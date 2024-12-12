@@ -1,7 +1,6 @@
 name: Sync Notebooks
 
 on:
-  on:
   push:
     paths:
       - '_notebooks/**'
