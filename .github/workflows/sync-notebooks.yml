@@ -28,7 +28,7 @@ jobs:
       - name: Convert Notebooks to Markdown
         run: |
           set -e  # Exit immediately if a command exits with a non-zero status
-          for notebook in _notebooks/*.ipynb; do
+          for notebook in notebooks/*.ipynb; do
             date=$(date +"%Y-%m-%d")
             title=$(basename "$notebook" .ipynb)
             md_file="_posts/${date}-${title}.md"
