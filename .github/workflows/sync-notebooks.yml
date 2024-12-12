@@ -55,12 +55,6 @@ jobs:
             fi
           done
 
-      - name: Update Image Paths
-        run: |
-          for file in _posts/*.md; do
-            sed -i 's|\!\\]*\))|\!\\|g' "$file"
-          done
-
 
       - name: Add Front Matter
         run: |
