@@ -21,13 +21,18 @@ jobs:
           git submodule update --init --recursive
           git submodule foreach git pull origin main
 
-      - name: Convert Notebooks to Markdown
+      - name: Install Dependencies
         run: |
           pip install nbconvert
+
+      - name: Convert Notebooks to Markdown
+        run: |
+          set -e  # Exit immediately if a command exits with a non-zero status
           for notebook in _notebooks/*.ipynb; do
             date=$(date +"%Y-%m-%d")
             title=$(basename "$notebook" .ipynb)
             md_file="_posts/${date}-${title}.md"
+            echo "Converting $notebook to $md_file"
             if [ ! -f "$md_file" ]; then
               jupyter nbconvert --to markdown "$notebook" --output "$md_file"
             fi
