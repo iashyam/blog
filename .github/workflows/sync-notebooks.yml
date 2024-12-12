@@ -16,10 +16,11 @@ jobs:
       - name: Checkout Blog Repo
         uses: actions/checkout@v2
 
-      - name: Update Submodules
+      - name: Clone Notebooks Repo
         run: |
-          git submodule update --init --recursive
-          git submodule foreach git pull origin main
+          git clone https://github.com/yourusername/notebooks.git
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
 
       - name: List Notebooks Directory
         run: |
