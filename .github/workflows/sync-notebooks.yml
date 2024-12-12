@@ -18,7 +18,7 @@ jobs:
 
       - name: Clone Notebooks Repo
         run: |
-          git clone https://github.com/yourusername/notebooks.git
+          git clone https://github.com/iashyam/notebooks.git
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
 
