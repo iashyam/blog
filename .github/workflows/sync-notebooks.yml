@@ -1,8 +1,13 @@
 name: Sync Notebooks
 
 on:
+  on:
+  push:
+    paths:
+      - '_notebooks/**'
   repository_dispatch:
     types: [sync-notebooks]
+  workflow_dispatch:  # This allows manual triggering
 
 jobs:
   sync:
