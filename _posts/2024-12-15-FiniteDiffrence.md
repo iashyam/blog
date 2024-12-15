@@ -4,6 +4,7 @@ title: "FiniteDiffrence"
 date: 2024-12-15
 categories: [Code, Physics]
 tags: [article, physics]
+math: true
 ---
 
 <a href="https://colab.research.google.com/github/iashyam/Mp3/blob/main/FiniteDiffrence.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>

@@ -4,6 +4,7 @@ title: "Heat Equation using Spectral Method"
 date: 2024-12-15
 categories: [Code, Physics]
 tags: [article, physics]
+math: true
 ---
 
 ```python
