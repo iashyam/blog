@@ -1,0 +1,21 @@
+---
+layout: page
+permalink: /newsletter/
+title: "Newsletter"
+icon: fa fa-envelope
+order: 6
+---
+<h1>Newsletter Archive</h1>
+<div class="post-list">
+  {% assign newsletters = site.pages | where: "dir", "/newsletter/" %}
+  {% for newsletter in newsletters %}
+    <div class="post-item">
+      <p class="post-title">
+        <a href="{{ newsletter.url | relative_url }}">
+          {{ newsletter.date | date: "%B %d, %Y" }} - {{ newsletter.title }}
+        </a>
+      <p>
+    </div>
+  {% endfor %}
+</div>
+
