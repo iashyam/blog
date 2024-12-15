@@ -99,7 +99,7 @@ plt.show()
 
 
     
-![png](output_3_0.png)
+![png](/assets/Heat Equation using Spectral Method-1.png)
     
 
 
@@ -135,7 +135,7 @@ plt.show()
 
 
     
-![png](output_5_0.png)
+![png](/assets/Heat Equation using Spectral Method-2.png)
     
 
 
@@ -170,7 +170,7 @@ plt.plot(temp_point)
 
 
     
-![png](output_8_1.png)
+![png](/assets/Heat Equation using Spectral Method-3.png)
     
 
 

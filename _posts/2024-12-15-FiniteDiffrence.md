@@ -191,7 +191,7 @@ plt.show()
 
 
     
-![png](output_16_0.png)
+![png](/assets/FiniteDiffrence-1.png)
     
 
 
@@ -220,7 +220,7 @@ plt.show()
 
 
     
-![png](output_20_0.png)
+![png](/assets/FiniteDiffrence-2.png)
     
 
 
