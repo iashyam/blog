@@ -23,7 +23,7 @@ The book I am currently reading is: __The Greatest Show on Eearth: Evidence for 
 
 I am currently obssessed with _Clorine_ by _twenty one pilots_. It has one a preety catchy attention seeking beat in the background which continues to play in my head all day and I am forced to listen to it again. The band has nailed the music to this song. 
 
-{% include embed/{youtube}.html id='{eJnQBXmZ7Ek}' %}
+{% include embed/youtube.html id='eJnQBXmZ7Ek' %}
 
 ## Movie of the week
 Recently I have finished the websries Marvel's __Hit Monkey__. I watched the first season in 2022 when I was living alone in Delhi. When I went to hotstar after a long time I saw that the new season is out. I immidiately jumped to it. The first season was promising but this one has got even more brutal, the story is intense and rich with characters.
@@ -40,7 +40,7 @@ Here is a cool article for you. It is written on the exploration of the concept 
 
 Most of us have been guided to speak in English. Through our teachers, through some friends, and through various other channels. But what is the guide itself doesn't know English. For example, there is no English teacher in your school and PT teacher is teaching you English. In his latest video, Rob talks us through such a guide book published in 1885: `English As She is Spoke`. Don't miss the hilarious commentory on the hilarious book.
 
-{% include embed/{youtube}.html id='{hXfeh0Rf5gI}' %}
+{% include embed/youtube.html id='hXfeh0Rf5gI' %}
 
 That is not a proper tamplet. I am writing it sitting in my office on Github online editor. But it is tamplet and I will writing more and more interesting newsletters here from now on. 
 Cheers Chiao. 
