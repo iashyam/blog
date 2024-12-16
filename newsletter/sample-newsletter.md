@@ -9,7 +9,7 @@ I spend the whole weekend on designing and tweaking this website. A huge shoutou
 
 I am switching to the newsletter format to document my life online. It is different from the _posts_ format in the presentation because it doesn't have all the informative stuff. The basic format is the same which is given in this newsletter. The first newsletter will be released next sunday. 
 
-## Qotue of the week
+## Quote of the week
 >“The happiness of your life depends upon the quality of your thoughts.”
 > 
 > ― Marcus Aurelius, Meditations
