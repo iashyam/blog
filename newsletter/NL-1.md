@@ -4,7 +4,7 @@ title: NL#1
 date: 12-12-2024
 ---
 
-![Picture of a moon](NL-1-moon.jpg)
+![Picture of a moon](assets/NL-1-moon.jpg)
 _I would have nailed this one if and only if I had a good camera._
 
 I spend the whole weekend on designing and tweaking this website. A huge shout-out to `chatGPT` for helping me in this task. I couldn't have done it without it; maybe I could have but it would have been a hell harder than this. I have also realized that as I use this feature more and more I am getting better and better at writing better prompts. Now I write a detailed prompts in my notepad and in one prompt ChatGPT gives exactly what I want from it. Sometimes, some miner manual debugging but that's mostly it.
