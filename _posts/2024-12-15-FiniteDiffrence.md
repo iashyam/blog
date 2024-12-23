@@ -225,9 +225,4 @@ plt.show()
     
 
 
-## So as we can see that our solution exactly matches with the theorictical value
-
-
-```python
-
-```
+So as we can see that our solution exactly matches with the theorictical value
