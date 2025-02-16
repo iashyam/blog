@@ -18,8 +18,9 @@ So the basic requirement of a happy successful marriage is that the couple's ide
 
 If you plot these two numbers in a plane, you will get a vector. This is called _the opinion vector_.[^1] Of course, not all the questions have the same weight, so you need to scale these vectors with a weight matrix. You compute the scaled opinion vector for two people, and take the dot product; you will get a scalar quantity representing how well their opinions align. You can call this quantity __Opinion Alignment Metric (OAM)__. But since this represents the harmony in married couples, I will call this __Marital Harmony Metric (MHM)__.  
 
-![Light mode only](assets/opinion-space-light.png)
-{: .light }<br>![Dark mode only](assets/opinion-space-dark.png){: .dark }_a simple representation of opinion space where on the x-axis is political views and on the y axis is who should cook food or something_
+![Light mode only](assets/opinion-space-light.png){: .light }
+![Dark mode only](assets/opinion-space-dark.png){: .dark }
+_a simple representation of opinion space where on the x-axis is political views and on the y axis is who should cook food or something_
 
 The greater this number, the greater the cooperation between two people, the happier the life. For illustration purposes, I have made a 2-D figure, but you should try to extend this to as many dimensions as possible. As you can see, a person named $A$ is more likely to have a happier life with $B$ despite the slight difference between their political views. But with someone whose opinion lies in the faraway corner of the graph, like person $C$, life is going to be tough. The angle here is too much, and _OAM_ is going to be negative. 
 
