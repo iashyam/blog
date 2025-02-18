@@ -1,6 +1,6 @@
 ---
-title: Posts
 layout: archives
-icon: fas fa-blog
+title: posts
+icon: fas fa-pen
 order: 1
 ---

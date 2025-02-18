@@ -3,7 +3,7 @@ layout: post
 title: "Heat Equation using Spectral Method"
 date: 2024-12-15
 categories: [Code, Physics]
-tags: [article, physics]
+tags: [Article, physics]
 math: true
 ---
 

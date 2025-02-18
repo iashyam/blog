@@ -1,6 +1,7 @@
 ---
 title: Marital Happiness Metric, Love and Arranged Marriages
 date: 15-02-2025
+image: assets/love-arrange-marraige.jpg
 categories:
   - Article
 math: true
@@ -19,8 +20,7 @@ So the basic requirement of a happy successful marriage is that the couple's ide
 If you plot these two numbers in a plane, you will get a vector. This is called _the opinion vector_.[^1] Of course, not all the questions have the same weight, so you need to scale these vectors with a weight matrix. You compute the scaled opinion vector for two people, and take the dot product; you will get a scalar quantity representing how well their opinions align. You can call this quantity __Opinion Alignment Metric (OAM)__. But since this represents the harmony in married couples, I will call this __Marital Harmony Metric (MHM)__.  
 
 ![Light mode only](assets/opinion-space-light.png){: .light }
-![Dark mode only](assets/opinion-space-dark.png){: .dark }
-_a simple representation of opinion space where on the x-axis is political views and on the y axis is who should cook food or something_
+![Dark mode only](assets/opinion-space-dark.png){: .dark }_a simple representation of opinion space where on the x-axis is political views and on the y axis is who should cook food or something_
 
 The greater this number, the greater the cooperation between two people, the happier the life. For illustration purposes, I have made a 2-D figure, but you should try to extend this to as many dimensions as possible. As you can see, a person named $A$ is more likely to have a happier life with $B$ despite the slight difference between their political views. But with someone whose opinion lies in the faraway corner of the graph, like person $C$, life is going to be tough. The angle here is too much, and _OAM_ is going to be negative. 
 
@@ -55,3 +55,8 @@ Love can happen between couples after marriage for after marriage fixture and be
 > There is a difference between loving someone because you want to marry them, and wanting to marry someone because you love them. 
 
 So overall, I can obviously state that love marriages are already ahead.
+
+___
+Edit: After writing this article I had a talk with few of my friends. (Yes I have friends!) It made me realise that living with someone having different opinion than you isn't that hard. (Look at me, I have friends.) It isn't that if you have different world views then a fight is going to happen, nothing like that occurs. You just have to respect other's individuality. And there goes the whole of my argument. I want to restate my proposition: It isn't that arranged marriages are bad, but love-marriages are a little better if done right. That's the thing, if done right, everything is great. Well whatever. 
+
+It made me realize that a lot of my philosophies are just pure thought and mathematical. I am young and have little exeprience with the real world. So, my theories may not fit well into the real world. But it's a cute idea to have. I am sure no one has thought about opinion vectors before. Just take it as an intellecual joke. Cheers, goodbye. 

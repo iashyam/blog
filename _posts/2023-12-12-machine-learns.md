@@ -8,7 +8,7 @@ image: assets/machine-learns-3.jpg
 tags:
 - Tech
 - Article
-title: What Can We Learn From AI Revolution?
+title: Learning The Way AI Learns
 ---
 
 The talk around AI is a hot topic nowadays. ChatGPT is producing spectacular results every day. YouTube recommendation is better than ever. Self-driving cars are becoming common on the road. It seems that AI is taking over the world. But how does AI work? How does AI learn everything at the level of expertise? How can ChatGPT be an expert in both Science and History and you can’t even study one?

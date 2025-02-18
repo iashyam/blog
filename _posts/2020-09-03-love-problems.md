@@ -3,9 +3,9 @@ date: '2020-09-03'
 draft: false
 image: assets/love-problems-1.jpeg
 tags:
-- Gazal
 - Hindi Poem
 - Poem
+- Translation
 title: Love Problems
 ---
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhK2ZWvtjzsf-NqrvuAv2ivDy_Ihv1LboJ9_kS4vyUoLqbqioi6WI1oCqXlyB4TpbYvk58cT9cMDSurpuzhFvmO8SGsNTVp6SRPhZ37egMX9MF93jFKS2a9u7OKHjVgPKks8alVwgX9416Eti_ZsxpSHsCbxWyOJVCwDbrkzCeZaZSpUn5c9mdMMsFpzA/w416-h233/index.jpeg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhK2ZWvtjzsf-NqrvuAv2ivDy_Ihv1LboJ9_kS4vyUoLqbqioi6WI1oCqXlyB4TpbYvk58cT9cMDSurpuzhFvmO8SGsNTVp6SRPhZ37egMX9MF93jFKS2a9u7OKHjVgPKks8alVwgX9416Eti_ZsxpSHsCbxWyOJVCwDbrkzCeZaZSpUn5c9mdMMsFpzA/s300/index.jpeg)

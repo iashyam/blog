@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "FiniteDiffrence"
-date: 2024-12-15
+date: 2024-12-10
 categories: [Code, Physics]
-tags: [article, physics]
+tags: [Article, physics]
 math: true
 ---
 
