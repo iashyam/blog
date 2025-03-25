@@ -135,3 +135,5 @@ __Languages__: Python, C++, HTML, CSS. JavaScript, SQL
 + LinkedIn: [iashyam](https://www.linkedin.com/in/iashyam)
 + Twitter: [shyam10kwd](https://www.twitter.com/shyam10kwd)
 + Instagram: [the_rest_frame](https://www.instagram.com/the_rest_frame/?hl=en)
+
+Download the pdf version of the cv from [here](https://iashyam.github.io/assets/files/CV_physics.pdf)
