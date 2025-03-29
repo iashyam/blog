@@ -5,21 +5,20 @@ permalink: /cv/
 icon: fa fa-university
 order: 5
 ---
-
 ## Introduction
-Driven by a deep passion for physics and strong programming skills, my enthusiasm lies at the heart of solving
-complex problems, particularly in statistical mechanics. While my programming skills are robust, my true devotion
-is to the world of physics. I am committed to utilizing my programming insight to push the boundaries of what is
-possible in this exciting discipline.
+Passionate software developer with a strong foundation in programming, problem-solving, and cross-disciplinary collaboration. Skilled in designing and developing efficient, scalable, and maintainable software solutions. Adept at breaking down complex challenges, thinking analytically, and delivering innovative solutions. Experienced in working with diverse teams, effectively communicating technical concepts, and bridging the gap between different disciplines to create impactful software. Always eager to learn, adapt, and contribute to meaningful projects.
 
-##  Work Experience
+## Experience
 **McDermott International-** Associate Structural Engineer (July 2024- )
+* Automate the report making workflow with python. 
+* Extracting and analyzing data from text files and making tables for represantation. 
 * Record and manage weight data and create weight control reports.
 * Create and analyse a database from the weight control team. 
 
 ## Education
+
 |**Institute**|**Degree**|**Year**|
-|---|---|--|
+|-------------|----------|--------|
 |IIT Madras|MSc. Physics|2022-24|
 |Delhi University| BSc. (H) Physics| 2019-22|
 |Vardhman Mahaveer Open University|Certificate in IT| 2017|
@@ -110,16 +109,6 @@ __Languages__: Python, C++, HTML, CSS. JavaScript, SQL
 + Putting together a team and guiding people for the annual fest of the society: _Traverse_.
 + Built, designed, and set up the society blog Ellipses.
 
-## Experience 
-
-+ Teaching Assistant: Personal And Professional Growth Course, IIT Madras
-+ Freelance Teaching: Learn with PKB
-
-## Certificates 
-
-+ Data Analysis from LinkedIn Learning 
-+ SQL intermidiate from LinkedIn Learning 
-
 ## Hobbies and Extra-curricular
 
 + Running a literary blog consistently for about four years.
@@ -134,6 +123,5 @@ __Languages__: Python, C++, HTML, CSS. JavaScript, SQL
 + Mail: [Shyam10kwd@gmail.com](mailto:shyam10kwd@gmail.com)
 + LinkedIn: [iashyam](https://www.linkedin.com/in/iashyam)
 + Twitter: [shyam10kwd](https://www.twitter.com/shyam10kwd)
-+ Instagram: [the_rest_frame](https://www.instagram.com/the_rest_frame/?hl=en)
 
 Download the pdf version of the cv from [here](https://iashyam.github.io/assets/files/CV_physics.pdf)

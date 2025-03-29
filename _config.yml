@@ -219,6 +219,8 @@ exclude:
   - rollup.config.js
   - "package*.json"
 
+markdown: kramdown
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
