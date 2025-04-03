@@ -1,0 +1,1 @@
+Recently, the Galibi art studio trend has went viral. Everyone is very eager to jump to the trend, they are putting their best photos at work. But there is another minority group who feels bad to the artists; the artists who put their blood and sweat into creating these arts. And now when such precious art is available at one click, they would deem worthless. 

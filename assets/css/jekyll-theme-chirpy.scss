@@ -6,9 +6,17 @@
   .bundle
 {%- endif -%}
 ';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
 
 /* append your custom style below */
 body{
-font-family:georgia;
 text-align:justify;
+font-family: 'IBM Plex Serif', serif;
+}
+
+header .post-desc, #toc-bar .label, #search-results a, h1, h2, h3, h4, h5 {
+    color: var(--heading-color);
+    font-weight: 400;
+    font-family: serif;
+    scroll-margin-top: 3.5rem;
 }

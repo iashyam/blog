@@ -220,6 +220,7 @@ exclude:
   - "package*.json"
 
 markdown: kramdown
+syntax_highlighter: rouge
 
 jekyll-archives:
   enabled: [categories, tags]
@@ -229,3 +230,4 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
