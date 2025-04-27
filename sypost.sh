@@ -3,7 +3,8 @@
 # Configuration
 RAW_POSTS_DIR="posts"
 POSTS_DIR="_posts"
-ARCHETYPE_FILE="posts_archetype.md"
+ARCHETYPE_FILE="_archetypes/posts_archetype.md"
+
 DATE=$(date +%Y-%m-%d)
 TAGS=""
 

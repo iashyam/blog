@@ -1,7 +1,7 @@
 ---
 title: "{{ title }}"
 date: "{{ date }}"
-categories: [code]
+categories: [Writing]
 tags: []
 math: true
 layout: post
