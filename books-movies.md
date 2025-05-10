@@ -4,12 +4,12 @@ permalink: /books-movies/
 ---
 
 Here is a list of all the books and movies I have read and watched starting from April 2025. 
-obsidian://open?vault=posts&file=ai-art-debate
 
 Books 
 ----
 - The Happy Prince by Oscar Wilde. 
-- Currently Reading: The Idiot by Fyodor Dostoevsky
+- The Idiot by Fyodor Dostoevsky (left unfinished)
+- Currently Reading: The Prisonor of Birth by Jeffery Archer 
 
 
 Movies 
@@ -29,3 +29,11 @@ Movies
 - Along Came Polly (Sun, May 4, 2025)
 - Suits (till Season 4), (Thu, 1 May 2025)
 - Currently Watching: Georgie and Mandy's First Marriage (S1E19)
+
+Podcasts
+---
+Here are buch of my favorite podcasts
+- Urdunama hosted by Fabiha Sayed [link](https://open.spotify.com/show/6zRRY9ssHgiH2Rm0IUrd5x)
+- Lex Fridman Podcast (Lex Fridman) [link](https://lexfridman.com/podcast/)
+- Within Reason Podcast (By Alex O'Connor) [link](https://open.spotify.com/show/16wUbvDT95dxzpG2KEhakK)
+- Humbermann Lab Podcast (By Andrew Hubermann) [link](https://www.hubermanlab.com/all-episodes)
