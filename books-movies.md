@@ -27,6 +27,8 @@ Movies
 - Thunderbolts* (Sat, May 3, 2025)
 - Notting Hill (Sun, May 4, 2025)
 - Along Came Polly (Sun, May 4, 2025)
+- Heavy Arch Ricing: The Primeagen (Sun, May 11)
+- Jerry Maguire (Tue, May 13, 2025)
 - Suits (till Season 4), (Thu, 1 May 2025)
 - Currently Watching: Georgie and Mandy's First Marriage (S1E19)
 
