@@ -3,7 +3,7 @@ title: "A Prisoner of Birth By Jeffery Archer"
 date: "2025-05-18"
 categories: [Writing]
 tags: [book-reviews]
-image: prisoner-of-birth.png
+image: assets/prisoner-of-birth.png
 layout: post
 ---
 
