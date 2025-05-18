@@ -1,6 +1,6 @@
 ---
 title: "Does Identity Comes In The Way Of Truth"
-date: "2025-04-15"
+date: "2025-03-15"
 categories: [Writing]
 tags: [mini-essay]
 image: assets/identity-truth.png
