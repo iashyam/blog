@@ -39,7 +39,7 @@ fi
 if [ -f "$OUTPUT_FILE" ] && [ "$FORCE_OVERWRITE" = false ]; then
     echo "Warning: Post '$OUTPUT_FILE' already exists."
     read -p "Do you want to overwrite it? (y/n): " choice
-    case "$choice" in 
+    case "$choice" in
         y|Y ) echo "Overwriting...";;
         n|N ) echo "Aborting."; exit 0;;
         * ) echo "Invalid choice."; exit 1;;

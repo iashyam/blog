@@ -9,7 +9,8 @@ Books
 ----
 - The Happy Prince by Oscar Wilde. 
 - The Idiot by Fyodor Dostoevsky (left unfinished)
-- Currently Reading: The Prisonor of Birth by Jeffery Archer 
+- The Prisonor of Birth by Jeffery Archer(May 17, 2025)
+- CR: The Greatest Show on Earth by Richard Dawkins
 
 
 Movies 
@@ -28,9 +29,11 @@ Movies
 - Notting Hill (Sun, May 4, 2025)
 - Along Came Polly (Sun, May 4, 2025)
 - Heavy Arch Ricing: The Primeagen (Sun, May 11)
-- Jerry Maguire (Tue, May 13, 2025)
+- Jerry Maguire (Tue, May 17, 2025)
 - Suits (till Season 4), (Thu, 1 May 2025)
+- American Manhunt: Osama Bin Laden (21 May, 2025)
 - Currently Watching: Georgie and Mandy's First Marriage (S1E19)
+- CW: Emily in Paris (S1E4)
 
 Podcasts
 ---
