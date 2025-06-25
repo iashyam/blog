@@ -10,6 +10,7 @@ Books
 - The Happy Prince by Oscar Wilde. 
 - The Idiot by Fyodor Dostoevsky (left unfinished)
 - The Prisonor of Birth by Jeffery Archer(May 17, 2025)
+- Little Women by Louisa May Alcott (June 1, 2025)
 - CR: The Greatest Show on Earth by Richard Dawkins
 
 
@@ -28,12 +29,18 @@ Movies
 - Thunderbolts* (Sat, May 3, 2025)
 - Notting Hill (Sun, May 4, 2025)
 - Along Came Polly (Sun, May 4, 2025)
-- Heavy Arch Ricing: The Primeagen (Sun, May 11)
 - Jerry Maguire (Tue, May 17, 2025)
 - Suits (till Season 4), (Thu, 1 May 2025)
 - American Manhunt: Osama Bin Laden (21 May, 2025)
-- Currently Watching: Georgie and Mandy's First Marriage (S1E19)
-- CW: Emily in Paris (S1E4)
+- The Truman Show (25 May, 2025)
+- Captain Amarica: Brave New World(6 June, 2025)
+- Drishyam 2 (7, June 2025)
+- Invention Of Lying (14,June 2025)
+- A Complete Unknown (Jun 15, 2025)
+- How To Train Your Dragon(2025) (June 22, 2025)
+- How To Train Your Dragon(2010) (June 22, 2025)
+- Georgie and Mandy's First Marriage (S1E19)
+- CW: Emily in Paris (S1E8)
 
 Podcasts
 ---
