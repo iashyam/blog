@@ -39,6 +39,7 @@ Movies
 - A Complete Unknown (Jun 15, 2025)
 - How To Train Your Dragon(2025) (June 22, 2025)
 - How To Train Your Dragon(2010) (June 22, 2025)
+- Ted 2 (June 27, 2025)
 - Georgie and Mandy's First Marriage (S1E19)
 - CW: Emily in Paris (S1E8)
 
