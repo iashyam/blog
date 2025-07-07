@@ -11,8 +11,8 @@ Books
 - The Idiot by Fyodor Dostoevsky (left unfinished)
 - The Prisonor of Birth by Jeffery Archer(May 17, 2025)
 - Little Women by Louisa May Alcott (June 1, 2025)
-- CR: The Greatest Show on Earth by Richard Dawkins
-
+- The Greatest Show on Earth by Richard Dawkins
+- CR: Greek Lessons by Han Kang
 
 Movies 
 ----
@@ -39,9 +39,12 @@ Movies
 - A Complete Unknown (Jun 15, 2025)
 - How To Train Your Dragon(2025) (June 22, 2025)
 - How To Train Your Dragon(2010) (June 22, 2025)
-- Ted 2 (June 27, 2025)
+- Ted 2(Fkin Hillarious) (June 27, 2025)
+- La La Land (June 28, 2025)
+- Fight Club (July 05, 2025)
 - Georgie and Mandy's First Marriage (S1E19)
 - CW: Emily in Paris (S1E8)
+- CW: Family Guy (S19)
 
 Podcasts
 ---
