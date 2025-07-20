@@ -17,7 +17,6 @@ Books
 Movies 
 ----
 - The Storyteller (Sun, April 16, 2025)
-- Silicon Velly (Sun, April 11, 2025)
 - How To Lose A Guy In 10 Days (Fri, April 19, 2025)
 - You Before Me (Wed, April 24, 2025)
 - Lost In Translation (Thu, April 25, 2025)
@@ -30,25 +29,31 @@ Movies
 - Notting Hill (Sun, May 4, 2025)
 - Along Came Polly (Sun, May 4, 2025)
 - Jerry Maguire (Tue, May 17, 2025)
-- Suits (till Season 4), (Thu, 1 May 2025)
-- American Manhunt: Osama Bin Laden (21 May, 2025)
-- The Truman Show (25 May, 2025)
-- Captain Amarica: Brave New World(6 June, 2025)
+- American Manhunt: Osama Bin Laden (May 21, 2025)
+- The Truman Show (May 25, 2025)
+- Captain Amarica: Brave New World (June 6, 2025)
 - Drishyam 2 (7, June 2025)
-- Invention Of Lying (14,June 2025)
+- Invention Of Lying (June 14, 2025)
 - A Complete Unknown (Jun 15, 2025)
 - How To Train Your Dragon(2025) (June 22, 2025)
 - How To Train Your Dragon(2010) (June 22, 2025)
-- Ted 2(Fkin Hillarious) (June 27, 2025)
+- Ted 2 (June 27, 2025)
 - La La Land (June 28, 2025)
 - Fight Club (July 05, 2025)
-- Georgie and Mandy's First Marriage (S1E19)
-- CW: Emily in Paris (S1E8)
+- Superman (July 13, 2025)
+- Shutter Island (July 19, 2025)
+- Batman Begins (July 20, 2025)
+
+Shows
+---
+- Silicon Velly (Sun, April 11, 2025)
+- Suits (till Season 4), (Thu, 1 May 2025)
+- Emily in Paris (S1E8)
 - CW: Family Guy (S19)
+- Georgie and Mandy's First Marriage (S1E19)
 
 Podcasts
 ---
-Here are buch of my favorite podcasts
 - Urdunama hosted by Fabiha Sayed [link](https://open.spotify.com/show/6zRRY9ssHgiH2Rm0IUrd5x)
 - Lex Fridman Podcast (Lex Fridman) [link](https://lexfridman.com/podcast/)
 - Within Reason Podcast (By Alex O'Connor) [link](https://open.spotify.com/show/16wUbvDT95dxzpG2KEhakK)
