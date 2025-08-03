@@ -45,6 +45,7 @@ Movies
 - Fantastic Four (2005) (Aug 1, 2025)
 - Fantastic Four: Rise of Silver Serfer (Aug 1, 2025)
 - The Dark Night (Aug 2, 2025)
+- Forrest Gump (Agu 3, 2025)
 
 Shows
 ---
