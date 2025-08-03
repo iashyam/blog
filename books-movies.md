@@ -29,7 +29,6 @@ Movies
 - Notting Hill (Sun, May 4, 2025)
 - Along Came Polly (Sun, May 4, 2025)
 - Jerry Maguire (Tue, May 17, 2025)
-- American Manhunt: Osama Bin Laden (May 21, 2025)
 - The Truman Show (May 25, 2025)
 - Captain Amarica: Brave New World (June 6, 2025)
 - Drishyam 2 (7, June 2025)
@@ -43,11 +42,15 @@ Movies
 - Superman (July 13, 2025)
 - Shutter Island (July 19, 2025)
 - Batman Begins (July 20, 2025)
+- Fantastic Four (2005) (Aug 1, 2025)
+- Fantastic Four: Rise of Silver Serfer (Aug 1, 2025)
+- The Dark Night (Aug 2, 2025)
 
 Shows
 ---
-- Silicon Velly (Sun, April 11, 2025)
-- Suits (till Season 4), (Thu, 1 May 2025)
+- Silicon Velly  (April 11, 2025)
+- Suits (Season 7) (Aug 1, 2025)
+- American Manhunt: Osama Bin Laden (May 21, 2025)
 - Emily in Paris (S1E8)
 - CW: Family Guy (S19)
 - Georgie and Mandy's First Marriage (S1E19)
