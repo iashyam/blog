@@ -45,7 +45,12 @@ Movies
 - Fantastic Four (2005) (Aug 1, 2025)
 - Fantastic Four: Rise of Silver Serfer (Aug 1, 2025)
 - The Dark Night (Aug 2, 2025)
-- Forrest Gump (Agu 3, 2025)
+- Forrest Gump (Aug 3, 2025)
+- Tumse Na Ho Payega (Aug 9, 2025)
+- 500 Days of Summer (Aug 10, 2025)
+- The Dark Knight Rises (Aug 10, 2025)
+- Your Name (Aug 15, 2025)
+- Never Back Down (Aug 16, 2025)
 
 Shows
 ---
