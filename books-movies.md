@@ -12,6 +12,7 @@ Books
 - The Prisonor of Birth by Jeffery Archer(May 17, 2025)
 - Little Women by Louisa May Alcott (June 1, 2025)
 - The Greatest Show on Earth by Richard Dawkins
+- Verity by Colleen Hoover (Aug 23, 2025)
 - CR: Greek Lessons by Han Kang
 
 Movies 
