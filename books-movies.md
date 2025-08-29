@@ -52,6 +52,8 @@ Movies
 - The Dark Knight Rises (Aug 10, 2025)
 - Your Name (Aug 15, 2025)
 - Never Back Down (Aug 16, 2025)
+- Lal Singh Chadda (Aug 23, 2025)
+- Wall-E (Aug 28, 2025)
 
 Shows
 ---
