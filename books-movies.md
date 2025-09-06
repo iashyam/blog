@@ -54,6 +54,12 @@ Movies
 - Never Back Down (Aug 16, 2025)
 - Lal Singh Chadda (Aug 23, 2025)
 - Wall-E (Aug 28, 2025)
+- Kingsman: The Secret Service (Sep 6, 2025)
+- Kingsman: The Golden Circle (Sep 6, 2025)
+- King's man (Sep 6, 2025)
+- Nobody (Sep 6, 2025)
+
+
 
 Shows
 ---
