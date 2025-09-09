@@ -58,6 +58,7 @@ Movies
 - Kingsman: The Golden Circle (Sep 6, 2025)
 - King's man (Sep 6, 2025)
 - Nobody (Sep 6, 2025)
+- Oppenheimer (Sep 7, 2025)
 
 
 
