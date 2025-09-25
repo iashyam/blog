@@ -59,7 +59,9 @@ Movies
 - King's man (Sep 6, 2025)
 - Nobody (Sep 6, 2025)
 - Oppenheimer (Sep 7, 2025)
-
+- Punjab 1984 (Sep 13, 2025)
+- Sajjan Singh Rangroot (Sep 13, 2025)
+- Rise of the Planet of Aps (Sep 23, 2025)
 
 
 Shows
@@ -68,7 +70,8 @@ Shows
 - Suits (Season 7) (Aug 1, 2025)
 - American Manhunt: Osama Bin Laden (May 21, 2025)
 - Emily in Paris (S1E8)
-- CW: Family Guy (S19)
+- Family Guy (S19)
+- Peacemaker (S2)
 - Georgie and Mandy's First Marriage (S1E19)
 
 Podcasts
