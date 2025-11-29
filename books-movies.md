@@ -13,7 +13,7 @@ Books
 - Little Women by Louisa May Alcott (June 1, 2025)
 - The Greatest Show on Earth by Richard Dawkins
 - Verity by Colleen Hoover (Aug 23, 2025)
-- CR: Greek Lessons by Han Kang
+- CR: The Secret Hisotry by Donna Tratt. 
 
 Movies 
 ----
@@ -61,7 +61,10 @@ Movies
 - Oppenheimer (Sep 7, 2025)
 - Punjab 1984 (Sep 13, 2025)
 - Sajjan Singh Rangroot (Sep 13, 2025)
-- Rise of the Planet of Aps (Sep 23, 2025)
+- Rise of the Planet of Apes (Sep 23, 2025)
+- Dispicable Me (Oct 1, 2025)
+- Chhichhore (Oct 20, 2025)
+- Fantastic Four: The First Steps (Nov 9, 2025)
 
 
 Shows
@@ -80,3 +83,5 @@ Podcasts
 - Lex Fridman Podcast (Lex Fridman) [link](https://lexfridman.com/podcast/)
 - Within Reason Podcast (By Alex O'Connor) [link](https://open.spotify.com/show/16wUbvDT95dxzpG2KEhakK)
 - Humbermann Lab Podcast (By Andrew Hubermann) [link](https://www.hubermanlab.com/all-episodes)
+- Kitabi Cabins Podcast 
+- Fake Podcast

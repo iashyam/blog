@@ -51,16 +51,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Real Problems with AI.md",
+                "file": "Life Update Nov25.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Real Problems with AI"
+              "title": "Life Update Nov25"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -199,6 +199,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -207,13 +208,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "27e3e51a7872421a",
+  "active": "ba168549108da940",
   "lastOpenFiles": [
+    "Real Problems with AI.md",
+    "Life Update.md",
+    "Life Update Nov25.md",
     "The Load of Self-Expectations and The age of exploring.md",
     "Pahalgam Attack and the death of humanity.md",
     "Untitled.md",
     "Big-Question-About-AI.md",
-    "Real Problems with AI.md",
     "Capitalist and Communist Parent.md",
     "An-atheist-and-a-priest.md",
     "ai-art-trend.md"
