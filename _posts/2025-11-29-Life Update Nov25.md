@@ -15,7 +15,7 @@ I am currently reading two books: Pride And Prejudice by Jane Austin and Behave 
 
 I am watching `How I Met Your Mother`. You can already guess my favorite character: it's Ted. He is just like me, hopeless romantic, desperate and doing all sorts of things to find the love of his life. Well I am also writing this post, don't look at me with narrow eyes. 
 
-Ah, I have been doing a lot of coding lately. I am learning `go` programming language. It's a very beautiful and simplistic language developed by `goGGLE` (get it?). I am addicted to learning thanks to [boot.dev](boot.dev)'s excellent curriculum. Here are some of my latest project for you to explore:
+Ah, I have been doing a lot of coding lately. I am learning `go` programming language. It's a very beautiful and simplistic language developed by `goGGLE` (get it?). I am addicted to learning thanks to [boot.dev](https://www.boot.dev/dashboard)'s excellent curriculum. Here are some of my latest project for you to explore:
 
 - Pokedox: github.com/iashyam/pokedox
 - Gator: github.com/iashyam/gator
