@@ -6,8 +6,9 @@ I am watching `How I Met Your Mother`. You can already guess my favorite charact
 
 Ah, I have been doing a lot of coding lately. I am learning `go` programming language. It's a very beautiful and simplistic language developed by `goGGLE` (get it?). I am addicted to learning thanks to [boot.dev](boot.dev)'s excellent curriculum. Here are some of my latest project for you to explore:
 
-- Pokedox: github.com/iashyam/pokedox
-- Gator: github.com/iashyam/gator
+- Pokedox: [github.com/iashyam/pokedox](https://github.com/iashyam/pokedox)
+- Gator: [github.com/iashyam/gator](https://github.com/iashyam/gator)
+
 You can explore them. Give me some feedback, it would be actually nice. 
 
 I have quit gym. (Oh my god Shyam! Why?)  I haven't quit it, my subscription has expired. Can you believe it? I actually went to the gym the whole of my one year tenure. Yes. Now that I will get  my salary, I am renewing my subscription the first thing of the month. 
