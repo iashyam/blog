@@ -13,7 +13,8 @@ Books
 - Little Women by Louisa May Alcott (June 1, 2025)
 - The Greatest Show on Earth by Richard Dawkins
 - Verity by Colleen Hoover (Aug 23, 2025)
-- CR: The Secret Hisotry by Donna Tratt. 
+- The Secret Hisotry by Donna Tratt. 
+- CR: Pride and Prejudice
 
 Movies 
 ----
@@ -65,6 +66,8 @@ Movies
 - Dispicable Me (Oct 1, 2025)
 - Chhichhore (Oct 20, 2025)
 - Fantastic Four: The First Steps (Nov 9, 2025)
+- Laila Majnun 
+- The Life List
 
 
 Shows
