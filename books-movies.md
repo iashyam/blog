@@ -68,6 +68,7 @@ Movies
 - Fantastic Four: The First Steps (Nov 9, 2025)
 - Laila Majnun 
 - The Life List
+- The Holiday
 
 
 Shows
