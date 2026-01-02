@@ -69,6 +69,8 @@ Movies
 - Laila Majnun 
 - The Life List
 - The Holiday
+- A Beautiful Mind
+- Materialists
 
 
 Shows
