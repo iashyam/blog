@@ -14,7 +14,8 @@ Books
 - The Greatest Show on Earth by Richard Dawkins
 - Verity by Colleen Hoover (Aug 23, 2025)
 - The Secret Hisotry by Donna Tratt. 
-- CR: Pride and Prejudice
+- Pride and Prejudice
+- Down And Out in Paris And London by George Orwell
 
 Movies 
 ----
@@ -72,6 +73,9 @@ Movies
 - A Beautiful Mind
 - Materialists
 - Jolly LLB 3
+- Coolie: The Powerhouse
+- Dhurandhar
+- Pride & Prejudice
 
 
 Shows
@@ -83,9 +87,12 @@ Shows
 - Family Guy (S19)
 - Peacemaker (S2)
 - Georgie and Mandy's First Marriage (S1E19)
+- Our Beloved Summer
+- The Big Bang Theory
 
 Podcasts
 ---
+- The Rest Is Science
 - Urdunama hosted by Fabiha Sayed [link](https://open.spotify.com/show/6zRRY9ssHgiH2Rm0IUrd5x)
 - Lex Fridman Podcast (Lex Fridman) [link](https://lexfridman.com/podcast/)
 - Within Reason Podcast (By Alex O'Connor) [link](https://open.spotify.com/show/16wUbvDT95dxzpG2KEhakK)
