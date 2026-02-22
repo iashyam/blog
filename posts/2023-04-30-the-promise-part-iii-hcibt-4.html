@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Promise part III | HCIBT #4 - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            The Promise part III | HCIBT #4
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2023-04-30" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2023-04-30
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/journal.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #journal
+                </a>
+                
+                <a href="/tags/Story.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Story
+                </a>
+                
+                <a href="/tags/HCIBT.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #HCIBT
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/the-promise-part-iii-hcibt-4-1.jpeg" alt="The Promise part III | HCIBT #4" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFx-Hi9OjWKFW7X17AUX6sSaxdt5ntji_h3jr3Y_G42iwfSOaNLX-ZjzQIvlK6QSpBH1xmCibHB_k3nAeWrQqzU4piYn5mZexswcqxc6qL6nBhOtjRepX12i1CIgFffwUyZALKVEVPxGZxN4wimzpNbxJt3Y8nTry1PTYboVZ1ok9tmBdbH-lfu_Ji1w/s3264/IMG_20200327_171355.jpg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFx-Hi9OjWKFW7X17AUX6sSaxdt5ntji_h3jr3Y_G42iwfSOaNLX-ZjzQIvlK6QSpBH1xmCibHB_k3nAeWrQqzU4piYn5mZexswcqxc6qL6nBhOtjRepX12i1CIgFffwUyZALKVEVPxGZxN4wimzpNbxJt3Y8nTry1PTYboVZ1ok9tmBdbH-lfu_Ji1w/w382-h286/IMG_20200327_171355.jpg" alt=""></a></p>
+<p>After sleeping for many days on the cold floor, I held to the comfort of my bed. When Mohit woke me up, it was already eight. He was already ready. Mohit was holding a comb in one hand and wearing a caring expression. When I sat on my bed, he shouted, &quot;Get up! Get ready while I bring breakfast. You have ten minutes. Otherwise, we will be late for the assembly.&quot; </p>
+<p>I got up quickly and took a bath. I was ready when I brought Poha from the nearby store. We hurried to the college after rapidly eating. We were at the edge and entered just after the principal. Luckily the attendance had not started, so we got ourselves marked.</p>
+<p>The assembly followed the same structure as before. A very enthusiastic welcome by the principal, bible verse, explanation, and advice. But then we had our programming lab. My first programming class was an experience.</p>
+<p>With a nervous voice and friendly smile, the teacher was teaching us the basics of programming. He tried to make it simple, but it was over my head. He told us to write a simple program to print something. But I didn't understand anything. I just froze, unable to make a move. At the end of class, when the teacher was checking everyone's code, he looked at my computer screen and was surprised that I hadn't written anything. I told him I had never operated a computer and had yet to learn to program. He motivated me for a minute and advised me to read about it from some book. I didn't get much from his class, but I liked his smile and friendly attitude. For some reason, the teacher here didn't behave like teachers; they acted like friends, like our elder brothers and mentors, as it was made clear in the orientation. They were really our teachers. They didn't need to be scary and strict like our school teachers.</p>
+<p>The following two classes were more informative than that. Once again, I got nothing besides the word algorithm from Dr. Gupta's mechanics class. Dr. Geetanjal taught us vector products very well. I observed a difference between Dr. Geetanjali and Dr. Abhinav Gupta. Dr. Geetanjali seemed less friendly than Dr. Gupta, but I got everything she taught. On the other hand, Dr. Gupta cracked jokes. He asked us if we understood everything or had any doubts. But I only got a few words he was speaking. His English was on the next level.</p>
+<p>I looked for Mohit when I went for lunch, but he was nowhere to be seen. So, I went to the cafe alone and ordered Rajma rice. I was nearly done when Mohit called me.</p>
+<p>&quot;Where are you? Aren't you coming to play cricket? Or you gonna mug up in the library?&quot;</p>
+<p>&quot;What cricket? Now? Are you crazy? I will be fried even if I step out in such heat, let alone playing cricket in such conditions.&quot; I complained.</p>
+<p>&quot;Nothing will happen. All players play in the heat. The ODI matches start at this time only. It happens in Delhi many times, and they play in the sun. You will not get fried.&quot; His habit of pushing his points persisted on the line too.</p>
+<p>&quot;I am not an international cricket player. They have several different energy drinks and chemicals to protect them from heat. I will burn in the sun.&quot;</p>
+<p>&quot;You are just afraid of it. You will not even feel it once you serge in the game.&quot;</p>
+<p>&quot;You are got to be crazy. I am not going to play now. Let's wait for it to cool down. Can we go at four?&quot; I almost pleaded him.</p>
+<p>&quot;What will you do till then?&quot;</p>
+<p>&quot;I will rest.&quot;</p>
+<p>He gave up. The thinking was not his cup of tea, but giving up was his cup of coffee.</p>
+<p>&quot;Okay. Let's go at four PM.&quot;</p>
+<p>&quot;Okay. Four PM done.&quot;</p>
+<p>I quickly finished my remaining rice and put the plate aside. I leaned back on my chair and let the cool breeze fall on my face. It all was really happening. I was taking classes in Physics at St. Stephen's College. Unbelievable!!</p>
+<p>After some time, the cafe emptied as people went for their post-lunch classes. I didn't have any post-lunch classes. I stayed in the cafeteria and reviewed the new book I picked from the library between the class gaps. I wasn't really reading that. I was just going through it, viewing the equations, staring at strange equations and symbols, graphs, figures, and schematic diagrams. They looked beautiful in a stranger's eye, but I knew they would be haunting when being taught. That was a Physics student's experience.</p>
+<p>I walked out of the cafe a little after three PM. And the first step I put out of the AC, the heat outside gave me a nasty blow. I didn't realize how long I had spent inside AC, and the walk from college to my room was arduous. I reached home with an effort. I gulped down a bottle of cold water from the fridge. Then I thought of changing into fresh clothes. I went outside where I had put my clothes to dry last night. The heat had done an excellent work, and they were looking good and dry. When you do something by yourself with some effort, the result comes with a great deal of satisfaction. And that was there when I looked at the fresh clothes. It was the same feeling when I got my results of 12th class back. Both of them were the results of my hardwork.</p>
+<p>And when I thought it was time to rest. Mohit came into the picture from nowhere.</p>
+<p>&quot;Let's go! Oh, you are already in the athletics mood.&quot; He pointed at my clothes.</p>
+<p>&quot;Yeah, I just collected them from outside.&quot;</p>
+<p>&quot;Come on. If we start walking now, then only we will reach the ground at four.&quot;</p>
+<p>He seemed so excited that he was literally jumping. He behaved like a child whose father had just bought him a new bat, and he couldn't wait to play with it. I was excited too. But I don't generally show my excitement like that. Moreover, I was unsure if I could walk to the pitch after my long journey home from college. But I was impressed by his enthusiasm and decided to let it have a go.</p>
+<p>He picked up his kit, handed me a bat, and put some bottles in his bag.</p>
+<p>&quot;Isn't that too much to carry for a two people's match? I never took anything other than a bat and a ball for playing.&quot; I complained. &quot;We will hardly play for an hour or so, and all our energy would be wasted carrying that stuff on our shoulders.&quot;</p>
+<p>&quot;Spirit, bro! Mind the spirit.&quot; He exclaimed.</p>
+<p>We started to walk in the harsh summer again. He took me through the shortcuts, some stinking narrow roads with lowly hanging wires. Nearby some empty and closed stalls, which will be alive in the evening. We saw some shopkeepers in their shops watching movies on old TVs and the doctors in their clinics patiently waiting for patients.</p>
+<p>The ground was deserted at this hour of the day. It was still and silent except for the dried leaves in hot air. The trees cast long shadows on the ground, and I was relieved to see that. We put our stuff down under a tree and sat there awhile. When the air evaporated some beads of sweat from my body created a cold and pleasant experience.</p>
+<p>I surveyed the ground for a minute. It was an academy team practice ground. The grass on the ground was different from the lawns in my college. There was a significant weed in between and also bald patches. The pitch seemed dusty from this angle. This ground needed attention.</p>
+<p>&quot;We will not play on the pitch; it's sunny out there. We can play here under the trees only.&quot; I suggested a clever point.</p>
+<p>&quot;What's the point of coming to the ground then? &quot; Mohit pointed out.</p>
+<p>&quot;Think about it. We are just two people, and we don't have any fielders. It will be fruitless running around the corners and more time-wasting than enjoyment.&quot;</p>
+<p>He didn't think  that for a moment and said coldly.</p>
+<p>&quot;Okay! We will only defend like test match practice.&quot;</p>
+<p>&quot;We don't have any keeper also. You must fetch a ball from the boundary if you leave a ball.&quot;</p>
+<p>He again didn't paused for a minute and answered colderly.</p>
+<p>&quot;We will only ball full length and on stumps balls.&quot;</p>
+<p>I gave him an is-this-guy-mental look. Mohit takes not only other people's answers for granted but also takes other people's opinions as granted as well. He had a big problem with empathy, which was surprising given his extrovert nature. If he wanted to play in the sun, how does that imply that I wished to play in the sun too? I thought those who are with other people very much could also understand their feelings. But he proved me wrong. He gave no damn about other people's feelings. But now he was my roommate, and I was to spend three years with him. I was angry, but I didn't let that come out. I took two or three deep breaths.</p>
+<p>&quot;Okay. Let's play.&quot;</p>
+<p>&quot;Will you bowl first?&quot;</p>
+<p>I took one more deep breath and said, &quot;Okay.&quot;</p>
+<p>I knelt to tighten my shoelaces. Mohit started to pad up. He put on the pads, the gloves, and other different kinds of security equipment. I just picked up a ball and measured my runup. He came to the middle of the pitch and started doing all those things international players do, like scratching the pitch, doing some exercises, etc. This guy is proper Dramebaz, nothing else. I smiled.</p>
+<p>I bowled him good length balls, and he simply defended back to me. After every ball, he shouted things like: 'Good ball,' 'Nicely bowled,' etc.</p>
+<p>Then it was my turn to bat. Mohit took off his security equipment and asked me to put it on. It didn't take me long to dress up for batting. And I didn't waste time on the dramas he did. I took my stance as he measured his runup.</p>
+<p>He spoke all those lines to convince me to come up to play on the pitch and forgot before bowling the first ball. I was standing low, expecting a fuller-length ball. But I got a pacy short ball instead. He had a good speed, and the ball was already close to my body when I judged it. I don't know my instant reaction, but I stood, and the leather ball hit me on the chest. I thought I heard one of my rib breaking. Pain exploded in my chest instantly. The bat dropped from my hand immediately. I removed my glove and sat down, rubbing where the ball had hit me.</p>
+<p>Mohit came running to me. He looked anxious about it, but I felt too painful to notice.</p>
+<p>&quot;I am sorry. I didn't know the bounce of the pitch. I was just testing the pitch.&quot; It looked like he was feeling sorry for that. He rubbed my palm thinking that it would reduce the pain.</p>
+<p>&quot;Wait a minute; I will bring things for you.&quot; He got up quickly and ran to the tree where we had put our bags. He returned after a minute. He was holding a bottle that he had filled just before coming here.</p>
+<p>&quot;Here, take it. It's glucose. You will feel better.&quot;</p>
+<p>I said nothing. I just took the bottle and took a sip. It felt cold and sweet. I did feel better.</p>
+<p>Mohit offered me the painkiller spray. But I denied it. I didn't feel like taking my T-shirt off on a hot day.</p>
+<p>&quot;Do you feel better?&quot; He asked me after a while.</p>
+<p>&quot;Yeah.&quot; I paused for a moment, &quot;Thank you.&quot;</p>
+<p>He didn't say anything. &quot;I can't play anymore,&quot; I added.</p>
+<p>He considered that for a moment. &quot;Okay!&quot; He said slowly. He helped me get up.</p>
+<p>I was right about carrying so much weight; we had to move it back without much usage. We took an auto from there. We spoke only when we reached home.</p>
+<p>&quot;Take rest if you feel like it.&quot; I lay down on my bed. I was still feeling a lot of pain in my chest. </p>
+<p>I needed something in my mind to distance me from the pain. I thought about how the situation would have been different if I had been home. So many people around me offering different solutions, while some other scolding me like it was my fault only. I thought about all of my relations. I was thinking about my mother and a nice healing took me over. It was something I had been missing till now like someone had sent me blessings from heaven—the prayer with the power to take away any pain. I thought about my mother, and slowly I fell asleep.</p>
+<p>When I woke up, I wan't feeling pain, I was feeling cold. I opened my eyes slowly. The lights were dim. I looked around me. Mohit had switched his desk lamp on and was scrolling his phone. When he noticed that I had woken up, he gave me a water bottle. He took my wrist in his hands. &quot;You still have a fever. I don't understand this. You are a poor person who can get a fever from a ball hitting you. Have you never played outside?&quot;</p>
+<p>He was more complaining than asking.</p>
+<p>&quot;I am also surprised,&quot; I whispered.</p>
+<p>&quot;Have some rice, take some paracetamol. You will be as fine as a temple bell tomorrow morning.&quot;He smiled and went away. He didn't ask me if I felt like eating. As always, he assumed the answer. And he assumed wrong.</p>
+<p>He returned with a bowl of daal rice. I forced myself to sit up and take a few bits.</p>
+<p>&quot;Did you cook it yourself?&quot;</p>
+<p>&quot;How did you guess that?&quot; He asked, slightly surprised.</p>
+<p>&quot;It's a bit too salty.&quot;</p>
+<p>&quot;Oh!&quot;</p>
+<p>&quot;You should always keep the salt less. One can always add salt afterward, but one can not take the salt out from a dish.&quot;</p>
+<p>&quot;Yeah, it's just I like to eat spicy food. That's why I thought it was normal.&quot; He justified his point rather than accepting his fault.</p>
+<p>I ate the food slowly. I noticed that the AC was off.</p>
+<p>&quot;Why is that AC off?&quot;</p>
+<p>&quot;Do you want me to turn it on?&quot;</p>
+<p>&quot;No! It's fine for me. Don't feel hot?&quot;</p>
+<p>&quot;I come from Rajasthan, buddy. I am used to the heat.&quot; he said proudly. But I could sweat on his temples. I smiled at his sacrifice.</p>
+<p>He gave me the paracetamol tablet. I took that without much resistance.</p>
+<p>Sacrifice is a very rare trait. You don't see unconditional sacrifices a lot these days. They are scarce. When he hit me with the ball, he had been feeling guilty since then. What might he have been doing while I was sleeping? He prepared the food himself for me. He might have been waiting for me to test it. Then he switched off the AC because I had a fever. He didn't need to do that. He could get away with that easily. But he chose to do that. Even though he was uncomfortable with that, he showed that he enjoyed it. I thought he was an asshole, but I had been judging him all wrong. He is a great person. I felt guilty about judging him badly. So often, we judge people wrong. I might have been judging people wrong from the beginning. That explains why I don't have any friends. But now, I have found my best friend.</p>
+<p>&quot;Mohit!&quot; I called him.</p>
+<p>&quot;Do you need anything?&quot; He asked.</p>
+<p>&quot;No! Thank you. Thank you for doing all that for me.&quot;</p>
+<p>&quot;It's needless, yaar. You don't need to thank me.&quot;</p>
+<p>&quot;I do. You have done a lot for me. You can ask me anything, and I will do it.&quot;</p>
+<p>&quot;I don't want to ask you anything. Moreover, I don't think you are in position to do anything.&quot;</p>
+<p>&quot;Maybe not right now. But I will be okay sometimes, and I will always remember that I owe you one. And then you can ask me anything, any sacrifice.&quot;</p>
+<p>&quot;Okay, I will ask you later. You rest now.&quot;</p>
+<p>&quot;Okay. You get one promise. You can ask me anything at that time. I will do that.&quot;</p>
+<p>&quot;Okay, Now you sleep. Good Night.&quot;</p>
+<p>&quot;Good Night.&quot;</p>
+<p>And that's how, my friends, The chapter got the name: The Promise.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

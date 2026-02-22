@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healy: The One Who Heals - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Healy: The One Who Heals
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2020-08-09" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2020-08-09
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Story.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Story
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/healy-the-one-who-heals-1.jpeg" alt="Healy: The One Who Heals" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <h1>Healy: The One Who Heals</h1>
+<h2> <strong>Cricketer Chandan Sharma tells his love story in a conversation with The Rest Frame.</strong></h2>
+<hr>
+<p><a href="https://1.bp.blogspot.com/-lSfSPyQ1nVU/Xy-F7QWcdBI/AAAAAAAAEPc/K1c6osDw6_QbnA_MymIX4a0Oo9Qr5GNEQCLcBGAsYHQ/s640/vjk.jpg"><img src="https://1.bp.blogspot.com/-lSfSPyQ1nVU/Xy-F7QWcdBI/AAAAAAAAEPc/K1c6osDw6_QbnA_MymIX4a0Oo9Qr5GNEQCLcBGAsYHQ/w512-h384/vjk.jpg" alt=""></a></p>
+<p>The under-19 world cup was in Australia for sure but it is not where the story starts. I made my debut against Sri-Lanka. After that, we had a tour of Australia, three One Day Internationals. We played well there. After losing the first ODI, we performed great in the remaining two and won the series. I hit my maiden century and a fifty there. I wanted to visit Australia, so I remained there even after the team was gone. And this is where the story starts.</p>
+<p>I was in a bar on that night which, I say, the luckiest night of my life. I took a drink and sit on a chair waiting for the concert to begin. The speaker was playing <em>Shape of You.</em> I knew the song, I like it actually. I started to sing with it. Suddenly, a female voice interrupted me.</p>
+<p>&quot;You sing very nice.&quot;, the words echoed in my head. I have heard these words before, from my college girlfriend. I loved her very much but she chose my best friend, leaving me alone to think about whether to blame my best friend to take away my girl or the girl to take away my best friend and mentor. I still was in pain of her.</p>
+<p>&quot;Thank You.&quot; , I smiled.</p>
+<p>&quot;Can you pass me the ice?&quot;</p>
+<p>&quot;Sure!&quot; my smile disappeared. I gave her the plate of ice cubes.</p>
+<p>&quot;Are you the Indian cricketer?&quot;, she got excited.</p>
+<p>&quot;Yes. I am.&quot;, I felt proud. When you become famous so these feelings become common.</p>
+<p>&quot;You played very well, actually destructive. I enjoyed your batting.&quot;</p>
+<p>I scanned her from bottom to top. She was beautiful. She was not more than 5'5&quot;.She was wearing a dress that ended well above the knees. Her hairs were not much longer but it made her more beautiful. Her round baby face looked so cute. Her eyes were deep and brown. And her smile was killing. </p>
+<p>&quot;Thank You.&quot;</p>
+<p>&quot;Can I sit here?&quot; She asked an innocent question.</p>
+<p>&quot;Of course.&quot;</p>
+<p>&quot;Can I suggest something?&quot;</p>
+<p>&quot;Why are you always asking me? Do whatever you want.&quot;</p>
+<p>&quot;You play very nice but you seemed scared of fast bowlers.&quot;</p>
+<p>I looked at her with vast surprise. I was a fast-bowling allrounder. I can hit fast bowlers without even thinking and she is saying that I am sacred of fast bowlers. It made me irritated.</p>
+<p>&quot;Why do you think so?&quot;</p>
+<p>&quot;To be more precise, you are scared of swing bowling. Aren't you?&quot;</p>
+<p>She was right. I was scared of swing bowling. I didn't want to be out in initial overs. I wondered how she figured out.</p>
+<p>&quot;Yes. I am but how do you everything.&quot;</p>
+<p>&quot;Your stance tells me. Don't be scared of swing bowling. Don't play too wide of your body. Keep your stance wide and keep attention on your footwork. You can score in powerplay easily. Moreover, the white ball doesn't swing much.&quot;</p>
+<p>When someone tells you about your weakness, you feel ashamed but I was feeling surprised. My mouth was open in surprise. The girl looked like a coach or an expert. She was incredible.</p>
+<p>&quot;You play spin very well.&quot;, she continued.</p>
+<p>&quot;Every Indian does. I am brought up playing spin. Indian conditions are good for spin.&quot;</p>
+<p>&quot;That is because you aren't scared of spin. You play the spinner openly so you score on them, Similarly, If you play openly to swing bowlers, you can score on them too. Be confident, You are a great player of the future, I know. I believe in you.&quot;</p>
+<p>It reminded me of Mohit, my best friend and mentor, I mentioned above. Say jealousy or bad luck, I was not in contact with him for the last two years. He was great, I missed him. He motivated me in a similar way. The relationships are <em>maut ka kuan.</em></p>
+<p>&quot;Thank you for your advice but is it the right place to talk about this stuff?&quot;</p>
+<p>&quot;Oh! You are in a bar. You want to enjoy it.&quot;</p>
+<p>&quot;Who talks about serious stuff in a bar.&quot;</p>
+<p>&quot;You are right.&quot;</p>
+<p>&quot;Can I ask you something?&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>&quot;Do you play cricket.&quot;</p>
+<p>&quot;Yes. I am a wicketkeeper batswomen in west austalian wonmes team.&quot;</p>
+<p>&quot;Wicketkeeper? You? Seeing your height, I can't guess.&quot;</p>
+<p>&quot;But I am.&quot;</p>
+<p>&quot;You have domestic matches?&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>&quot;I can guess why Australia is much ahead in cricket.&quot;</p>
+<p>&quot;Aren't  you talking about serious stuff now?&quot;</p>
+<p>&quot;Sorry. by the way What is your Name?&quot;</p>
+<p>&quot;Healy. Healy Smith.&quot;</p>
+<p>Her name was simple and beautiful but her Australian accent made it more beautiful. I liked the name, Healy: the one who heals.</p>
+<p>&quot;Are you the sister of Steve Smith?&quot;</p>
+<p>&quot;No! I am just smith. Healy Smith.&quot; She laughed.</p>
+<p>&quot;Just Kidding.&quot; </p>
+<p>&quot;What is your name? I forgot.&quot;</p>
+<p>&quot;Chandan Sharma.&quot;</p>
+<p>&quot;Cha...an..da...an.&quot;</p>
+<p>English speakers have the same problem as we have for them. We can't pronounce LABUSCHAGNE and they can't speak even Chandan.</p>
+<p>&quot;Call me Chandu.&quot;</p>
+<p>&quot;Cha ..an..du. Chandu. Right?&quot;</p>
+<p>&quot;Right! I can't tell you, how beautiful my name sounded in an Australian accent.</p>
+<p>&quot;It was nice to meet you.&quot;</p>
+<p>&quot;Yeah! Friends?&quot;</p>
+<p>&quot;Friends!&quot; We shook hands.</p>
+<p>We enjoyed the concert that night. That's how I met Healy first time.</p>
+<p> *******</p>
+<p>The next day, I decided to watch the final of the Australian Open, man's singles. The two finalists were any Nick Kyrgios and Rozar Federer. Let me tell you that I don't know even the alphabet of tennis. I don't know why I decided to watch it. <strong>When Destiny decides something for you, All things happen at the right</strong> <strong>time and the right place.</strong></p>
+<p>I took a seat and watched the match for two sets. I didn't know what are the rules, how is it played, how to watch score, who is winning, and who is losing. Nothing! I searched google to find out which one is Federer and which one is Nick. I tried to make assumptions to make sense of what was going on. But failed.</p>
+<p>After two sets, I saw Healy waving at me. Firstly I didn't notice but she came to me.</p>
+<p>&quot;Hey! Chandu.&quot;</p>
+<p>&quot;Healy. How are you.&quot;</p>
+<p>&quot;I am fine. What are you doing here?&quot;</p>
+<p>&quot;I am playing cricket.&quot;</p>
+<p>&quot;What?&quot;</p>
+<p>&quot;What else can be done except watching the match.&quot;</p>
+<p>&quot;You are funny. Let's sit together. There is an empty seat.&quot;</p>
+<p>We sat there together. </p>
+<p>&quot;Healy, I am not understanding anything in this game. I don't know how it is played.&quot;</p>
+<p>&quot;Then why did you come here.&quot;</p>
+<p>&quot;Just for the experience.&quot;</p>
+<p>&quot;You are ridiculous.&quot;</p>
+<p>She explained to me briefly about the game in the set break.</p>
+<p>&quot;Whom do you want to win?&quot;</p>
+<p>&quot;Rozar Federer.&quot;</p>
+<p>&quot;Why So?&quot;</p>
+<p>&quot;Because I have heard his name before.&quot;</p>
+<p>&quot;My god.&quot;</p>
+<p>&quot;You?&quot;</p>
+<p>&quot;Nick.&quot;</p>
+<p>&quot;Why?&quot;</p>
+<p>&quot;HE is Australian?&quot;</p>
+<p>&quot;Oh!&quot;</p>
+<p>&quot;Let's bet.&quot;</p>
+<p>&quot;What?&quot;</p>
+<p>&quot;If Rozer wins, You will treat me. If Nick wins, I will treat you.&quot;</p>
+<p>&quot;OK Done.&quot;</p>
+<p>&quot;I don't think he will win.&quot;</p>
+<p>&quot;Why?&quot;</p>
+<p>&quot;He just lost two sets.&quot;</p>
+<p>&quot;He will win.&quot;</p>
+<p>Now, I wanted Nick to win. <em>If you have been to boys hostel for five consecutive years, you know why.</em></p>
+<p>Federer played bloody good after that. He won all three sets and won the Australian Open as well.</p>
+<p>After the ceremony ended, we walked to the nearest cafe. I had to treat her. We took a table. I ordered something based on her wish, I don't exactly remember what.</p>
+<p>&quot;You live in Sydney itself.&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>&quot;With family.&quot;</p>
+<p>&quot;yea.&quot;</p>
+<p>&quot;Who are there in your family.&quot;</p>
+<p>&quot;Mom, dad, and I.&quot;</p>
+<p>&quot;So short. You don't have any siblings?&quot;</p>
+<p>&quot;No. What about your family? &quot;</p>
+<p>&quot;Uncle-Aunty, grandpa- grandma, and six cousin brothers and sister.&quot;</p>
+<p>&quot;Your mom-dad?&quot;</p>
+<p>&quot;I lost them when I was six.&quot;</p>
+<p>&quot;Ohh ... I am sorry!&quot;</p>
+<p>&quot;I don't remember them much now.&quot;</p>
+<p>She gave me sympathy. We talked about some light and serious stuff the half an hour.</p>
+<p>&quot;So when are you going back.&quot;</p>
+<p>&quot;Tomorrow.&quot;</p>
+<p>&quot;Healy! I want to talk to you more.&quot;</p>
+<p>&quot;What?&quot;</p>
+<p>&quot;I like talking to you.&quot;</p>
+<p>She gave me a what-have-you-said look.</p>
+<p>&quot;Seriously!&quot;</p>
+<p>&quot;Can I have your number?&quot;</p>
+<p>&quot;What?&quot;</p>
+<p>She was confused firstly but I convinced her. We used to talk usually. Whenever I had a match in Sydney, I met her. Soon she was selected in the Australian Women's team. Then she visited India a few times. Our love grew deeper. And the day the Australian team won the World cup defeating India in Mumbai, I purposed her for marriage.</p>
+<p>She was with me in every bad situation. She helped me to improve my cricket. She helped me to come out of the pressure of the game. I was in a heartbreak those days about Riya and Mohit, She helped me to heal. </p>
+<p>I love HEALY the one who heals.</p>
+<p><strong>A glimpse of My Next Story.</strong></p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

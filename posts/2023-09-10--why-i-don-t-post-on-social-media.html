@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Why I Don’t Post On Social Media - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+             Why I Don’t Post On Social Media
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2023-09-10" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2023-09-10
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>Lucky are those who can call themselves introverts or extroverts. For those in transition or introverted at one time and extroverted at another, it’s a constant struggle between these two personalities. The action of one personality may cause a wave of regret or a feeling of utter stupidity to the other. And since they are cohabiting the same brain, they are bound to cross each other’s paths.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/0*XhkeunPPE3XqaDLN" alt=""></p>
+<h3>What’s the point?</h3>
+<p>Sometimes, I think I should post my work online. I should post my poems and stories on Instagram. I should make reels about the books I am reading, the quotes from the books, the knowledge and the insights, etc.</p>
+<p>When I think of getting a lot of followers, I get excited. I think of being able to talk to random strangers who share my passion, which gives me a hint of happiness. But mostly, I regret sharing my work. When it comes to actually sharing my work, I actually pull my hands back.</p>
+<p>I recently developed this software in which I connected my blog with my Instagram account using <a href="https://en.wikipedia.org/wiki/API">API</a>. Using this, I could share my work directly from my blog without even opening Instagram. It would automatically fetch the poem from my blog and post it on Instagram. When I was coding this app, I was excited. I abandoned my lab work to build this software, but it felt useless as soon as it was completed.</p>
+<p>I felt like, what’s the point of sharing my poems online? What will I get from it? Even if I gain some followers, what extraordinary will happen? It would only make me stick more to social media, decreasing my productivity. I felt like there was nothing to gain, so I abandoned the idea. I will probably list this project on my CV.</p>
+<h3>What to share?</h3>
+<p>After that comes the question of what to share. Even after writing many poems, I feel like none is shareable. I feel like all the poems I have written and posted on Blogger are lame. They don’t have any particular meaning. Many of them are written just because of the pressure of consistency. They are just a set of rhyming lines. They don’t have any deep meaning. They don’t have fancy metaphors or anything at all. They are just random rhymes. Why would anyone be interested in that at all?</p>
+<p>My poems are composed of raw emotion. They don’t have structure, metaphors, art, literary elements, figures of speech, or many difficult words from the dictionary. My poems do not have any revolutionary ideas that would change the world forever. My poems are pure thoughts and emotions I felt at a particular time. Sometimes they rhyme, sometimes they don’t. When I select poems to share, none of them seem exciting at all.</p>
+<h3>Fear of Judgement</h3>
+<p>No matter how often I say this: <em>I don’t care what others think about me.</em> Deep down in my heart, unfortunately, I know that I care. I am ashamed to admit, but I have a fear of judgment.</p>
+<p>My poems are not lovely romantic poems. They are sad poems, and poems are range and disappointment. Some of them are inspirational and motivational poems, but most of them are not. And all of them are dear to me. Unconventional poems tag along a fear of judgment. I know that my strange point of view would naturally raise questions I don’t have the answers to.</p>
+<p>I fear that people reading my poem will judge me from them. Which seems naturally fair; we should be judged by our thoughts, and our thoughts are reflected in our writing. But I fear that if my unorthodox ideas in my poems don’t coincide with their natural way of thinking, I will be ignored as a side psychopath.</p>
+<p>And the main thing is the emotion that drives our writing doesn’t last very long. Let’s be honest here, where we are happy, we are too busy to write that feeling down. It’s when we are sad or angry that we can’t focus on anything else and let our emotions flow through the pen in the form of ink into paper. But that anger and sadness doesn’t last very long, at least for me. So, I try to conserve the feeling in the form of poetry.</p>
+<p>But most of the time, we regret things we said in anger later. When frustrated, we say things we didn’t mean to and always feel sorry later. That is also one of the reasons I don’t share many of my poems. I might have written them in a terrible mood and said terrible things. And these things may present me as a maniac. I am a good person, and I want to look like that.</p>
+<p>Once, I wrote a poem in which I called that <a href="https://www.iashyam.in/2023/06/love-is-like-magic.html">love is like magic</a>. I was so heartbroken at the time that I wrote the worst things. And when someone pointed out what I wrote, I felt ashamed. I should not have generalized that. <em>A person might be a good person, but if you always greet him when he is in a bad mood, you might get the impression that he is depressed.</em></p>
+<h3>Fear of Misinterpretation</h3>
+<p>Poetry is subjective to interpretation. The best thing about poetry is that everyone can have their own interpretation of the same poem. And that is also the worst thing about it. It’s about thinking what others think of me, but whenever I post a poem, I can’t help but wonder what interpretation might come of it. And how many of those interpretations can make me look bad?</p>
+<p>I was once listening to this <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjpkrP6oZ6BAxUcTWwGHRbUCuoQ3yx6BAgeEAI&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DoU0ZERngSFA&amp;usg=AOvVaw1Bt7qU1QhB-6PP6xqDhb7G&amp;opi=89978449">song</a> by Diljit and Anne Marie. Then I thought about writing an irritated girl’s version of it. It goes like this:</p>
+<p>I love peaches, I love my self</p>
+<p>You got yourself babe, I got myself.</p>
+<p>And long after <a href="https://www.iashyam.in/2023/01/peaches-shyams-version-random-rhymes-2.html">writing this poem</a>, I realized that peaches here refer to ass. And then It came to me that the first line would technically mean I love my ass. And that made me embarrassed.</p>
+<p>There is always something in a poem that could easily be misinterpreted. Our ancient text has been found out to be historically misinterpreted. I am just a baby writer. And sometimes, those misinterpretations could cost you a fortune.</p>
+<h3>Price of Privacy</h3>
+<p>And lastly, all of these fame and followers come at a price of privacy. When you get a large audience, they demand more of you, and you feel obliged to share details. But I’m not particularly eager to share my life with them. My poems and journal directly link to my feelings and what is going on in my life. So they are really private. So, a sense of protection of my privacy prohibits me from sharing my work online.</p>
+<p>There are some of my close friends connected with me on social media. So, if I share a romantic poem online, they would obviously ask me about the context of it. Some of them have the one damn question: <em>Who is the girl?</em> With their eyebrows raised. There might be context, or it all might be my imagination. But I seriously don’t want to share with them. What I want to hide from my buddies is clearly written in my poems.</p>
+<p>When I write, I write my heart out. So, if I share my work online, people are likely to find out what is happening in my life. That with that will accompany the question I am uncomfortable answering.</p>
+<p>In conclusion, I want to say that however delusive the path of recognition and fame might look, there are always side effects and consequences associated with it. And keeping the consequences in mind, the barriers of insecurities and fear build their castles in my conscious mind. But whether I choose to share my work online or not, it’s my choice, and I am happy with it.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

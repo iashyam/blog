@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls&#39; Life is Very Hard (Ft. Kim Jiyoung) - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Girls&#39; Life is Very Hard (Ft. Kim Jiyoung)
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2021-12-16" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2021-12-16
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>Recently, I read a book called '<em>Kim Jiyoung: Born 1982</em>' It was suggested a few months ago when I joined The Book Club. It was an initiative by my classmate, they brought the book reading enthusiasts together, read a book per week and they used to discuss it on google meet, etc. I didn't read any book then because I was doing some cool programing stuff but a few days ago, I decided to do better again. I deleted Instagram and I started reading the book again, and with no surprise, I finished it real quick. It was a very good book and it changed my point of view towards girls slightly. Earlier, I used to think that they are being provided enough opportunities and resources in the 21st century and if they complain now about feminism or whatever, something is wrong on their side only. (Even I know that was not true, I have seen that people don't provide enough chances to their daughters just because they are girls.)</p>
+<p>My attitude towards girls was never stereotype thinking, I strongly agreed that girls should be treated equally as society treats boys. I have a niece and I could say to my brother that if you don't put money on this girl's education, I am ready to invest money in her, you just give her the opportunity to study (Given that she shows enough enthusiasm about studies.) The main worry about girl's life in my area is about their marriage. Their parents started to make arrangements like their dowery from the day a girl child is born. I think girls should be given enough time and chances to explore and handle their life themselves like the case is with boys. </p>
+<p>This book was recommended by the Book Club. It was an initiative from my friend, she brought the book enthusiast together, read a book and then discuss it. It was a very good book actually. It is about a Koren Girl named Kim Jiyoung, she was from an elite family, her father was in civil service and she was given fair freedom to study and do whatever she wanted to do. But the gender discrimination is elaborated all over the book. Boys are always counted first. When she was young she and her elder sister had to take care of their younger brother, like helping him with the homework and making him ready for school. It may seem okay to me. But why every time the girls had to save the dessert for the boys, why can't boys save sweets for their sisters? </p>
+<p><a href="https://blogger.googleusercontent.com/img/a/AVvXsEj0xZPgn-BuMPLjxp6C4BGCeFl3Zfo8YS9dYwOh2ZkzS3016J2ng9RO-lXFCiwmjgg4O7q0WVZ6M-nSw76RGBn7oG3xFYpVrShpKpv4fL32dgTtxxx16qjVUdthRsvLg6_cQRT_0k3qOlBly3Legtoa-lcd365fHR61Yd7yuGzStc30Q-PO4CWdpWQf3w=s400"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEj0xZPgn-BuMPLjxp6C4BGCeFl3Zfo8YS9dYwOh2ZkzS3016J2ng9RO-lXFCiwmjgg4O7q0WVZ6M-nSw76RGBn7oG3xFYpVrShpKpv4fL32dgTtxxx16qjVUdthRsvLg6_cQRT_0k3qOlBly3Legtoa-lcd365fHR61Yd7yuGzStc30Q-PO4CWdpWQf3w=w202-h320" alt="Kim Jiyoung: Born 1992" title="Kim Jiyoung: Born 1992"></a></p>
+<p>This issue has been widely discussed in the book. In high school, boys were always given the opportunity to eat first in the mess and when girls entered there wasn't enough time remaining to finish the lunch, so sometimes they were scolded by the teacher. When she entered university, she writes about boys staring at her breasts for thighs and how did felt about that. She also listened to boys passing bad comments about herself and when she explains about that, it was totally awful for me. I have been in boys school and boys hostel before I entered the college. I have always seen people staring at girls and passing bad comments about them, and to be honest I, sometimes, find myself doing that. But now when I have read that book, I feel guilty about it. </p>
+<p>She applied to many companies for jobs, but even after having such a brilliant academic record, she wasn't shortlisted for the interviews, just because she was a girl, and companies preferred boys over girls. The author had given statistical pieces of evidence from the surveys conducted in Korea at that time and proved that an average company would hire a man over a woman for the same job and same age. In a few interviews she went to, she was asked questions about her sexuality and all that stuff. Even when she got a job the way wasn't easy for her. The way people used to behave at her job made me feel embarrassed from the side of male human beings. </p>
+<p>But the main thing arrives at the stage when she becomes a mother. It wasn't totally her decision, her husband's family wanted to see a baby in her lap. I don't know but I have seen in a society that people become over-excited about this thing, as soon as one is married they want them to have a baby. She said that she isn't ready for a big step but she wasn't supported by his husband. But I liked the character of her husband overall. She had to quit her job when she gave birth to a girl child. Having a girl child didn't bring her in-laws a lot of joy because everyone wanted a boy. </p>
+<p>She had to quit her job, even I felt bad about her, I was just reading her story, and I was like no.. that's wrong. She put her whole life into it, her academics, she studied hard, maintained her CGPA, in she did a lot of work, she attended a lot of workshops about speaking skills, went to the seminars, and created a high profile curriculum. As I have said above it was hard for her to be picked by a company just because she was a girl but she made it through. At her job she was unexceptionally good, she used to like her job, she did the work very responsibly. She liked her co-workers, her leader, and this place only. It was something she had earned in her whole life. It literally broke my heart. Look at me, I am studying hard for my graduation, I will probably study more in the coming two years and do a lot of internships and do this and that just to get a job and if I had to leave my job, it would be very hard for me. But that didn't make her life easier than, her husband used to say a lot that you are free you can enjoy your life. She could hear people saying about her that she is a mom-roach she just stay at home on the excuse of being a mother and sucking her husband's money. She never wanted to do that, she wanted to earn her living. This Pressure was much for her and eventually she went mad, she had a mental illness. </p>
+<p>I thought a lot about it after reading this book. Why should girls quit their jobs? After marriage or before marriage if they have been given enough opportunities just to reach this stage then why should they quit. Firstly it has been the stereotype thinking that only a wife should do the household works. Why can't a man do this? If someone has to quit the job after being a parent then why always should it be the mother? Why can't man? ( Honestly, I won't think of quitting the job, because that would be unfair to me then, I am putting my life into it. But yeah after all this discussion with myself I have reached on the conclusion that I can't force my wife to have a child, not at all.)</p>
+<p>I don't have a sister, nor a girlfriend. I have been in boys' school and boys hostel. I have only spent six months at a place where boys and girls can sit together.  There are not many girls in my life. I have always seen my mom, she doesn't demand anything she just does household work all day, she helps my father on the farm and also does part-time sewing to add in the income. She cooks for us, does the dishes, does the cleaning of the house, and what does she want in return: nothing. She doesn't have a phone, she even doesn't know how to use a phone. She failed in 10th she said there was too much work in her house, her father didn't consider another try, instead, he fixed her marriage with my father. She wears the colors my father likes, I sometimes say to her why don't you put dark colors and she would just say your father doesn't like her. </p>
+<p>It was a bit classy because she is not a modern-day girl. I always wondered how today's girl's life feels like. I have created female characters but when I put them into stories I always think would this action, this dialogue would be characteristic for a girl? I don't even know how do they feel about love and other things. I have only seen it in movies or books but I don't know yet don't know. I really feel shy when talking to girls and most of the time, I can't go farther than just a 'hi'. I tried talking about this with some of the girls I know but mostly I can't put this in words. I have a friend on Instagram. She is from the Philippines. I thought in foreign the situation would be different from Indian, but it's not. She had already quit her studies and now she only does household work. She said being a girl is hard, people always judge you, your living style, your clothes, and everything. When she wants to go somewhere her parents won't allow her saying it's not safe. </p>
+<p>I have been thinking about this a lot now. And my respect towards girls has been increased a lot, like exponentially. I always write about discrimination based on religion and caste and all that thing but this is more central and most inappropriate. Talking about boys, we all want girls to achieve higher, go to big stages, and do well. But at the same point, we are also staring at them, passing bad comments about them making them feel unsafe. It's wrong. We should stop fantasying about them and make them feel good around us. </p>
+<p>Also as far as I am concerned now, I know anyone who knows me personally is not going to read this article, all the views I get are from search engine optimization. so I can be honest here. (If you do, please don't talk with me to get me immersed about it, it is true) As a boy, I will never disrespect a girl, I will never think bad about them again. If I get married, I would not want to take control of her life. (Neither do I want to give her control of mine.) I will just stick with whatever it is. I will give my wife full respect. ( we can do all the household things together, don't worry!) </p>
+<p>If you like the post, you may like my other posts, please do visit them. I post every Thursday and you can check on Friday to get a new post. You can follow me on social handles by clicking the buttons given below. (I don't use social media much so don't bother messaging me.) If you want to contact me, write a guest post on this blog, or if you want me to write a guest post on yours, Please mail me at</p>
+<p>shyam10kwd@gmail.com</p>
+<p>Thank You for reading good bye!</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

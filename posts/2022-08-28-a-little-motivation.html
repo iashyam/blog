@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A little Motivation  - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            A little Motivation 
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2022-08-28" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2022-08-28
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Poem.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Poem
+                </a>
+                
+                <a href="/tags/English%20Poem.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #English Poem
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/a-little-motivation-2.py" alt="A little Motivation " class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJgUZDQ8Na31d99BFYEVCnVcvj24QAhSrfgU3mc1qD3q9eebFCRqgdH5PGNmB2vI9jEG_44iEylvEHdsByUwZ1qHfzlYKWET3O_q2DUa-uQMjTQZEWxsD9CrgaoLKi-x6OY1i5FpRX1RuT9ZC8iZn4lBmof6T77sc_M4Epczc8eqkSqMldMgpmAxrn_Q/s7360/depressed.jpg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJgUZDQ8Na31d99BFYEVCnVcvj24QAhSrfgU3mc1qD3q9eebFCRqgdH5PGNmB2vI9jEG_44iEylvEHdsByUwZ1qHfzlYKWET3O_q2DUa-uQMjTQZEWxsD9CrgaoLKi-x6OY1i5FpRX1RuT9ZC8iZn4lBmof6T77sc_M4Epczc8eqkSqMldMgpmAxrn_Q/w366-h245/depressed.jpg" alt=""></a>\</p>
+<p> <br>
+When the mistake from the past come to haunt to <br>
+Things you did even when you didn't want to <br>
+Things you said even when you didn't mean<br>
+Now you seek a chance to regret, to redeem. <br>
+<br>
+Sometimes, you regret the things you did<br>
+Mostly you regret things you didn't do<br>
+Sometimes, you worry about things that are there<br>
+Mostly you worry about things that are going to. <br>
+<br>
+The grip of the past is so tight, that it doesn't let you go<br>
+It doesn't let you rethink, reconsider you know.<br>
+<br>
+Sometimes, you feel lost; sometimes, you feel defeated<br>
+Sometimes, you feel betrayed; sometimes you feel cheated<br>
+Sometimes, you feel alone; sometimes, you feel no connection<br>
+Sometimes, none seem worthy, and none deserve a relation.<br>
+<br>
+Sometimes you want to cry your heart out<br>
+Sometimes you want to stand alone in the desert and shout<br>
+Sometimes you want to be left alone in the dark<br>
+Sometimes you want o shut down and restart. <br>
+<br>
+Sometimes you are jealous of your past version<br>
+You think you degraded yourself in search of the perfection<br>
+Sometimes you think you are the smartest and others are stupid<br>
+But when your ego shatters, it takes you down bit by bit.<br>
+<br>
+Sometimes the feeling of hate for yourself grabs your neck<br>
+You feel you were beautiful but you have become a snake<br>
+Sometimes you feel the sand slipping out from the hole<br>
+Things are taking over which you have no control. <br>
+<br>
+Sometimes, the ghostly memories appear in your had<br>
+The people who loved you, you made them sad. <br>
+Sometimes, you want to go back and apologize<br>
+Sometimes, you play the tape of thoughts and revise.<br>
+<br>
+You want to do it but you feel so alone and so weak<br>
+The layer of garbage on your true self has gotten thick.   <br>
+Sometimes, you feel sunken in the ocean of regrets <br>
+Sometimes you crumble under the weight of debts.<br>
+<br>
+Sometimes, you feel you are not made for challenges<br>
+Sometimes, you feel conservative and hate changes<br>
+Sometimes, you don't feel good about touching you<br>
+Sometimes, you feel something heavy is crushing you.<br>
+<br>
+Sometimes, you feel you lost a part of yourself in the race<br>
+Sometimes, you betray yourself you lie to your own face<br>
+Sometimes, you think you are not the same person as before<br>
+Sometimes, you think you are not able to love yourself anymore. <br>
+<br>
+Sometimes, you witness negativity take over<br>
+You are broken inside and it is not a metaphor. <br>
+Sometimes, you feel trapped in your desires<br>
+You can feel yourself falling into the ring of fire. <br>
+<br>
+Sometimes, you question your own existence. <br>
+You ask yourself about the means<br>
+<br>
+Are you doing the things you always wanted to do?<br>
+Or you are trapped in something you don't want to.<br>
+Is this the life you really want to live?<br>
+Or you are faking happiness. Hard to believe. <br>
+<br>
+Where is that Shyam, who explained things to others?<br>
+Where is that Shyam, who used to argue with teachers?<br>
+Where is that Shyam, who was always enthusiastic?<br>
+I want to meet him, he was really fantastic. <br>
+Where is that Shyam, 'who always brings nice ideas.'<br>
+Now you compare between 'what is and what was.<br>
+<br>
+Remember the feeling you get when<br>
+You tell yourself how you have evolved.<br>
+Remember when you used to say<br>
+That every problem can be solved.<br>
+Remember those days when you <br>
+Used to pat yourself on the back<br>
+That was the original version of you<br>
+This Shyam is fake. <br>
+<br>
+Remember the little celebrations <br>
+When you always get the things done. <br>
+Remember the nights spent awake<br>
+Because doing science is really fun. <br>
+Remember you used to tell yourself<br>
+'We should never blame the resources.'<br>
+Remember the confidence<br>
+I can stand against all the forces. <br>
+<br>
+That Shyam is still sitting inside you<br>
+It's sleeping before the covers.<br>
+I still believe in you, Shyam<br>
+I am still your true lover. <br>
+You can still find your true self<br>
+It takes a little more the sitting and thinking<br>
+You are still that strong and bold Shyam<br>
+Who was able to achieve anything.<br>
+Let him wake up and let him fight. <br>
+You are strong Shyam, your future is bright.  <br>
+<br>
+<br>
+<br>
+I was a little sad this week. I was not able to perform the experiment. It was simple but I was not able to get the right results. I was not able to do the first and simplest part while my friends have gone very far ahead of me. I was feeling very lost, defeated in exact words. Other things were also there. I had a test coming the next day and I hadn't studied anything. Mostly it was from the failure in the lab. I came back from college and lay down on my bed. I started to watch a clip from a movie on YouTube, it was sad and I am honest I cried. I literally let tears roll down my cheeks. Then I got up and started writing everything that was coming to my mind. I didn't even think about the rhymes. I didn't notice how long the poem was getting and just realized that it is a hell of a poem. If I read it once more it will make me sad. Well, I feel relaxed after writing it and I am lighter now. Don't worry about me, this kind of thought doesn't last long in my mind. I am cheerful again at the moment of typing this post. <br>
+<br>
+<strong>Life in IIT Update:</strong> This week was the hardest week hitherto. I got an electronics experiment, and I am very weak in electronics. I was never able to get even the offset voltage of an operational amplifier. Then the classical mechanics' test happened. I need to say that I need decent in the test, at least relative to my friends. I was the only one to demand an extra sheet in the class and to attempt all three questions. So I guess I did well on the test. How was I able to do it? Well, I don't believe in God anymore but I don't have any other explanation for it. I just knew things in the test. At the first sight, I knew what to do and I didn't have to even think about the question. It was pure intuition-based, and It was right. <br>
+<br>
+I thought labs in IIT will be very good, but I did not meet my expectations in the electronics lab. It was terrible, I had to change three or four ICs before I got the working one. They didn't have a good potentiometer, in fact, they don't even have the potentiometer required. I need to join two old styles of two ohms potentiometers to make a four-ohm one, and this caused an open-air connection.  And the were kind of touch-sensitive, every time I touched the device to change the resistance, the voltage suddenly goes to maximum. It was really hard to figure out the correct voltage ratio between input and output, there were more fluctuations than actual values.  A five-ohm potentiometer hardly costs Rs. 350. But I don't know why they don't buy that. None of the devices was working properly, the DC power supply went of time to time to insure that your excitement about almost finishing the experiment didn't last long. I was so frustrated at the end of the experiment that I had to sit and sip black coffee to relax (This is a big thing because I prefer tea.)<br>
+<br>
+<strong>The book I am reading:</strong> I have just started reading Kane and Abel by Jeffrey Archer. I was picked by my friend Paul Joseph. I have just started but I kind of feel attached to the characters. As he is building up the character. The way of his storytelling is very impressive as said by the readers and I also kind of find it attractive. <br>
+<br>
+<strong>Song of the week:</strong> <a href="https://www.youtube.com/watch?v=6Kf_0IutzXw">Ek Jugnu the Ek Jugni</a>  by Satinder Sartaaj. The lyrics are really good. I can be found humming it. In this song, Sartaaj describes the difference between a girl's love and a boy's love. The examples he has taken are amazing. He describes that some love stories are praised by the people while there are others that are criticized. But it is the beauty of love and it doesn't care about differences in cast, race, or status. <br>
+<br>
+<strong>The movie this week:</strong> I watched The Incredible Hulk yesternight. It was a nice movie. I liked the way they build up the story. Some of the shots were incredible. The person who played the role of the General did a great job. He was my favorite character in this movie. His facial expressions were amazing. And the way he delivered his dialogues- 'umma'. <br>
+<br>
+<strong>A big event:</strong> I need to type this post as fast as possible because I am going to watch the match between India and Pakistan in the theatre of IIT Madras.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

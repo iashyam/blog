@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free ka Gyan #1: Think Above the Races - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Free ka Gyan #1: Think Above the Races
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2021-09-30" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2021-09-30
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+                <a href="/tags/Discussion.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Discussion
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/free-ka-gyan-1-think-above-the-races-1.jpeg" alt="Free ka Gyan #1: Think Above the Races" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><a href="https://1.bp.blogspot.com/-3SCtRCxbTug/YU3qYBf1YrI/AAAAAAAAHmo/Ubr1eoPZatczh4Vh_akVmf_ZFPFHKiT0ACLcBGAsYHQ/s286/humans.jpeg"><img src="https://1.bp.blogspot.com/-3SCtRCxbTug/YU3qYBf1YrI/AAAAAAAAHmo/Ubr1eoPZatczh4Vh_akVmf_ZFPFHKiT0ACLcBGAsYHQ/w640-h394/humans.jpeg" alt="Made on earth by Humans" title="Made on earth by Humans"></a></p>
+<p>If I ask Who are you what will your answer be?  And if you ask this question to yourself what is the difference, stop reading and think about it. You should write your answer and then you can read the story. </p>
+<p>So, if you don't know, let me tell you that I am a physics student at the University of  Delhi. It means that I am studying Physics. One year ago I was not sure what I want to do? I had a lot of options to continue with Physics or prepare for government exams or learn data science and get a job in any private company. I wanted to do Physics, but I was not sure about it. I thought I had lost interest in Physics. </p>
+<p>So One day a person visits my home and he asks me &quot;what do you want to do?&quot;. He is a teacher in a Government school, so I respected him, and because I was confused about my career so I thought It would be great if he can help me with it. </p>
+<p>I said- 'I don't know maybe I want to do Physics. But I want to do something that I would enjoy, I don't want to do something I regret.'</p>
+<p>So this person didn't ask me what I enjoyed doing or what is my passion or anything else. He just started giving me 'free ka gyan.' He said, - &quot;You should prepare for UPSC.&quot; I thought that was it but he started motivating me without I asked. </p>
+<p>&quot;You have the potential to crack the UPSC exam. You got ninety percent in the 10th board exams. You can do anything. Being an IAS officer has a different reputation, people will salute you...&quot; And whatever he kept talking for about an hour. I was listening to him very carefully. I was not like my father. I have no interest in winning arguments  I just like to listen to people more than asking them a counter question. But he said one thing that made me write this post. </p>
+<p> &quot;Our cast has done slavery for years. We are backward people, (I know it, that's why we are in Other backward casts). The people of our cast never come ahead in power. They don't run for elections, even if they run for it, they are not going to win it.&quot; Then he started comparing Kumawat samaj with jaats. I thought he was jealous. &quot;Jaat people are always ahead of us. They have got good positions in bureaucracy. When a person of our cast goes to any official work they don't give it a minute. But when their people go they can win it by the power of casts. In a way, they are oppressing us. We need to change this we need to change it. we need to work for our cast to bring it forward.&quot; </p>
+<p>That seemed fair to me, our cast has done slavery for years all right, we are backward, are we? There is a line in one of Amrit Maan's song Jatt Fattey Chak. <em>Casts or areas are not backward, thinking is.</em> We are backward because we think we are backward. This word, 'backward' has made a special place in our head and we are not willing to leave it. When I filled form for St. Stephen's College. They asked me my category and they didn't give me an option for OBC, I had to check general and I made it. Then I learned something, <strong>If you think you are strong, you don't need the stimulant of reservation.</strong> After that I never tick OBC in my forms I always check General and Congratulations I am not backward anymore. So this is the answer I prepared for this situation.</p>
+<p>Our definition depends on our frame of reference ie How do we introduce ourselves to other people depends on where we are. The question is 'Who are you?' that has a different answer depending on the place if  When I am in Punjab, I define myself as the son of Vimla but if I am in Rajasthan, I define myself as the son of Madan. There is one question 'Where are you from?' that has different answers in different rest frames. like If I am in Delhi, I say I am from Rajasthan, and If I am in Rajasthan, I say I am from Hanumangarh and if I am in Hanumangarh, I would say I am from Rawatsar. So the answer clearly depends on the frame of reference. </p>
+<p>But what about the answer to the question of identity in your own rest frame. Like how do you define yourself to yourself? The answer to this question is the natural scale for your thinking. Like the length of a rod may vary in different frames but the length in his own rest frame is constant and that is its natural length scale. </p>
+<p>When you talk to yourself you might say I am Jaat or I am a Hindu. That's big thinking. But you can also say I am an Indian, that's patriotic that's huge. The person who says I am a Hindu wants to do something for his religion that is good but the person who says I am an Indian, keep his nation ahead of his religion and that's the best. For those people Indian Hindu and Indian Muslim are the same, they are Indian. Isn't that a great thing? </p>
+<p>But what I define myself as is that '<strong>I am a human!</strong>'. I want to do something that is good for humanity, I want to do something that can bring humanity forward. For me Indian, African, Hindu, Muslim, Kumhar, Jaat, all are the same, they are humans. If an alien civilization attacks on earth, it is not going to ask you if you are a Hindu or Muslim before destroying you. For them, all are the same and for us, we all should be the same. </p>
+<p>But I didn't give this answer. I had to courage, I gave this answer instead. </p>
+<p>&quot;For the last two years, I am enjoying Physics and I think I like it, I want to do this my whole life.&quot;</p>
+<p>And you know what did he answer?</p>
+<p>&quot;They have filled this in your mind, the whole Physics thing. You are going to waste half of your life in studies and the rest half searching for the job.&quot;</p>
+<p>I didn't say anything and this ends here... I want to end this first episode of this </p>
+<p><strong>The funda is that:</strong> If you want to do something big in your life, you have to think big. You have to leave this feeling behind that you are weak. And if you want to remember for a long time on earth you have to do something big for the earth not for your cast. </p>
+<p>I want to end this episode with a poem by Jems Kirkup</p>
+<h2>No men are Foreign</h2>
+<p>Remember, no men are strange, no countries foreign</p>
+<p>Beneath all uniforms, a single body breathes</p>
+<p>Like ours: the land our brothers walk upon</p>
+<p>Is earth like this, in which we all shall lie.</p>
+<p>They, too, aware of sun and air and water,</p>
+<p>Are fed by peaceful harvests, by war’s long winter starv’d.</p>
+<p>Their hands are ours, and in their lines we read</p>
+<p>A labour not different from our own.</p>
+<p>Remember they have eyes like ours that wake</p>
+<p>Or sleep, and strength that can be won</p>
+<p>By love. In every land is common life</p>
+<p>That all can recognise and understand.</p>
+<p>Let us remember, whenever we are told</p>
+<p>To hate our brothers, it is ourselves</p>
+<p>That we shall dispossess, betray, condemn.</p>
+<p>Remember, we who take arms against each other</p>
+<p>It is the human earth that we defile.</p>
+<p>Our hells of fire and dust outrage the innocence</p>
+<p>Of air that is everywhere our own,</p>
+<p>Remember, no men are foreign, and no countries strange.</p>
+<p>And this photo as the message:</p>
+<p>Feel free to read more about it</p>
+<p><a href="https://blogs.icrc.org/law-and-policy/2019/07/30/power-of-humanity-being-human-now-future/">Power of Humanity</a></p>
+<p>This series is inspired by N Raghuraman's column <a href="https://www.facebook.com/pages/category/Journalist/Management-Funda-of-N-Raghuraman-369448253158185/">Management Funda</a> You will see these posts often on my blog now so I am starting a series all #free_ka_gyan and let's see how it goes. </p>
+<h2>Please comment on what did you write at the beginning. Please do it, it inspires me to write more.</h2>
+<h3>Comments:</h3>
+<h4>Throughly enjoyed it 😅 ☀️</h4>
+<p><a href="https://www.blogger.com/profile/13736022551311077085" title="noreply@blogger.com">Vinod Kr. Jiani</a> - <!-- raw HTML omitted -->Oct 6, 2021<!-- raw HTML omitted --></p>
+<p>Throughly enjoyed it 😅 ☀️</p>
+<!-- raw HTML omitted -->
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

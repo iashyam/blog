@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marital Happiness Metric, Love and Arranged Marriages - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Marital Happiness Metric, Love and Arranged Marriages
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="15-02-2025" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                15-02-2025
+            </time>
+
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/love-arrange-marraige.jpg" alt="Marital Happiness Metric, Love and Arranged Marriages" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>Are love marriages any better than arranged marriages? I would like to advocate this in the article.</p>
+<p>The single thing that matters the most in marriages is harmony between husband and wife. All other factors can be resolved by either law enforcement or open discussion between the concerned parties. A marriage in which husband and wife are not on the same page is doomed to break; and if it sustains, it would be a hell to live through.</p>
+<p>Given two people are to come together to spend the rest of their lives together, it is essential that they have a common ground to start with. In simple terms, their opinions should match on various different topics. It is not necessary that they should agree on every single thing (it would be wonderful if they do), but they should at least agree on the things that matter the most to them. If they don't, then the conflict of opinion arises, and it all goes down to the art of conflict resolution and making compromises.</p>
+<h2>Opinion vectors and OAM</h2>
+<p>So the basic requirement of a happy successful marriage is that the couple's ideologies should match in as many different directions as possible. To express this in a mathematical model, think of a big opinion vector space with multiple dimensions. Here, each dimension represents a different prospect to have an opinion. For example, you ask a person their political leaning on a scale where <span class="math inline">\(-\infty\)</span> is far left (liberal) and <span class="math inline">\(\infty\)</span> is far right (conservative). {<span class="math inline">\(\infty\)</span> here is just a big number, take <span class="math inline">\(10\)</span> for example.} On another axis, take some other linearly independent question, for example- Who should take care of the children? (I am out of creative ideas for questions but you get the point.). You ask their opinion between <span class="math inline">\(-\infty\)</span> being only men, and <span class="math inline">\(\infty\)</span> being only women. (sign convention is arbitrary).</p>
+<p>If you plot these two numbers in a plane, you will get a vector. This is called <em>the opinion vector</em>.[^1] Of course, not all the questions have the same weight, so you need to scale these vectors with a weight matrix. You compute the scaled opinion vector for two people, and take the dot product; you will get a scalar quantity representing how well their opinions align. You can call this quantity <strong>Opinion Alignment Metric (OAM)</strong>. But since this represents the harmony in married couples, I will call this <strong>Marital Harmony Metric (MHM)</strong>.</p>
+<p><img src="assets/opinion-space-light.png" alt="Light mode only">{: .light }
+<img src="assets/opinion-space-dark.png" alt="Dark mode only">{: .dark }<em>a simple representation of opinion space where on the x-axis is political views and on the y axis is who should cook food or something</em></p>
+<p>The greater this number, the greater the cooperation between two people, the happier the life. For illustration purposes, I have made a 2-D figure, but you should try to extend this to as many dimensions as possible. As you can see, a person named <span class="math inline">\(A\)</span> is more likely to have a happier life with <span class="math inline">\(B\)</span> despite the slight difference between their political views. But with someone whose opinion lies in the faraway corner of the graph, like person <span class="math inline">\(C\)</span>, life is going to be tough. The angle here is too much, and <em>OAM</em> is going to be negative.</p>
+<p>The best bet here is when your opinion vector lies on top of your partner's, in which case the cosine will be <span class="math inline">\(1\)</span>. This is not going to happen unless you decide to marry yourself. The worst case is an antiparallel line with a cosine of <span class="math inline">\(-1\)</span>. And that is as impossible.</p>
+<h2>Success of Arranged Marriages</h2>
+<p>Before we go to that question, we need to understand why arranged marriages had this good run in the past. I am going to write this section with my personal observations. I might miss something here, and might be wrong.</p>
+<p>If women (or men) are not educated enough, they don't give much attention to things. In that case, their opinion vectors sit on the origin. This ensures that OAM never goes below the zero line.</p>
+<p>The best way to ensure a high OAM is that wives agree to everything their husband says. This is the one tradition that has kept arranged marriages alive till date. Men watch news, women watch serials, men decide who to vote for, women comply. Men earn, men decide what to do with money, women comply. Society expects women to ditch their own opinions and follow the orders of their in-laws. Women go to the husband's house and <em>fit into</em> the culture that has already existed and so on.</p>
+<p>In today's world, women have their own opinions independent of their husband, and they are not willing to submit. A conflict is surely going to come up, then arguments, fights and the world knows what comes next.</p>
+<p>The second reason is when you get your ideologies directly from your parents, there will are chances of a happy marriage. In a pre-internet era where access to information was limited, it was common to have your worldview similar to your parents. The marriages are typically arranged in the same society, caste, and class. So the other partner will also come from the same quarter of opinion space. There is a high chance of a greater OAM in such cases. And, this is not too hard to see. If you get along well with your parents, you won't have much problem with the partner they decide for you.</p>
+<p>The third reason is the young age of couples at marriage. When you share the same environment while your ideologies are still developing, then the OAM will obviously be positive. And I don't need to show why this is a hideous idea and doesn't work anymore.</p>
+<h2>Conflict Resolution</h2>
+<p>So what happens when a conflict arises in a marriage? One solution, solution A, is that you live together aware of it and don't argue about it. If you respect them enough, you don't care whether they come home drunk. Your wife goes her ways, you are aware of it, but you respect it so don't argue. And she respects you, she don't force you about anything. My cousin brothers are married and this is their life. This sounds very nice, but at one extreme end, it looks like two strangers who sleep together. You might call it a successful marriage but not really a happy marriage.</p>
+<p>This seems an ideal solution but this only works when there is a greater force in action than the conflict. That is love and respect. If your conflict is bigger than your love and respect, it is bound to escalate and break out.</p>
+<p>The other solution, solution B, is to sit together, talk through your differences, make compromises and work that out. In the opinion space, it would be equivalent to rotating the vectors. This only works when a person rotates their vector clockwise and the other rotates counter-clockwise, bringing the vectors closer. In some areas, you compromise and in others, your partner does. This should be done in mutually exclusive directions specially and a marriage can be saved.</p>
+<h2>Love Marriages and Arranged Marriages</h2>
+<p>Now, given all that information, we can compare love marriage and arranged marriage. If two people have known each other for a long time and they have decided to get married then probably they have similar ideologies and a very high OAM. There are two points to consider. One that they have gone through the evaluation of this. They are not acting on pure blind attraction because attraction will fade out pretty soon. And two, that they have considered enough dimensions. Being religious or not is one prospect, but whether to raise your children religious is another. In most mature couples, they are sensible enough to discuss all these things beforehand, and if they didn't have, probably they couldn't come that far along. And even if a conflict rises between them, both solution A and B work better if there exists a driving force of love between them.</p>
+<p>Love can happen between couples after marriage for after marriage fixture and before marriage. But</p>
+<blockquote>
+<p>There is a difference between loving someone because you want to marry them, and wanting to marry someone because you love them.</p>
+</blockquote>
+<p>So overall, I can obviously state that love marriages are already ahead.</p>
+<hr>
+<p>Edit: After writing this article I had a talk with few of my friends. (Yes I have friends!) It made me realise that living with someone having different opinion than you isn't that hard. (Look at me, I have friends.) It isn't that if you have different world views then a fight is going to happen, nothing like that occurs. You just have to respect other's individuality. And there goes the whole of my argument. I want to restate my proposition: It isn't that arranged marriages are bad, but love-marriages are a little better if done right. That's the thing, if done right, everything is great. Well whatever.</p>
+<p>It made me realize that a lot of my philosophies are just pure thought and mathematical. I am young and have little exeprience with the real world. So, my theories may not fit well into the real world. But it's a cute idea to have. I am sure no one has thought about opinion vectors before. Just take it as an intellecual joke. Cheers, goodbye.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

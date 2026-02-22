@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samant Kaka - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Samant Kaka
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2022-06-23" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2022-06-23
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Story.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Story
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/samant-kaka-1.jpeg" alt="Samant Kaka" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcL-81lbRxf1reqXMz-YAuyHlZNV-JS-Z9lYiDSQSs3X6qw7kT8b_jPEQmxebiN_IrminXeJZDCud2EJjPSWk0mTjwvTZcil2oAwbOXnY-0IWiCPNxmNdGDxyGCEagKlkxq_PEL4bV2czdJfqM4cRhsdSPS0KaoQ2D3ZUsjKaEYXzunpS7hAG7X6oXRg/s5472/samatkaka.jpg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcL-81lbRxf1reqXMz-YAuyHlZNV-JS-Z9lYiDSQSs3X6qw7kT8b_jPEQmxebiN_IrminXeJZDCud2EJjPSWk0mTjwvTZcil2oAwbOXnY-0IWiCPNxmNdGDxyGCEagKlkxq_PEL4bV2czdJfqM4cRhsdSPS0KaoQ2D3ZUsjKaEYXzunpS7hAG7X6oXRg/w370-h246/samatkaka.jpg" alt=""></a></p>
+<p>After devoting half of my youth to loneliness, now I had well adjusted myself to the fact that there is nothing in the world to get attached to. <em>Sab moh Maya hai.</em> Life gave me <em>fakiri,</em> I gave life to <em>fakiri</em>. After getting transferred to Ajmer, I didn’t search for a luxurious house, instead, I looked for something cheaper, and far from my workplace. It didn’t take me a lot of hard work to settle for a small flat at a considerable distance from the city.</p>
+<p>The flat was on the first floor, made of two small rooms, adjacent to each other, a kitchen ahead and some vacant space in front of the kitchen. Looking at the room, I could easily tell that no one had been living in this house for a year or so. The old infrastructure of the house gave it a different look from all the places I looked for in Ajmer. The walls made by rocks were coved by homemade <em>kekal</em> and were painted with calcium carbonate by some apprentice, which I guess uncle had done himself. The newspapers on the walls were ladened with a layer of dust, as it was abandoned a long time ago. The doors had old-styled locks, the ones I had seen in my house when I was a kid. I couldn’t help myself imagine if British people had lived in these rooms when they controlled Rajasthan from Ajmer.</p>
+<p>The owner of the house was a short man in his sixties. His hairs were so dilute that his skin was visible under the layer of hairs. His fit body amazed me. I am only twenty-eight and I cannot inhale deeply because I fear it will blow off the buttons of my shirts, and his man twice my age has no sign of a belly. He showed me the house with extreme excitement. He elaborated on how his memories were attached to this house. He said that his knees don’t support him anymore to climb up so the upstairs apartment was practically useless for them. That was a lie, he seemed fitter than me. I didn’t have any problem with it at all. I liked the flat, it was love at first sight.</p>
+<p>On that day only, I went back to Jaipur and brought a whole lot of luggage. I put the whole-hearted effort into cleaning and decorating the house, pasting new wallpaper, and buying new curtains, and new utensils. I was provided with some basic furniture and had to buy the most. I didn’t need to put an A.C but I still bought an electric cooler, after all, I was living in Rajasthan. The next day, I changed the look of the old, tired room and couldn’t stop myself from clicking it again and again and being proud of how good I am at decorating the stuff.</p>
+<p>That evening, Samant kaka said that he made dinner for me. That night, we sat together for the first time. I had little interest in knowing him but it seemed that he had a lot. We sat cross-legged on a carpet lying on the ground. The first question he asked me was-</p>
+<p>“Did you wash your hands?”</p>
+<p>“Excuse me?”, I didn’t understand his Rajasthani dilute, “Can we talk in Hindi?”. I was a little nervous, needless to say, that I was missing Jaipur already.</p>
+<p>“Okay, did you wash your hands?” He repeated his question in Hindi.  (I don’t know how to write this actually; it kills me to write in English.)</p>
+<p>“Yes, I wash every time before eating something.”</p>
+<p>He served me <em>Kheer.</em> I couldn’t believe he made that himself. I haven’t had such delicious food in days. We talked for a while then. He asked me an array of general questions, about my family, my earnings and job, etc. and then I asked him back the same questions.</p>
+<p>Samant Singh Rathour, the owner, retired from his job in the railway of India a couple of years ago. He got enough money as a pension to keep rotating the wheel of his life. Besides, he runs a small shop in his house and sells household items. He was a very disciplined person. He used to wake up before sunrise every morning, did yoga, <em>Surya Namaskar, and pranayama,</em> and did everything to keep his body fit at that age too. “This is government’s money, I want to take it as long as I can.”, he joked sometimes when I asked why he is doing such hard work. He lived downstairs, I lived upstairs, alone, cooking for ourselves.</p>
+<p>I was very inspired by him. I wanted to implement the same lifestyle in my life too. I woke up a little late and went straightaway to his shop for buying a packet of milk. We chatted there for a while. I made tea for myself and then did a physical workout. The routine went on for months. We got to know each other better, and our talks shifted from static to current topics, like yesterday’s match, new government policy, or the upcoming festival. He was a very kind man; he poured all his love on me like I am his son.</p>
+<p>I saved a lot of money in Jaipur, enough to buy my dream car, which would have suited my new position. But I didn’t buy, I just got some basic things like an array of suits and donated the rest of the money to various NGOs looking to help cancer patients. It benefitted me in two ways, first by giving me a sense of satisfaction, if I was able to help someone in need that meant I am a big man now, a sense that I am approaching ultimate <em>fakiri;</em> I am not chasing money. Secondly, I used to take the city bus to get to work and walked home back. It kept the threat of being fat under control. People use to say ‘Our boss is very <em>kanjoos</em>.’ But I hardly cared.</p>
+<p>In the next four months, I could notice a change in myself. I was happier, fitter, and better than ever before. I used to sing and dance alone, watched anime, cooked whatever I wanted, and brought happiness home.</p>
+<p>One day when I returned home, Samant kaka told me to have dinner with him tonight. I went up, had a shower, and wore in white kurta as kaka mostly wear. When I came down, I saw kaka sitting on the carpet, he was also dressed in white. A portrait of his wife was placed on a small platform and two incense sticks were lit in front of him. He was sitting in silence, praying maybe. I could guess so easily that it was the death anniversary of his wife. I went there and sit on a side silently. We didn’t speak anything for a few moments, we both prayed in silence for her soul to rest in peace.</p>
+<p>I didn’t say anything, he sensed my eyes and started talking. (God! I just realized how introverted I am, I cannot initiate a conversation even in stories.)</p>
+<p>“Got a heart attack. She left me alone in the ride of life.” He sensed my hesitation to ask about what happened?</p>
+<p>“Everyone who has come into this world has to depart one day. That’s the law of nature.” Too wise words for a person of my age, I thought.</p>
+<p>“Yes, you are right. But what can an alone man do in this harsh world? Having someone to speak with, to share your sorrows and happiness, your problems and achievements is so important. If you can talk with someone at the end of day, you can sleep well at night.”</p>
+<p>“Sometimes, being alone does bring happiness to life. For me it does.”</p>
+<p>“But families are more important, my son. Living this kind of life doesn’t give me <em>soon.</em> Peace doesn’t lie in silence; squabbles give peace if you really look through them. I miss those days when I was part of a small family. Your kaki and our son meant the world to me. When I came back home from work, he used to come and climb up my shoulder while your kaki made me tea. We all used to sit together and have dinner. I miss those days.” His voice was heavy. I had never seen a man crying in my life before. I thought men are strong, but now I know only until they encounter tougher circumstances. I offered water to him, and he took the glass and had a sip.</p>
+<p>It was the first time, Kaka discussed his son, I wanted to ask what happened to his son. Again, I couldn’t gather the courage to say but he sensed again.</p>
+<p>“Today’s time is different, Shyam Babu. You raise your children to make them live on their own, then you live on your own. Western culture has affected us very strongly. We have forgotten our culture.” I could already feel the pain in his voice.</p>
+<p>“The day Vikram was born was the happiest day of my life. I was running here and there distributing sweets. I loved him very much, more than anything. I wanted to spend every second of my time with him, but the life of a government employee is where easy. I think I couldn’t get enough time with him so that he gets to know me enough. He was brought up very differently than me.</p>
+<p>He was very bright in academics and aced every class from one to twelve. He took an engineering course in Ajmer. We both kept busy in our lives, he was busy with his projects and all, I was busy with my work, traveling all over India. He soon got a job in a private company in Ajmer.  </p>
+<p>With a high salary comes high expenses. He started living his more sophisticated life, involving himself in parties with his friends. Sometimes, he came home drunk and I didn’t like it, we used to get into arguments every time. I kept telling him not to fall into these things, and he used to answer ‘this is the modern world, dad.’”</p>
+<p>“It is only an illusion, Kaka. As the black covers our eyes, we keep going away from the reality thinking we are going in the right direction, but actually, we are not.”</p>
+<p>“That’s right. Your Kaki and I thought he will get on the track once he is married. So, we started looking for his bride and it turned out that he was also doing that. One day he came to us and informed us that he is in love with a girl and wants to marry her. That was a shocking moment for us, hard to swallow. They used to work in the same company and they were dating each other for six months.</p>
+<p>We discussed the situation for a very long time, that night. Marrying our only boy outside the community was not a small thing for us. Even if we celebrate the marriage, we can’t invite our friends and relatives. It was such a shame. But considering he was our only child; we didn’t want to lose him. Your Kaki was afraid of him taking a risky step at this stage. ‘If he chose her, there must be a reason behind it.’ She told.</p>
+<p>If you ask me how was Vikram’s wife, she was just like Vikram but more sophisticated. Both of them used to come home from work and lay down in front of the TV. Do you know what the problem with children is, it’s not that they don’t know, it’s that they don’t want to understand.</p>
+<p>Your Kaki had built dreams around his daughter-in-law. She used to tell me every day before his marriage, they will cook together, this-that, etc. But she and Vikram’s wife never came on the same track. She just refused to do any work asked to do by your Kaki. ‘Your son doesn’t cook, why should I?’ She argued. We always used to sit on the ground while having food, but she never did so, and neither did Vikram after her arrival.</p>
+<p><em>Parties</em> from their friends didn’t stop either. They used to come home both completely drunk. Sometimes, someone from their office used to drop them off because they both were not in a condition to drive. Daily fights increased, in a year, we were standing on the boundaries.</p>
+<p>At this stage, Vikram gets another job, a high-paying job in America. We celebrated the day he told us that news. We all went to drop him at Jaipur airport. He and his wife were very nice when they bid goodbye to us. Your kaki cried all night when he flew to America.</p>
+<p>He said he would be in touch but he never called us back. No news came back from his side after that day. He never called, never wrote a letter, and never came back to us. We waited for days, weeks, months, and years. Your kaki waited for her lifetime and she never saw him again. I had to source to letting him know that the woman who carried him in the womb had left the world. Ever since then, I had only cried alone.”</p>
+<p>I was numb. I wasn’t able to speak anything. “May her soul rest in peace.” I found my voice was heavy. “Today’s kids are weird; they don’t understand how to measure love. How can you forget the love you get from your parents so soon?” I could notice my voice was shaking, I didn’t want to fix it, I wanted not to talk at all.</p>
+<p>“Maybe it was the result of my karma, beta. God pushes you into tough conditions for some reasons only.”</p>
+<p>It was hard to speak for me.  I opted to remain silent. We ate dinner in silence. Then we went to a nearby orphanage to donate some money and things. It made me feel better. We talked about his son again on the way back home. It was so emotional stuff, I don’t want to explain.</p>
+<p>That night, I couldn’t sleep. I lay on my back, staring at the darkness. There was more to relate to this story than it seemed. I felt like I have heard this story before, an old man saying how his only son left him alone in his time of need. I was thinking about how much time had passed since Kaka talked to his son last time, but he remembers him every day. How wrong has his son done to him, he still loves his son, because after all his blood ran through his son’s veins. The flashback started in front of my eyes.</p>
+<p>It was my story exactly the same narrated from a different angle. It has been seven years, or maybe eight since I have talked to my father. He may also remember me every day, he still loves me, after all his blood runs through my veins. Does he still think of my return? Does he still pray for my well-being?</p>
+<p>I was in college when I was informed about my mother’s death. My father didn’t tell me on phone, he told me to come home and meet them, and when I reached home, I found that my beloved mom was no more. I felt numb after hearing the news, every part of my body seemed to be going apart, like they are working on their own. Objects around me looked small and very far away, and the world started to spin around me. I screamed, I screamed louder. Holding her body in my hands, I cried and cried until I lost conscience.</p>
+<p>I set her to fire, I saw her mortal body burning with my eyes. I was burning from inside. I came home and sat in a corner, refusing to talk to anyone. Relatives were coming and humming around me, I didn’t focus on anything. My mind was still going through her memories, the fact that I could never see her again was unacceptable. I was told she died of cancer.</p>
+<p>My father came to me with food. He sat next to me, put his hand on my shoulder, and asked me to keep my spirits up, but I was falling deeper and deeper. I asked him one question.</p>
+<p>“Why didn’t you tell me earlier?” My voice was not polite.</p>
+<p>“I didn’t want you to distract from your studies.”</p>
+<p>“Fuck academics! My mother was dying and it didn’t seem important for you to tell me. How could you do that?”</p>
+<p>He was silent. He was just listening to me, maybe he was as broken as I was.</p>
+<p>“Did you come to Jaipur? For treatment? And you didn’t meet me?”</p>
+<p>He was still silent. He never stayed in Jaipur. He just went there to check up. He never provided the required treatment.</p>
+<p>“You didn’t take her to the hospital? You didn’t take her to the hospital?” I slammed the plate to the ground. My voice was loud enough to wake the sleeping relatives to make a show.</p>
+<p>“We didn’t have money.” It was a lie, I knew that.</p>
+<p>“You wanted her to die, don’t you?. You never let her live happily, you never let her do her wishes. You never… You killed her. You are a beast. You deserve hell!!” I abused my father for a considerable amount of time before one of my relatives put his hand on my mouth and locked me up in a dark room.</p>
+<p>When I got out, I took my bag and went to my father straightaway.</p>
+<p>“You and your mother made my mother’s life a living hell and when the time came, you took her life. You are a beast. If you couldn’t help my mom, don’t expect any kind of help from my side. I am going, going for forever far away. Never talk to me, okay. God curse you, your mother gets the same death, so you could know what it feels to lose your mother.”</p>
+<p>I came to college, threw my bag in a corner, and jammed myself in a corner. I cried and cried there. Skipped all the meals and refused to talk to anyone on campus. My father came to see me, and we put another show in the hostel.</p>
+<p>He was sitting in front of a chair. He talked for a while, I didn’t listen, I kept looking away. I was sitting folded, my knees on my chest and I was holding myself very tightly. I looked at him. He sighed and said politely, “I want you to come home and complete the remaining rituals.”, the next moment I was yelling at him.</p>
+<p>“You don’t deserve me, you don’t deserve to be a father, you don’t deserve to be a man. They should put you in a cage and throw you in the desert. I am not coming with you, I am afraid, the way you behave, you can kill me one day. I want my life. I don’t want to see the face of the murderer of my mother again. Go away from me, go away from my life.”</p>
+<p>He was still sitting there, silent. I took my phone and threw it at him violently, I missed and it hit the wall, shattered into pieces. “Get out!” I screamed as loudly as I could.</p>
+<p>He bowed his head in disappointment and went out of my room. It was the last time I saw his face. I remained in the corner for rest of the day crying alone. When I got up, I found that he left a little bag in my room. It was full of cash. “‘We couldn’t afford her treatment.’ That fucking bastard!” I threw the bag in the dustbin. Later that day, I used the cash to buy alcohol. God knows how did I pick myself up and gave an exam coming the next month. But I know that life after that was not easy.</p>
+<p>The cash proved enough to pay the fees that semester, but I was aware of the next semester. I work tirelessly the whole year. Working as a private tutor at one place, packing boxes in a currier facility, and studying at the night. Took a loan to cover my fees. I don’t know how but I topped the exams every semester.</p>
+<p>I stopped talking to anyone in the college. I didn’t have many friends in my class, and for those who considered me a friend, I behaved very rudely toward them. They might have noticed the strange change in my behavior I don’t know but they were left very far away on the journey. The broken phone came very handily in keeping my isolation sustained. I didn’t buy a new one.</p>
+<p>The long heart-breaking journey made me a very conservative and self-centered person. And at this stage of life, I came in contact with mystics. It started by picking a book by the roadside. I found it interesting. Once I get into it, I read more and more about it. The proverbs written in it helped me to deal with the constant pain, I was carrying with me. I found ways to live happily alone, to search for good things in the world. It made me light weighted, it made every person look nice, it made the air breathable, and the made the water delicious. At the end of my bachelor's, I had decided to remain unmarried, to practice the art of <em>sannyasa</em>.</p>
+<p>Thinking about those days again, brought tears to my eyes. The way Samant Kaka told his story, it felt just the top view of my story. The memories I made with my father started to come in front of my eyes one by one. From the scratch.</p>
+<p>I am introverted from the beginning, I realize. I never went outside to play and I don’t have any siblings. I remembered I used to go to my father and ask him to play with me, and he never refused. He used to bowl and I bat. He never demanded the other way around, but whenever I played a big shot, he refused to bring the ball back.</p>
+<p>A village fair used to take place in the village nearby, he took me on his bicycle. We had to cross a large sand dune to get there. It was high that you can’t paddle to climb up. So, he came down and pushed the cycle while I was still sitting on it. Those days were fun.</p>
+<p>Take the day, I topped my secondary school. He was very happy, he came running towards me and embraced me, ‘<em>wah wah! Shabbas!’</em>  he praised. I still remember that day. His frequent surprise visits to my hostel made sure that I was doing okay. He loved me, and he still loves me.</p>
+<p>I used to think a lot about my purpose in life, and what is my purpose life. What do I work for? Why am I focusing on my fitness, my money, and all those things that matter? What matters and what doesn’t?</p>
+<p>I sometimes thought of myself going to the Himalayas in search of the ultimate truth. Praying like our ideal <em>rishis</em> and getting <em>moksha</em>. How can I get that given the sins I have committed in my life? Even if I get it, do I deserve it? On the betrayal of my own duties toward my family? </p>
+<p>When parents rise their children, they don't demand anything. They put their needs behind the needs of their children. It has to be this way, when we are young, we are nurtured by them, so we need to pay them back, and we need to take good care of them when they get old. </p>
+<p>I couldn't sleep that night, I was sleeping in the bus to Rawatsar the next day. </p>
+<p>(To be continued....)</p>
+<p>Hello guys, How are you? I know I have been away from the blog for a long time. First, I was preparing for entrance exams, then university examinations. I came back home about ten days ago, and since then I have been writing this story, writing it, deleting the sentences, and changing it again and again in my mind. I have plans for this blog and I think from now on, I am going to maintain the proper schedule. (I will try my best!!)</p>
+<p>Disclaimer: This story is completely a work of fiction, It has nothing to do with my real life, I have both my parents alive and well.  I love them, I have a good relationship with them(?)</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

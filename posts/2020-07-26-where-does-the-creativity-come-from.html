@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where does the Creativity Come from? - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Where does the Creativity Come from?
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2020-07-26" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2020-07-26
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+                <a href="/tags/Discussion.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Discussion
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/where-does-the-creativity-come-from-1.png" alt="Where does the Creativity Come from?" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><strong>Creativity,</strong> as we talk about it, is to discover and use something new, completely new. But in writing it is meant t be something new creation, new writing, new story or plot, a new poem.</p>
+<p>It is Sunday Discussion and we are going to talk about where can we think about new and creative write-up ideas. If you are new and aspiring writers and you are trying to find new and creative plots for your story and poem then this post can be helpful for you. So let's start:</p>
+<h2>1. Experience </h2>
+<p>Creativity comes from experience. Doesn't it? Think about it. Something strange happened to you. can't you write a poem or story about it? If you are in love, you can easily talk and write about you. Love poems are just the feelings, you have.</p>
+<p>It is more about it. If you are on a trip or you are traveling then you can write about your experience as travel fiction. Or something strange happened to you then you can write it as a story. Your life story can also be a novel. So a lot of creative writing can be done on experiences.</p>
+<p>Sometimes our experiences give us a feeling that later transforms into work like a poem or a story. For example, my poems <a href="https://iashyam.blogspot.com/2020/04/oh-my-friend.html">Oh My Friend</a> and <a href="https://iashyam.blogspot.com/2020/04/me-and-my-fortune.htm">Me And My Fortune</a> are based on experiences about them. I will tell you about these experiences in another post.</p>
+<p>Sometimes you chose to experience to create a post. Like you want to write a book in that you want that environment should be of a hill-station. Then you go to a hill station and spend there a lot of time to gain experience in hill station life and then write a book or maybe you write a book there.</p>
+<h3>2. Wish</h3>
+<p>Sometimes we think what if something will happen, better to say we wish something. Then we start imagining a series of events. This can be a great source of creativity. A plot to write. When I was in 8th class there were essays like 'If I Were Prime-minister.'. It is more story than an essay. Think about it. What will you do if you were prime minister? Can't that be a great story? I write love stories but I never fell in love except for a one-sided crush. Strange? I just imagine what if I have a girlfriend?  Then another question comes along. How did get a girlfriend? Then I try to answer these question and it turns to be a love story.</p>
+<p>Suppose What if you make a time machine? Suppose what if You become invisible? But You have to justify how did you make a time machine and what do you do with the help of the time machine. That can be a great adventure but I will be a great source of a great Sci-Fi novel.</p>
+<p>It is right that you don't need experience of something to write about it as far as your imagination is detailed. Imagination can be as good as experience but It should be in detail. There should be no contradiction and It should be believable. All great fictions are imagination only, few are based on experience. So if is a great source of finding a plot.</p>
+<h3>3. Kash... </h3>
+<p>Expectations that don't meet reality.  That's how I define it. It can be in two ways. First, we expect something to have happened that doesn't happen.  We start to think Kash! it would have happened. If it would have happened then a series of events would have happened. And these series of events can be lead to a good story or a good poem. That's a sign of creativity. Let's think that I expected Rahul Gandhi to win the parliament election and be the prime minister of India. But it didn't happen so now I start to think about what would have happened if Rahul Gandhi would have won the elections. The situation could have been terrible but that can be a good plot to a story.</p>
+<p>The second situation is we have done something and it results in something that we didn't want. Then we think what if we haven't done this and we have done something else. If we have done something else then it would have happened. Or say something like we are regretting. Think about Robart Frost's poem '<a href="https://www.poetryfoundation.org/poems/44272/the-road-not-taken">The Road Not Taken</a>'. If he had chosen the second road then what would have happened. It not necessary that we regret our own deeds we can regret others' deeds as well. Think what if Gandhiji had tried to save Bhagat Singh? Then it can lead to a great story.</p>
+<p>Now you may feel that Wish and regret are a similar thing. We imagine something that does not happen. But let me make you clear that they are not similar. Wish is something not happened yet but w assume that it may happen in the future but regret is something that is happened in the wrong way ad we are assuming that it could have happened in another way.</p>
+<h3>4. Uninterested:</h3>
+<p>When you are doing something that you are not interested in, then your mind is not totally involved in that work and you start imagining things.  Go back in your childhood, when your mother used to beat you and give you some household work. Then you started imagining to leave the home and starting a new life in the jungles. Seems funny! but it can lead you to a great story. </p>
+<p>Let's take another example. Do you know where the most creative people in the world live? Don't know? The answer is back benches of class. Have a look at this creativity:</p>
+<p><a href="https://1.bp.blogspot.com/-skBZ7wskuYo/XxvIrILGIkI/AAAAAAAAEFM/ksOlSJ4etncOaESqCbXo3Ju4-3G6UWypACLcBGAsYHQ/s747/Creative.png"><img src="https://1.bp.blogspot.com/-skBZ7wskuYo/XxvIrILGIkI/AAAAAAAAEFM/ksOlSJ4etncOaESqCbXo3Ju4-3G6UWypACLcBGAsYHQ/s320/Creative.png" alt=""></a></p>
+<p> </p>
+<p>The teacher is giving boring history lectures and the backbenchers are doing creativity. The next level of creativity. I can be sure when you are being bored than you can crest something. All you have to do is not use any simulations interest tools. Like some people watch a movie, listen to songs during their journey by train. That sets the mind in one direction, it stops our imaginations to fly in all directions. So whenever you are being bored or when you are doing something, you are not interested in, don't use any entertaining tool, just let your imagination fly in all directions. The most interesting and creative plots come when you are the most bored. It can be done when you are waiting for someone, traveling, or attending a two hour applied optics class. </p>
+<p>This is my personal experience, I have written a lot of poems in boring Optics class in college and I have come up with creative and interesting physics problems in chemistry class at my high school.</p>
+<h3>5. Being Social</h3>
+<p>A fool is the one who learns from his own mistakes but a wise is the one who learns from the others' mistakes as well. As Savi Sharma says Everyone has a story but everyone is not a writer. Being social will help to know and write other's stories. Your own life is too short to experience everything. So you should learn to write by knowing others' experiences as well. Everyone in this world has its own and unique experience so there are a lot of stories floating around you.</p>
+<p>It's not just listening to what is happening in other's life and writing down everything as they say. It is not said creative writing. But you can find a plot, a goal and a story in their voice. It is just like experiences based stories but the experiences are not your own the experiences are others'. </p>
+<p>But is it possible? Can we write a story on anyone else's experience? Can we write on something that someone else feels not us? The answer is yes we can write a story on someone else's feelings. The thing is you feel it. The thing is that you imagine it in as much detail as possible. I don't say you go to all of your friends one by one and listen to their stories and write them. The thing is that if someone is describing their experience then you feel that you can write a story on it. Then you can pick the plot and story of it, add your own imagination and art of story writing and you will get a good story.</p>
+<p>For this, I advise that you be open with your friend. Make fewer friends but grow your friendship deeper. If people trust you then you will be able to make your own story. And keep one thing in your mind. <strong>Your own character is reflected in your writing.</strong> You always write what do you think. Keep your character good. Being social will help you with this as well.</p>
+<blockquote>
+</blockquote>
+<h3>6. Being Alone</h3>
+<p>Being alone is when you actually think. It is similar to the concept of being bored. When you are alone and you are doing nothing then you are actually thinking about new ideas. It is the time when you can really work on creativity. You can take out a pen and a piece of paper and plan your writing sitting alone. The experience is not enough for writing, you have to think deeply about creating good write work. You can do this only when you are alone.</p>
+<p>When you are alone then think about your next poem or story. Sit somewhere and play the events of your next story in mind. Play the role of every character in your mind yourself. Think deeply about the plot and explain it to yourself in as much detail as possible. Be the critic of your plot. Find the logical mistakes in your story and correct them. Being alone will help you with this.</p>
+<p>I believe in planning more than hard work so being alone is the time when I can talk to myself and plan my day, my week, and my future. When you are alone you can think about what do <em>you</em> want. You can think about what are your own feelings and it is your feelings that help you in writing poems. So as a writer, I advise you to spend more and more time alone.</p>
+<h3>7. Unable</h3>
+<p>That is a good thing about writing. Understand this with a simple concept. A kid watches YouTube videos to make something and tries that at home. But he has not the necessary tools to make it. Then he thinks about it and uses his creativity and makes an extraordinary device with the available tools. In three idiots, he makes a device with a vacuum cleaner.</p>
+<p>This thing doesn't apply exactly in writing but you can be inspired to write a poem or story when you are unable to express your feelings. Suppose you want to express your love to someone but you don't have courage. Then you can write a poem or story having your feelings in it and recite in front of your crush. Ultimately, when you want to say something and you can't say that then this can lead you to great artwork.</p>
+<p> Actually, this is why I started writing. When I was in the ninth class or maybe even before ( I don't remember ). I had a fight or an argument with my seniors. I wanted to sled them but I couldn't, so I wrote poems and stories about them. What happened later, I don't want to tell.</p>
+<h3>8. Inspiration</h3>
+<p>At last, I want to talk about inspiration. You read a poem or story and you are inspired by the story to write a story. It is the most popular source of creativity. It is the reason why most poets among us are poets actually. My friend read my poetry and he was inspired by it so much that he thought that he should also try to write poetry and he is a good poet today. </p>
+<p>Now, hoe can we take plot from any other plot. That is a good process. I read a murder mystery by Chetan Bhagat in the book- 'The Girl in Room 105' and I thought that I can write a murder mystery too. Then I looked at the process, I analyzed it, I learned from it and I started a new story with a different situation. That's how it works.</p>
+<p>These are the sources of creativity in writing. I hope you find it informative and helpful. Tell me how do you feel after reading this. If any mistake is there, feel free to tell me. If I have missed anything, any source of creativity then inform me in comments.</p>
+<p>Thank You</p>
+<p>Shyam Sunder</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

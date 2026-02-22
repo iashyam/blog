@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Electricity Entered My Village. - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            When Electricity Entered My Village.
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2020-08-02" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2020-08-02
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Story.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Story
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/when-electricity-entered-my-village-1.jpeg" alt="When Electricity Entered My Village." class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><strong>My father got married in 1995, they gave us cooler, fan and TV in dowery. And Electricity entered our village in 2002. We had to wait 7 years to use the items we got in gift in the marriage. Read this entire interesting journey of Power.</strong></p>
+<p><a href="https://1.bp.blogspot.com/-f_aAm_YnP00/XyZtLBKmMpI/AAAAAAAAELU/ObFlRMPBSzki54yTrBEiD_Jo1Pxv2knGwCLcBGAsYHQ/s1600/ddksfkdjsfk..jpg"><img src="https://1.bp.blogspot.com/-f_aAm_YnP00/XyZtLBKmMpI/AAAAAAAAELU/ObFlRMPBSzki54yTrBEiD_Jo1Pxv2knGwCLcBGAsYHQ/s640/ddksfkdjsfk..jpg" alt=""></a></p>
+<h2>April 2002, Bhakhran Wala, Rawatsar</h2>
+<p>&quot;XEN sir! we have the poles outside our village but we don't have electricity.&quot;, I told XEN who was recently transferred to Rawatsar. He was a tall, muscular man wearing a neatly ironed pent-shirt, showing that he was a mighty government employee. </p>
+<p>&quot;Seriously! We have given you poles but we haven't given you electricity yet?&quot;</p>
+<p>&quot;Yes Sir.&quot;</p>
+<p>&quot;Okay. I will look into the matter. You can go now.&quot;</p>
+<p>&quot;Thank You, Sir,&quot; I said and came out of that office.</p>
+<p>When I was informed that a new XEN was appointed in Rawatsar, I got excited and went to meet him.</p>
+<p>He ensured us that we would be given electricity connections. The poles reached outside the village one year ago but they can't install inside because our Sarpanch had an argument with the previous XEN. He demanded a bribe and Mr. Sarpanch denied. Then he was stuck on the point that he wouldn't install the poles inside and our Sarpanch was firm that he won't give bribe. So the villages that were far from the city installed electricity and we remained behind. I approached the XEN first because I was afraid that Mr. Sarpanch will argue with him too.</p>
+<p>After two days, he summed to me. We met in his office.</p>
+<p>&quot;I will try to install the poles in your village. I will make a new line. You have to make sure that at least seven houses take new connections.&quot;</p>
+<p>&quot;Seven?&quot;</p>
+<p>&quot;Yes. This is the least number in a line.&quot;</p>
+<p>&quot;Ok. I will try to convince my neighbor.&quot;</p>
+<p>&quot;Meet me with seven applications.&quot;</p>
+<p>I tried to convince people in my line for electricity connection. It cost Rs1800 for one connection. That was a considerable amount at that time so they hardly agreed. I managed to convince five people- Indraj, my cousins Banshi and Dharampal, Aslam, Safi, and myself. I requested XEN to make a line but He said if the house at the corner agrees to have a connection then we could proceed. </p>
+<p>Motilal was a poor man. He didn't have Rs. 1800 to take a connection. But it was important to convince him. So we all seven collected money to buy a connection for him. At last, we were at the condition that none could stop us to have an electricity connection, First in our village.</p>
+<p>The next day, we submitted our application files to the office. XEN registered us and gave me a receipt. He shorted the files as locations of our houses. My file was at three. He gave me a receipt which showed <em>File No. 3.</em> I kept that. He came to our village and inspected our houses. He said we had to have an Electricity fitting in our house to have a power connection. </p>
+<p>&quot;Call a mechanic and do the electricity fitting in the next two days, unless you are not able to have a connection.&quot;</p>
+<p>I went to an electrician in Rawatsar. I told him about the whole situation. </p>
+<p>&quot;Seven Houses. Are you sure?&quot;</p>
+<p>&quot;Yes, I am. You have to do it in two days.&quot;</p>
+<p>&quot;Okay. I will do it.&quot;</p>
+<p>In the next two days, we had fitting as well. A truck was brought there and dropped poles in our street. Now the news spread all over the village that we were having electricity. Two days passed but none installed meters on the poles. Then we get to know that poles were dropped in the second street as well. I went to meet XEN that afternoon.</p>
+<p>I met LunaRam in the market. I had guessed well what could have happened. Luna Ram was a rich Choudhary of the village. He lost the last elections. I went to the office.</p>
+<p>&quot;What happened? Why haven't we got the connections yet?&quot;</p>
+<p>&quot;Some problem occurred, we will fix it.&quot;</p>
+<p>I looked at the files on the table. A few more files were there. I looked at my file. It was numbered 10. Loona's file was numbered 1. He must have bribed the officer.</p>
+<p>&quot;Why is it number ten? My file is at three.&quot;</p>
+<p>&quot;Don't worry! It will not take more than a week.&quot;</p>
+<p>&quot;I am not going to wait for a day.&quot;</p>
+<p>&quot;What will you do?&quot;</p>
+<p>&quot;I will do a direct connection by myself. ( We call it <em>Kundi.)</em></p>
+<p>&quot;This is not a game.&quot;</p>
+<p>&quot;I will do it with the help of an electrician. And If you inspect us then I can prove that you delayed our connections willingly.&quot; I took out the receipt. </p>
+<p>Sweetdropes came out on his forehead. I could see the situation was under control.</p>
+<p><strong>&quot;This is a game.&quot;,</strong> I said hitting my fist on the table.</p>
+<p>He called his peon and summoned junior engineer. They gave us a connection on that evening. A senior officer came there and inspected the progress. I could understand the reason for the sweatdrops.</p>
+<p>I didn't sleep that night. I tried every instrument that night. TV didn't show visuals, it didn't have an antenna. We installed that next day. I was so happy because finally, we have electricity, we can use the cooler and TV after the wait for seven years.</p>
+<p><a href="https://1.bp.blogspot.com/-budcCJsc7os/XyaXPm7LzRI/AAAAAAAAELg/USnsSOlVUwkMVmpr9mT-I_qb_VxGKdVgQCLcBGAsYHQ/s1600/villagepowe.webp"><img src="https://1.bp.blogspot.com/-budcCJsc7os/XyaXPm7LzRI/AAAAAAAAELg/USnsSOlVUwkMVmpr9mT-I_qb_VxGKdVgQCLcBGAsYHQ/s640/villagepowe.webp" alt=""></a></p>
+<p><a href="https://1.bp.blogspot.com/-d9LoYGLA89k/XyaXcT9yuuI/AAAAAAAAELk/ZKQ_jVJbTekf3PqxkHnzYc_R3WDdgG8zACLcBGAsYHQ/s1600/lightttttttttttttt.jpg"><img src="https://1.bp.blogspot.com/-d9LoYGLA89k/XyaXcT9yuuI/AAAAAAAAELk/ZKQ_jVJbTekf3PqxkHnzYc_R3WDdgG8zACLcBGAsYHQ/s640/lightttttttttttttt.jpg" alt=""></a></p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
