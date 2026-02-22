@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will AI make art go Obsolete? - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Will AI make art go Obsolete?
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="20-04-2025" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                20-04-2025
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+                <a href="/tags/AI.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #AI
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/dhoni-finishes-off-in-style.png" alt="Will AI make art go Obsolete?" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>Recently, the Ghibli art studio trend has gone viral. Everyone is putting their Ghiblified photos on social media. There is another minority group who feels bad to the artists who have been traditionally credited for the creation and Ghibli studio art. These artists have to put their sweat and blood to make these animations  and now when such precious art is available at one click, they would deem worthless.</p>
+<p>All the debate is about the credit of the art. Who is the artist? Does the person who wrote the code which is used to convert the simple images into paintings count as an artist or it is the person who wrote the prompt? If a person sits down and copies an art, will he considered as an artist? If someone clicks a picture of <em>Monalisa</em>, and prints it to put on their wall, is it an art? What makes an art? Is it the effort, the time, the creativity, the uniqueness, or something else?</p>
+<p>Now when ChaGPT can generate art at one click, will artists become worthless? And will these AI tools make art go obsolete? If making an art becomes so cheap and easy, will it be as valuable as it has been before? All these questions have surfaced after the trend went viral. I won't be answering these questions in this article. I will put my point of view and the reader and make the judgement themselves.</p>
+<h2>Why is art still relevant?</h2>
+<p>I want to start with a simple question. Why didn't art go obsolete after the invention of camera? All the scenes and portraits that great painters used to create, could be done better and with more precise detail with the camera. So, why didn't the photography replaced traditional art.</p>
+<p>Take these two wall arts for example- the Monalisa which hangs in the Louvre museum in Paris and a scanned photograph of the same artwork. Which of them is more valuable? Both of them have the same visual attraction. It would be impossible to distinguish the two on first look. And this would be true for every artwork out there. Then,  why would anyone want to buy an artwork when he could just download a scanned photocopy and hang it on the wall? Why is art still relevant? How do artists in today's world get paid?</p>
+<p>Art, in this raw form, is still relevant because people care about art. People like to collect artworks to show them off. People buy and hoard art because they have got a taste for art.  they will buy artworks from the gallerias, hoard them, put them on their walls. People from the same circle come together and talk about art. This is a sophisticated hobby of sophisticated people, and they are making conscious efforts to keep art alive.</p>
+<p>Think about post-offices, or theaters, or opera concerts; why haven't they died and been shut down? Emails are much faster and cheaper than letters, movies are always available on your phone even before they release, and on air dramas are much cheaper and more accessible than theater drama. But still a good number of people enjoy all these things, even if it costs them a hell lot. A live action film is much cheaper to produce than an animation film but still, they make animation films and people go and watch them in crowds. People like to buy traditionally printed sarees and clothes over mass produced fabric just for the sake of it. And that's exactly what keeps these small businesses alive.</p>
+<p>The pattern is clear! Art has survived the technological progress because people care about art. People invest in art to keep them alive. Art has conventionally became a symbol of sophistication and aristocracy. People put original art to convey their sophistication. It's not required; they can put a scanned copy of the same art, but they don't do it. Because it will be taken as cheap and defy the purpose. Sophisticated people have kept art alive and they will continue to do.</p>
+<h2>What about the trend?</h2>
+<p>Now you can upload your photo to ChatGPT and ask it to convert it into a Ghibli studio style art, or Disney, Pixar, or any other studio. How does that affect the art? I can't think of any way this is going to affect these studios. If there is any effect, it will only promote these studios to lesser known people. Disney is not firing their animators to make their animation by ChatGPT. They might use it to fill in the frames but I don't see that happening either in near future.</p>
+<p>But what about the value of art? Those who cared about art before this trend will continue caring for these art. The fact that now the art can be produced more easily, makes the handmade art even more valuable. Think about it, they have taken the harder way to create the art instead of an easier and cheaper way. That will make it rare and expensive. The other half, very eager to put their photos on Instagram, never cared about the art in the first place, and they will forget as soon as the trend is over. The number of art-enthusiasts will remain the same irrespective of the trend.</p>
+<p>Some people like their clothes to be hand-tailored. Which is more expensive and subtle option. But these people will continue to do irrespective of technological progress. Tailors and artists alike are never going out of business. Because human creativity isn't something that can be replaced.</p>
+<h2>The Future of AI art</h2>
+<p>When the camera was invented, making art became easier. With smartphone, every hand got a camera. Everyone was able capture every scene around you with ease. Internet made art even more accessible. Platforms like Instagram and Facebook were designed specifically to this very purpose. The inflow of photos was unimaginable. But despite this, not everyone with a smartphone became an artist. People found better and better way to capture photos. And the art of photography emerged. Now people pick photography as a hobby, train at it, and became a master. They put their artworks on galleries, magazines, and they actually make money out of it.</p>
+<p>The AI chat is going to be no better. Just because now everyone can generate art with a single prompt and click that doesn't mean that everyone will become an artist with a magic shot. People will find better and better way to generate art with LLMs, and some people will get better than the others. And the era of AI art will rise. These art will be displayed on the galleries, printed in online magazines, and sold at premium subscribers on Instagram. The effort put in the process will be certainly reduced, as did with photography. Artists will sit in a room and experiment with prompts for manually trained LLMs on their private servers. They will also have sleepless nights and right at the crack of dawn, they will come up with a brilliant prompt which will generate the bestselling LLM generated art of the year.</p>
+<h2>Conclusion</h2>
+<p>Art has got a unique property. Older the art, more valuable it is. Rarer the art, the more more valuable it is. If certain style of art holds some value now, if it starts to be mass produced, the original source will become rarer and hence it will become more valuable and expensive. Just like all the hand-knitted bags and hand-weaved fabrics, these hand drawn art will become even more valuable. Art will never loose it's value to any technology whatsoever.</p>
+<p>AI is called <em>Artificial Intelligence</em>, it might seem like a person with a personality and all the the stuff designed to fool us but at the heart of it, it is just a tool. Newer and better tools might seem to replace humans at the start by making the job easier, but tools don't operate themselves. Bigger the machines we invent, better and more skilled people are required to operate it. The LLMs are the latest machines in the line.</p>
+<p>AI will not replace artists, it will generate a new genre of art. The current art will be upgraded to the elite category. Vintage, manually painted art will be still for the taste of aristocrats. The art will survive this and every upcoming technological progress because enthusiastic people will keep the art alive. The people who take art cheaply were not art enthusiasts in the first people and to put the brute way, art doesn't care about them.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

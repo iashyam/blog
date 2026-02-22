@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<div class="animate-in fade-in mx-auto w-full">
+
+    
+    
+    
+    
+    <article
+        class="group relative flex flex-col mb-12 md:mb-16 rounded-3xl overflow-hidden shadow-sm dark:shadow-none bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-shadow duration-500">
+        <a href="/posts/2022-09-18-mauka-mujhe-nhi-mila.html"
+            class="block w-full aspect-video sm:aspect-[2/1] md:aspect-[2.5/1] relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+            
+            <img src="/assets/mauka-mujhe-nhi-mila-1.png" alt="Mauka Mujhe Nhi Mila"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105">
+            
+        </a>
+        <div class="flex flex-col justify-center p-5 sm:p-6 md:p-8">
+            <time class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-3 block">2022-09-18 · Latest</time>
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-gray-100 leading-[1.15] mb-4">
+                <a href="/posts/2022-09-18-mauka-mujhe-nhi-mila.html"
+                    class="before:absolute before:inset-0 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Mauka Mujhe Nhi Mila</a>
+            </h2>
+            <div class="mt-auto flex flex-wrap gap-2 relative z-10">
+                
+                <span
+                    class="inline-flex items-center text-xs font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full uppercase tracking-wider">
+                    Hindi Poem
+                </span>
+                
+                <span
+                    class="inline-flex items-center text-xs font-semibold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full uppercase tracking-wider">
+                    Poem
+                </span>
+                
+            </div>
+        </div>
+    </article>
+    
+
+    <div class="mb-6 flex items-end justify-between border-b border-gray-100 dark:border-gray-800 pb-3">
+        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Recent Articles</h3>
+        <a href="/timeline.html"
+            class="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">View
+            All &rarr;</a>
+    </div>
+
+    
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        
+        
+        <article
+            class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-300">
+            <a href="/posts/2022-09-04-dreams-of-the-depressed-.html"
+                class="block aspect-[16/10] sm:aspect-video relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+                
+                <img src="/assets/dreams-of-the-depressed--1.jpeg" alt="Dreams of the Depressed!"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105">
+                
+            </a>
+
+            <div class="flex flex-col flex-grow p-5 sm:p-6 relative z-10 bg-white dark:bg-gray-900">
+                <time class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-2 block">2022-09-04</time>
+                <h2 class="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100 leading-tight">
+                    <a href="/posts/2022-09-04-dreams-of-the-depressed-.html" class="before:absolute before:inset-0">Dreams of the Depressed!</a>
+                </h2>
+
+                <div class="flex flex-wrap gap-x-3 gap-y-2 mt-auto relative z-20">
+                    
+                    <a href="/tags/Poem.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #Poem
+                    </a>
+                    
+                    <a href="/tags/English%20Poem.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #English Poem
+                    </a>
+                    
+                </div>
+            </div>
+        </article>
+        
+        
+        <article
+            class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-300">
+            <a href="/posts/2022-08-28-a-little-motivation.html"
+                class="block aspect-[16/10] sm:aspect-video relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+                
+                <img src="/assets/a-little-motivation-2.py" alt="A little Motivation "
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105">
+                
+            </a>
+
+            <div class="flex flex-col flex-grow p-5 sm:p-6 relative z-10 bg-white dark:bg-gray-900">
+                <time class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-2 block">2022-08-28</time>
+                <h2 class="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100 leading-tight">
+                    <a href="/posts/2022-08-28-a-little-motivation.html" class="before:absolute before:inset-0">A little Motivation </a>
+                </h2>
+
+                <div class="flex flex-wrap gap-x-3 gap-y-2 mt-auto relative z-20">
+                    
+                    <a href="/tags/Poem.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #Poem
+                    </a>
+                    
+                    <a href="/tags/English%20Poem.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #English Poem
+                    </a>
+                    
+                </div>
+            </div>
+        </article>
+        
+        
+        <article
+            class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-300">
+            <a href="/posts/2022-08-21-train-to-pakistan.html"
+                class="block aspect-[16/10] sm:aspect-video relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+                
+                <img src="/assets/train-to-pakistan-1.jpeg" alt="Train to Pakistan"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105">
+                
+            </a>
+
+            <div class="flex flex-col flex-grow p-5 sm:p-6 relative z-10 bg-white dark:bg-gray-900">
+                <time class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-2 block">2022-08-21</time>
+                <h2 class="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100 leading-tight">
+                    <a href="/posts/2022-08-21-train-to-pakistan.html" class="before:absolute before:inset-0">Train to Pakistan</a>
+                </h2>
+
+                <div class="flex flex-wrap gap-x-3 gap-y-2 mt-auto relative z-20">
+                    
+                    <a href="/tags/Story.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #Story
+                    </a>
+                    
+                </div>
+            </div>
+        </article>
+        
+        
+        <article
+            class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-300">
+            <a href="/posts/2022-08-14-bargaining-in-the-prayers-.html"
+                class="block aspect-[16/10] sm:aspect-video relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+                
+                <img src="/assets/bargaining-in-the-prayers--1.jpeg" alt="Bargaining In The Prayers!"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105">
+                
+            </a>
+
+            <div class="flex flex-col flex-grow p-5 sm:p-6 relative z-10 bg-white dark:bg-gray-900">
+                <time class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-2 block">2022-08-14</time>
+                <h2 class="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100 leading-tight">
+                    <a href="/posts/2022-08-14-bargaining-in-the-prayers-.html" class="before:absolute before:inset-0">Bargaining In The Prayers!</a>
+                </h2>
+
+                <div class="flex flex-wrap gap-x-3 gap-y-2 mt-auto relative z-20">
+                    
+                    <a href="/tags/Poem.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #Poem
+                    </a>
+                    
+                    <a href="/tags/English%20Poem.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #English Poem
+                    </a>
+                    
+                </div>
+            </div>
+        </article>
+        
+        
+        <article
+            class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-300">
+            <a href="/posts/2022-08-08-in-search-for-the-absolute.html"
+                class="block aspect-[16/10] sm:aspect-video relative overflow-hidden bg-gray-100 dark:bg-gray-800">
+                
+                <img src="/assets/in-search-for-the-absolute-1.png" alt="In Search for the Absolute"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105">
+                
+            </a>
+
+            <div class="flex flex-col flex-grow p-5 sm:p-6 relative z-10 bg-white dark:bg-gray-900">
+                <time class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-2 block">2022-08-08</time>
+                <h2 class="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100 leading-tight">
+                    <a href="/posts/2022-08-08-in-search-for-the-absolute.html" class="before:absolute before:inset-0">In Search for the Absolute</a>
+                </h2>
+
+                <div class="flex flex-wrap gap-x-3 gap-y-2 mt-auto relative z-20">
+                    
+                    <a href="/tags/Article.html"
+                        class="inline-flex items-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        #Article
+                    </a>
+                    
+                </div>
+            </div>
+        </article>
+        
+    </div>
+    
+
+    
+    
+    <div class="mt-16 flex items-center justify-between border-t border-gray-100 dark:border-gray-800 pt-8">
+        <div>
+            
+            <a href="/page/11/index.html"
+                class="px-5 py-2.5 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors font-semibold text-sm text-gray-700 dark:text-gray-300">
+                &larr; Previous
+            </a>
+            
+        </div>
+
+        <div class="text-sm font-bold tracking-widest uppercase text-gray-400 dark:text-gray-500">
+            Page 12 of 35
+        </div>
+
+        <div>
+            
+            <a href="/page/13/index.html"
+                class="px-5 py-2.5 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors font-semibold text-sm text-gray-700 dark:text-gray-300">
+                Next &rarr;
+            </a>
+            
+        </div>
+    </div>
+    
+
+</div>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

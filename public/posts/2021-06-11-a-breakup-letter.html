@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Breakup Letter - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            A Breakup Letter
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2021-06-11" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2021-06-11
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Letter.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Letter
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/a-breakup-letter-1.jpeg" alt="A Breakup Letter" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>Hi Riya,</p>
+<p>Hope you are doing well. It has been a while since we see each other but I think now it is time to confess myself. I have done wrong with you and I am guilty of it.</p>
+<p>Walking away from our relationship was not so simple for me as well. I was so attached to you at that moment that I was in pain when I thought to leave you. I had planning to tell you about my situation, but that was attached to a picture of you crying in front of me and I could not bear that even in my thoughts.</p>
+<p>I belong from a rural area in northern Rajasthan. My father is a farmer and we believe in old beliefs. I love my parents and I don't want to be a reason of shame for them, that's why I had arranged marriage over love marriage. When I was in college, they chose a girl for me and I am the kind of person who can never go against their wish. So I thought that was my fate only.</p>
+<p>I wanted to tell you the truth and honesty, I wanted to invite you to my marriage but I never dared to do so, I never dared to even face you after that and that's when I started ignoring you. You think I was just bored with you but that was not the case. I always wanted you and I was scared that you will cry when you get the news that I am getting married. I never wanted to see a drop of tear in your eyes and that's where I planned the slow death of our cute relationship.</p>
+<p>To be honest I knew what is going to be the result of my falling in love. But we both fall for it and I couldn't stop it from happening. It started to form your laughter on my silly jokes then it went through our food fair trips. When you used to ask me about my wellness after long practice sessions, It felt like all my tiredness had been flown away and I am so lightweight. I then used to put extra effort on the field because I knew all the tiredness would go away when I would meet you.</p>
+<p>Whenever I met you before the match, we never lost any match, and I realized that It is not just luck... It is something more... I put extra effort into the game when I had a memory of you cherishing me for the win in my mind, and that made us win.</p>
+<p>But it has to over one day, I also didn't know anything about it. An old person came to see my elder brother and I was not part of the plan. I was trying to be as simple as I could for the happiness of my father and my brother. But as he met me he said that he wants to marry me with his younger daughter and it was a shock for me too. My father was so happy, he managed to engage his both sons.</p>
+<p>I wasn't happy at first but I have always seen my father sacrificing all of his happiness for our good and it was my turn to sacrifice something for him. This was once in a lifetime chance for me and I decided to sacrifice you.</p>
+<p>I always wanted to say a proper goodbye to our relationship but I didn't have the courage. I know it is hard for you but I also know that you can do that.. you can go through this. You need to move on Riya. You deserve better than me. I am not the one for you.</p>
+<p>I always pray that you find someone... someone better than me.</p>
+<p>I don't know how to end this letter. I just want you to move on. If you want you can reply to this letter but this will be the last one... I don't want any factor from the past to affect my life. Be happy and go achieve your dreams.</p>
+<p>With Love</p>
+<p>Mohit Pooniya</p>
+<p> </p>
+<p>In most love stories, I have heard from my friends, or the movies, and all other resources. If they fail... They have a reason that girl's parents won't agree on the marriage. This is the key barrier in most love stories.</p>
+<p>But in my place, the love stories don't go any further because we have made our society such that we can't even talk about love with our parents. It is something like a sin. And we have to agree with whatever life partner they choose for us. They don't expect from us that we can love someone and we don't tell them because we know it is not considered well in society.</p>
+<p>The situation becomes worst when the casts are involved. Society will never agree if you marry someone outside your cast. They don't see that she may not be of our cast but she is a human. They never see. In most cases, I have seen people who don't even talk about this in front of their parents. This is the generation gap we have.</p>
+<p>Most of the love stories end because the girl is forced to marry against her wish or according to her parents' wish. But some love stories end because boys are forced to marry. Especially when they have an elder brother or sister.. like in Mohit's case. There is no rule that Mohit must get married just because his brother is getting married but parents consider this as saving of money and they won't even ask the child.</p>
+<p>The ending of these love stories is not the same as other love stories. Here boy and girl don't come together to cry and say goodbye but this is a slow death of the relationship.</p>
+<p>All I want to say that this should be changed... Parents in villages should also care about the relationship of their children and there should be an interaction between parents and children that they can talk about their love life. Imagine saying to your father, &quot;Papa I have started dating this girl...&quot; How great it would be.</p>
+<p>What are your thoughts on this please let me know in the comments. And please forgive me for my bad English. I may have made grammatical errors.. ignore them.</p>
+<p>If you have read this till here, It means you like my posts. You may like my other posts too check out this one:</p>
+<p><a href="https://www.iashyam.in/2020/08/a-sons-letter-to-his-father.html">https://www.iashyam.in/2020/08/a-sons-letter-to-his-father.html</a></p>
+<p>If you like this post please share it with your friends, think it as you are giving your friends some good content. This boosts my confidence. </p>
+<p>Thank you!!!</p>
+<p><a href="https://lh3.googleusercontent.com/-e03TrHFMBjg/YM_9BBYYkdI/AAAAAAAAF5A/7I2QQYS8qMwj6hIxyVMhTINVjPDl_SQRgCLcBGAsYHQ/s1600/1624243456562950-0.png"><img src="https://lh3.googleusercontent.com/-e03TrHFMBjg/YM_9BBYYkdI/AAAAAAAAF5A/7I2QQYS8qMwj6hIxyVMhTINVjPDl_SQRgCLcBGAsYHQ/s1600/1624243456562950-0.png" alt=""></a></p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

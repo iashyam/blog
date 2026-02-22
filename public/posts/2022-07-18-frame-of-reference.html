@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame of Reference  - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Frame of Reference 
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2022-07-18" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2022-07-18
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/frame-of-reference-1.jpeg" alt="Frame of Reference " class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicYszgI4Joa37rU-P_-DsKWTWfUw8lQ3FYpE9gUmuvSgvJkkrXgPR4PBHM3SAybLeDV13BfjynqXbEPeWgMACtlvciO8IgB2-ps0iNd1WN88GwxlXre-VoU1KyDA8LjTN7hFGVQIkpviPtlJwgUtBHfxN1VEFjsXP5uqB9TLYlR0EWm5_NBNeHYeq1JQ/s6016/10-6-6k.jpg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicYszgI4Joa37rU-P_-DsKWTWfUw8lQ3FYpE9gUmuvSgvJkkrXgPR4PBHM3SAybLeDV13BfjynqXbEPeWgMACtlvciO8IgB2-ps0iNd1WN88GwxlXre-VoU1KyDA8LjTN7hFGVQIkpviPtlJwgUtBHfxN1VEFjsXP5uqB9TLYlR0EWm5_NBNeHYeq1JQ/s320/10-6-6k.jpg" alt=""></a></p>
+<p> </p>
+<p>One day, One of my Juniours came up with this problem. She said that they are forcing her to learn Hindi. I was surprised to listen to her because my other North-Eastern friends were excited to learn Hindi, they never thought it was a problem. Jeptha, for example, learned some words of Rajasthani. He was very excited to learn Hindi. I told her that she was not being forced to learn Hindi. </p>
+<p>&quot;They don't ask us what we want to learn, they are just making sure that every one of us knows Hindi, this is clearly majoritism. They want to suppress all other languages, they want to push every bead into a single thread. They will kill our already dying culture.&quot;</p>
+<p>I was completely shocked by her answer. She seemed reasonable. I couldn't counter this argument. I used my ultimate weapon. </p>
+<p>&quot;Well, that's one way to look at it.&quot;</p>
+<p>&quot;Ask them why don't they give the option, why is it compulsory? Why only Hindi, why not Urdu? Why not Mizo?&quot;</p>
+<p> &quot;I want you to look at it as an opportunity to learn Hindi, it is widely spoken in India and it will open your way to make new friends and engage with non-teaching staff. It will be a beautiful experience, I promise. You will enjoy it a lot.&quot;</p>
+<p>&quot;How can you enjoy something you are being forced to do?&quot;</p>
+<p>&quot;You can! Look there is beautiful Hindi literature. You can't take pleasure in it just because you don't know the script. Once you get into reading Hindi poems, you will enjoy them a lot. You will like Hariwansh Rai Bachchan and other poets. It is very beautiful. And think about Hindi movies, ain't they beautiful? Don't you enjoy them? Think about watching them in the original language. You will not regret learning Hindi, I promise. Just take this step, you will cherish this forever.&quot;</p>
+<p>I saw she was listening. </p>
+<p>&quot;How can you enjoy something you are being forced to do?&quot; She said. She looked frustrated.</p>
+<p>&quot;You can.&quot;</p>
+<p>&quot;How?&quot;</p>
+<p>&quot;Sometimes, we don't know what is good for us. Sometimes we need to look at what others are saying. Wise people exist and sometimes they wants us to do things forcefully but they just want good for us.</p>
+<p>My parents mostly make me do things I say I don't like, but if I loot at the greater picture, I can see they just want my good.&quot;</p>
+<p>&quot;What does it has to with Hindi?&quot;</p>
+<p>&quot;I want you to look at this from an another point of view, I want you to look at it as an opportunity to learn something new. You gotta learn a new language, isn't it cool?&quot; </p>
+<p>&quot;Please stop. We have gone through a lot, and I don't want to fight with you. I get anger issues on this topic.&quot;</p>
+<p>&quot;I am sorry, I won't push it further.&quot;</p>
+<p>That day I couldn't convince her but I met her one year later in college, and She was asking me to recommend her Hindi poets to read. I was very surprised by this. She changed from hating Hindi to loving Hindi within one year. I asked her how did it happen?</p>
+<p>&quot;When I was in residence, some of my friends insisted me to talk in Hindi. And soon, I started to enjoy it. Now I can understand and speak Hindi very well.</p>
+<p>I remember what you said you can enjoy things you just need it to look from a different point of view, a different frame of reference.&quot; </p>
+<p>That day I learned a lesson, an important lesson. Sometimes, when we think we are betrayed, or being forced, we just need to look it from a different point of view and everything is settled. </p>
+<p>As Satinder Sartaaj sir says, when you have fight with someone, or you are having trouble in any relationship. You should look at the matter from the point of view of other person. You will find that he is not wrong at his position, he is just trying to protect you. If you look from his perspective, all the matters are sorted out!</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Travel - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Time Travel
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2021-10-28" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2021-10-28
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Story.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Story
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/time-travel-1.jpeg" alt="Time Travel" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>“Get up bro, Mahender Ji is going to take you under the pipes!”</p>
+<p><a href="https://blogger.googleusercontent.com/img/a/AVvXsEjCmbP3bwL51CfqHaKn1e5cTGiUYrHfuDMkK02CsFdlWn3aNOLcb-N7iJdsbJD8fPCy3JgXKrmlqQdgUMHRAcROevpfTvkdxBaKrZDhDgCMAQx0nSIGBPBPD1tJet76N6tzcXAuFMBq9VHpFYgi7I-0sWhk7TWGRhqd5vMQ0WSh2NmXCgohvYuVvnpk3w=s2048"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjCmbP3bwL51CfqHaKn1e5cTGiUYrHfuDMkK02CsFdlWn3aNOLcb-N7iJdsbJD8fPCy3JgXKrmlqQdgUMHRAcROevpfTvkdxBaKrZDhDgCMAQx0nSIGBPBPD1tJet76N6tzcXAuFMBq9VHpFYgi7I-0sWhk7TWGRhqd5vMQ0WSh2NmXCgohvYuVvnpk3w=s320" alt=""></a></p>
+<p>Who could have guessed that it is not a dream? I continued to sleep until I found myself dragged by someone out of the bed. When I opened my eyes, someone had held my shirt color and applied a large force on me. Before I could understand anything, He started beating me with a pipe.</p>
+<p>‘Bang!!” I could feel a red line form on my ass, that sound was amazing. This was enough to convince me that it is not a dream. And couldn’t think of any other way except accepting the oppression. </p>
+<p>“Go to your room.” The muscular man who just treated me like an animal commanded me.  I didn’t know where is my room. <em>Where is my room? Where the fuck am it at the moment</em>. There was still dark out there. The dim light couldn’t show anything, but still, it was lightening something. The place looked like a big restaurant with small rooms.   I went into a room straight away. A thin and tiny guy with glasses greeted me with a wild laugh. <em>Am I in India? When did I come to India?</em></p>
+<p>“I told you to wake up, now you feel better?”</p>
+<p>I grabbed the bottle and sipped a little. I looked at the boy standing next to me. His eyes were brown. <em>I have seen these eyes, but I can’t really remember. Maybe the hangover of last night. Oh! I just remembered that I was drinking with Jane last night in the bar. My flight to India was next week.</em></p>
+<p>“Who are you? I know you but I can’t recognize you at the moment.”</p>
+<p>The guy was looking at me in surprise like I have said that I slept with his girlfriend last night.</p>
+<p>“He has hit on your ass or your head? Have you lost your memory?”</p>
+<p>“I am also really confused, where am I? How did I get here? Who is that man, why did he beat me like an animal? Did I get kidnapped?”</p>
+<p>“What are you talking about have you lost your mind?”</p>
+<p>“Just tell me what is the name of this place am I in India? I'm supposed to come here next week, this is completely unexpected.”</p>
+<p>“Stop joking man, Mahender Ji just took you under the pipes and you are not a bit serious?”</p>
+<p>“Wait… Are you Rahul Sharma? Which year is this?”</p>
+<p>“Hain? I am Rahul, and it’s 2018.”</p>
+<p>“What the hell!!!”</p>
+<p> I looked at myself in the mirror. I was a skinny guy; I was in high school. All my hard work, my PhDs all the things get wasted. I thought for a moment. I remembered the days back in school, I used to be so passionate about Physics, I wanted to know all the Physics. Now I know I can’t know all the Physics.  This was a hell of a journey since then.</p>
+<p>After completing high school, I took Physics Major in Undergrad, I kind of lost interest in Physics there. Since then, I have given my whole life to Particle Physics. Still, I am not able to catch a break.</p>
+<p>“Are you Rahul Sharma?” I turned to the guy behind me.</p>
+<p>“Why are you talking like a stranger?”</p>
+<p>I get ahead and hugged Rahul. It was after a long time; I was meeting this guy. He was my best friend and roommate in my high school days. We used to fight, argue about a lot of nonsense but he remained my best friend for a long time until I met Riya.</p>
+<p>“I have come from the future. I am a scientist at the University of California. My friend Jane was working on something to go back to in the future. Our whole idea was to get entangled with the past version of ourselves and transfer the information. She made the experimental setup and I did the whole calculations. But that time we didn’t receive any information from my last version. I thought the experiment has been failed but now I think some miracle has occurred.” I thought I explained the whole idea beautifully.</p>
+<p>“I was drinking with Jane and my wife at the bar last night. Then I don’t remember what happened and I found myself here today.”</p>
+<p>“Shut up! You slept last night on your book. I took the book away and make you sleep in a better position.”</p>
+<p>I looked at him in surprise. “You didn’t understand anything of what I said just now?”</p>
+<p>“This is some sort of prank or what? I am not going to be fooled by you. Shut up!”</p>
+<p>“Name of your girlfriend is Anita. Isn’t it right?”</p>
+<p>“What the fuck! How do you know Anita…? I mean…!” He was fumbled in his words.</p>
+<p>“Tell me, is it?”</p>
+<p>“How do you know I have a crush on Anita?”</p>
+<p>“You still haven’t proposed to her? Thank God, if I am just late, you would ask me Who is Anita?”</p>
+<p>“You mean, If I propose Anita will she accept?”</p>
+<p>“Yeah, infect last time I visited India about seven years ago was your wedding with Anita.”</p>
+<p>“What the hell!! I will marry Anita?”</p>
+<p>“Yes, you will, there are a lot of surprises but I need to go out of here. I miss my wife and my little daughter. This experiment was fun but I need to go back now. Give me your Phone.”</p>
+<p>“No, I don’t have a phone.! Keeping a phone is prohibited here.”</p>
+<p>“What! Now how will I call… How will I go back to time?”</p>
+<p> I had just realized the trouble. Now I will have to wait for it to go on. I don’t have any technology to go back. There is one hope If I can transfer information to my past version… there should be an idea to send the information back to the future…</p>
+<p>To be continued…</p>
+<p>Hey guys! Hope you are doing good. I am trying to write a go-back in time story. This isn’t as exciting because there isn’t much adventure but true stories are actually boring. I will try to cover the rest next week.</p>
+<p>Today is my birthday, you can wish me a happy birthday in the comments. You’re my community, you are my family so your wishes actually matter.</p>
+<p>Thank You! See you next week.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

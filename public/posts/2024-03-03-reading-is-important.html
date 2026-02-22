@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Is More Important Than You Think - Here Is Why - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Reading Is More Important Than You Think - Here Is Why
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2024-03-03" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2024-03-03
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/reading-is-important-1.jpg" alt="Reading Is More Important Than You Think - Here Is Why" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>Once, an Asur (I don't exactly remember his name :joy:) got, no doubt accidentally, extremely smart and thought about eliminating the Devas without engaging in a direct war. He sought knowledge from several Rishis to know about the source of Devas' powers. He found out that the prayers and hawans essentially feed the Devas. A rishi told him that when a human prays in the name of a Dev, it works like a food bite for that Dev.</p>
+<p>With that knowledge, he formulated a plan to weaken and, eventually, eliminate the Devas. He terrorized all the Brahmins and humans into praying in the name of Asuras instead of Devas.</p>
+<p>That was an innovative and decisive blow to Devas. They started getting weaker and weaker. Some of them even died. Devas got very anxious and sought help from the supreme savior, Vishnu.</p>
+<p>A group of Devas, with the leadership of King Indra, went to Vishnu and explained the situation. He obviously knew that already. Vishnu listened to Indra carefully and, in response, gave him a wide smile.</p>
+<p>&quot;What do we do, Srihari Vishnu?&quot;, Indra asked.</p>
+<p>&quot;You don't need to do anything, my dear Indra. Just wait and watch. The Asuras will come to revive you guys.&quot;</p>
+<p>The Devas were perplexed after hearing that answer. They could not comprehend it. Why would the Asuras, their ultimate enemy, revive them?</p>
+<p>Vishnu sensed their skepticism with almost telepathic ability and started explaining the situation.</p>
+<p>&quot;There are three types of  <em>bhojan</em> (diet): Sattvic bhojan, Rajasi bhojan, and Tamsic bhojan. Similarly, there are three types of <em>Guna</em> (traits): Satta (nobility, calmness, harmony), Rajas (passion, activity, revenge), and Tamasa (Laziness, evil, ignorant).&quot;</p>
+<p>Indra nodded in agreement. Vishnu continued.</p>
+<p>&quot;The kind of diet you have, the same type of trait will you get. If you eat a sattvic diet, you will have sattvic characteristics like kindness and empathy. And similarly, if you have tamasic food, you will get tamasic features.&quot;</p>
+<p>Indra could now sense the direction in which the conversation was moving.</p>
+<p>&quot;The Asura had a tamasic diet in the past, so they were evil. But prayers and hawans come under a sattvic diet. If they continue consuming this diet, they will eventually turn good.</p>
+<p>&quot;This positive energy will take over their mind soon. As soon as they find the consequences of their actions as the suffering of the innocent devas, they will come running to rescue you.&quot;</p>
+<p>Indra was mesmerized by the explanation. The event occurred in the exact order as Vishnu had predicted. The Asuras saved the Devas, and the holy war stopped forever.</p>
+<h1>Introduction</h1>
+<p>I don't believe in the literal truth, like eating junk food makes you evil and non-vegetarians are barbaric. I want to use this story as an analogy or as a metaphoric truth to propose the claim:</p>
+<p>: <!-- raw HTML omitted -->We become what type of content we consume.<!-- raw HTML omitted --></p>
+<p>The information flowing around us in various forms, such as reels, YouTube videos, news, and books, is the food for thought. This food, similar to the three types of diet in the story, shapes our characteristics. We often fall too easily for so-called trends and unwillingly drive the social norms away from the ultimate goal of a collective good. We can try harder to deny this, but the content, directly or indirectly, shapes our ideologies, especially in the younger generation.</p>
+<p>You can see examples of this phenomenon around you and even in yourself. I find myself surprised by my behavior sometimes. I find myself making fun of my female colleagues. Later, when I think about it, I question myself: Am I the sort of person to have stereotypical views on gender roles? No, of course not. Then why did I behave that way? To sound cool, refer to the Instagram meme I saw earlier. (&quot;Women!&quot;)</p>
+<p>As Jordan Peterson says, &quot;What you believe is not what you say out loud. Your behavior implicitly reflects your belief.&quot; So I wonder often: Am I becoming a sinister person?</p>
+<p>I break my conclusion into two premises. Premise one: We think about the content we see. Premise two: we start to believe something if we think about it too much.</p>
+<h1>The Art of Thinking</h1>
+<p>Dr. Chinkhanlun Guite, Bursar of St. Stephen's College, often joked in class,</p>
+<blockquote>
+<p>&quot;People think that they think, but they don't really think, except when asked if they do, and that's when they start thinking.&quot; (Make sense of it.)</p>
+</blockquote>
+<p>Thinking is rigorous and takes energy and time. We have evolved to automate most of the thinking process. If we start thinking in the face of danger, we will be dead before we know it. That's why we have evolved a faster and more efficient fight-or-flight response system. We tend to avoid thinking most of the time and start to believe things without questioning them. Note that. It is the truth.<a href="https://howtoliveameaningfullife.com/thinking-is-difficult-but-that-is-what-makes-it-important/">[1]</a></p>
+<p>Thinking, generally, depends on the external source of thought. (Sometimes, it can be random.) We don't start to ponder unless set in motion by some external source.</p>
+<p>You can do this experiment yourself. Ask your friend: &quot;Have you ever thought...&quot; and follow up with some random fact. For example, &quot;Have you ever thought why green leaves are flat but dry leaves are curly?&quot; Of course, the answer is no, but they won't say it. Instead, they will start thinking about it immediately. And then state a fact with the opening- &quot;Do you know...&quot; and notice the difference.</p>
+<p>In the first case, you have provided them with a root of thought, and they can build a world on it. But without the root of thought, one is very unlikely to wander in that direction.</p>
+<p>These cues are generally present in our environment. That's why our environment plays a massive role in our ideology. We will only think about the things present in the nearest neighborhood. (Borrowing that term from condensed matter physics.) We don't think against the beliefs injected into our minds by our environment. We don't question any of the claims of our nation, religion, family, or friend circle. Hence, we become the product of our environment.</p>
+<p>A rich person is rarely going to think about the problems of a poor farmer. Scarcely, an atheist thinker would emerge from an orthodox family. Hardly any girl would understand why boys make so much effort to get their attention.</p>
+<blockquote>
+<p>Thinking is difficult. That's why most people judge.</p>
+<p>~ Carl Jung</p>
+</blockquote>
+<h1>From Thoughts to Beliefs</h1>
+<p>Repeated information can turn into belief. If you keep telling a person that she is fat, over and over, she will eventually start to believe that she is fat. If you keep telling yourself you are strong, you can observe yourself handling challenging things like a piece of cake. This is called the <a href="https://thedecisionlab.com/biases/illusory-truth-effect">Ilusory Truth Effect</a>.</p>
+<p>Similarly, we are deceived into thinking that women are weaker, Hinduism is in danger, and the only way to salvation is a BJP government. Repeated (mis)information registers in our brains and shapes our beliefs. I will break it into three steps.[^1]</p>
+<p>[^1]: There are no personal religious and political views involved. See this as an example only.</p>
+<h2>Sense of Familiarity</h2>
+<p>When you come across a meme on Instagram, a fact stated, or an orthodox or an innovative claim, you let it pass. But when a similar post comes again in your feed randomly, it creates a sense of familiarity in your mind. You are like: &quot;Oh, I have seen this before. I should check this out.&quot; That creates a story around the topic. This story helps to register this topic from short-term memory to long-term memory. That is precisely our first step to make a thought into belief.</p>
+<h2>Confirmation Bias</h2>
+<p>Confirmation bias says that we are likely to ignore the evidence against our beliefs and give more value to evidence for our beliefs. A plethora of information comes on our screens daily. But with the thought resting in our long-term memory, we search for evidence for the belief and reject the facts against it.</p>
+<p>That will happen repeatedly until the thought turns into a hardcore belief. Now, we are sure that Hinduism is in danger, and we need to sacrifice our lives for it.</p>
+<p>Social media platforms tend to show your more information from the sources you already agree with. This is called <a href="https://edu.gcfglobal.org/en/digital-media-literacy/how-filter-bubbles-isolate-you/1/">Filter Bubble.</a> So it becomes very likely that you form strong political opinions based on your soical meida interections.</p>
+<h2>The Exception of Social Media</h2>
+<p>Bob went to attend a lecture on the evolution of nuclear rocket engines. The professor explained the design, working process, and the future of space travel with this new technology. But he still had this doubt about this. He saw hundreds of his colleagues in the conference room. Everyone found it hard to believe that we are already there. His friend Alice is convinced because she saw a reel on Instagram saying that NASA is sending humans to Mars.</p>
+<p>A person going to amass and getting a piece of information is less likely to believe straightaway without asking questions because they can see several people standing beside him and doing the same. But if they receive the same information on their mobile phones, with hundreds of likes and comments. <!-- raw HTML omitted -->They think that many people have already accepted this belief. Therefore, it must be the right one. I should also go with the flow and accept this belief.<!-- raw HTML omitted --></p>
+<p>If it's trending, we should accept it. Not all of these people are idiots. If some idea is trending, then it must be the right. Well, as it turns out, anyone can be an idiot.</p>
+<p>However, some studies show that social media doesn't affect our belief system on a larger scale. The primary reason is that the endless scrolling numbs your mind and slows the thinking process. I will link these studies at the end of this article. <a href="https://www.nytimes.com/2023/08/09/world/europe/interpreter-social-media.html">[6]</a></p>
+<h1>Books to Rescue</h1>
+<p>So far, we have established that information leads to thought-provoking, and thinking leads to beliefs. But how can we avoid getting affected by this? This information flow is all around us, and we can't even hope to survive without information in this era.</p>
+<p>And that's when books come to the rescue. First, we know that our atmosphere affects our beliefs. Reading fiction can create a kind of virtual environment around us. This virtual environment helps us to learn from other people's lives. <!-- raw HTML omitted -->It also helps us build our beliefs based on a broader range of experiences and knowledge than the sphere of our current comforts.<!-- raw HTML omitted --> For example, a rich person can experience the struggle of a poor through reading books, and it can be an exciting yet awakening journey.</p>
+<p>By reading a book, you can teleport yourself through space and time. You can go back in time and learn from those people. You can go to distance places in Rome, and Grece and converse with them. Books have this amazing superpower to provide you with knowlege of things across space and time.</p>
+<blockquote>
+<p>“The reading of all good books is like conversation with the finest (people) of the past centuries.”</p>
+<p>― René Descartes</p>
+</blockquote>
+<p>Reading does not provide facts and asks you to believe them. Books offer an in-depth analysis of a claim. As I stated above, thinking is a rare thing now, but books give you not only extensive material to think about but also take you through various arguments, perspectives, and research that help you in the process of understanding.</p>
+<p>Knowledge-based beliefs are tremendously more valuable than stereotypical or reels-based beliefs. In that perspective, when you get to defend your views, you need to have more solid arguments and citations. You can't make a case for an argument about which you have limited information, and that too is from unreliable sources like Instagram and Aaj Tak.</p>
+<p>You can have this fun exercise: write down your beliefs and try to find out the evidence for and against them. Start with any statement, orthodox or innovative, and take a challenge to prove yourself wrong. I can guarantee you that the process will be mind-boggling.</p>
+<p>I should not forget the obvious benefits of reading, such as getting empathy, being more imaginative, rich vocabulary, less stress, exercising for the brain, getting patience, and sounding intelligent in front of others.</p>
+<blockquote>
+<p>In medicine, certain preventative and  preparation treatments contain forms of the bacteria or virus that causes the  disease the treatment is used to prevent. Likewise, arguably, both creating and  consuming good literature and good art, expose you to the virus of being, so you can  hopefully develop enough immunity to survive.</p>
+<p>~ Fernando Pessoa</p>
+</blockquote>
+<h1>Choosing Good Books</h1>
+<p>It is essential to choose good books for reading. I can give no more than an argument from personal experience for this. Last year, I read more than thirty books, mainly crime-thrillers. But I can't remember the stories of many of them. I didn't get anything from reading these books. I can't mention them anywhere. I can't quote from them in a conversation.</p>
+<p>But some of the books have a grand influence on me. I often think about the wait of Gatsby, the friendship of Hasan, the words of wisdom from Accitus, and many more things. I can never stop quoting from Yuval Noah Harari's books in my blog.</p>
+<p>In fact, Yuval has the template of my ideology. It has given me the push to be an atheist. I can never forget the influence these books had on me.</p>
+<p>We should always choose a good book to read, especially if you want to gain something from the books. It doesn't need to be a self-help or non-fiction book. Some great works of fiction will stay with you throughout your life. But beware of what you read.</p>
+<p>In the coming time, I will be looking to read more meaningful and philosophical books. No more do I want to read books for fun.</p>
+<blockquote>
+<p>If you read what everyone else is reading, you think what everyone else is thinking.</p>
+<p>~ Haruki Murakami</p>
+</blockquote>
+<h1>Conclusion</h1>
+<p>Read more books; they will make you a good person overall. You can use the time you spend watching reels to read a good book.</p>
+<h1>References</h1>
+<ol>
+<li>Rober Karr, Thinking is Difficult, But That’s Why it Matters <a href="https://howtoliveameaningfullife.com/thinking-is-difficult-but-that-is-what-makes-it-important/">https://howtoliveameaningfullife.com/thinking-is-difficult-but-that-is-what-makes-it-important/</a></li>
+<li>Arias, E. (2019). How Does Media Influence Social Norms? Experimental Evidence on the Role of Common Knowledge.  <em>Political Science Research and Methods</em> ,  <em>7</em> (3), 561–578. <a href="https://gap.hks.harvard.edu/how-does-media-influence-social-norms-field-experiment-role-common-knowledge">https://gap.hks.harvard.edu/how-does-media-influence-social-norms-field-experiment-role-common-knowledge</a></li>
+<li>The Desion Lab, Why do we believe misinformation more easily? <a href="https://thedecisionlab.com/biases/illusory-truth-effect">https://thedecisionlab.com/biases/illusory-truth-effect</a></li>
+<li>Ecker, Ullrich K., Stephan Lewandowsky, John Cook, Philipp Schmid, Lisa K. Fazio, Nadia Brashier, Panayiota Kendeou, Emily K. Vraga, and Michelle A. Amazeen. &quot;The Psychological Drivers of Misinformation Belief and Its Resistance to Correction.&quot; Nature Reviews Psychology 1, no. 1 (2021): 13-29. Accessed March 3, 2024. <a href="https://doi.org/10.1038/s44159-021-00006-y">https://doi.org/10.1038/s44159-021-00006-y</a></li>
+<li>Ali Abdaal, Is Reading Fiction A Waste of TIme? <a href="https://www.youtube.com/watch?v=TLZr5GVeLcY">https://www.youtube.com/watch?v=TLZr5GVeLcY</a></li>
+<li>The New York TImes, Does Information Affect Our Beliefs?, https://www.nytimes.com/2023/08/09/world/europe/interpreter-social-media.html</li>
+</ol>
+<h4>Picure Credits</h4>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

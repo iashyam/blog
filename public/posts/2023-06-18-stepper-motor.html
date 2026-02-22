@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepper Motor - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Stepper Motor
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2023-06-18" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2023-06-18
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/tech.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #tech
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/stepper-motor-2.jpeg" alt="Stepper Motor" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <h1>Aim</h1>
+<p>To get familar with Arduino UNO and use it to understand Stepper Motor and it's basic applications.</p>
+<h1>Theory</h1>
+<h3>Arduino</h3>
+<p>Arduino is a programmable ciruit board or mircrocontroller. Which comes with it's own IDE, called arduino IDE. Arduino helps us connects hardware electronics with logic using simple programming language such as C++. Basically arduino is just a microcontroller that can be operated with your computer using high level programming language. Aruino basically works on the voltage waveforms. But just tweaking the voltage signals we can do a vairety of tasks using arduino.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Arduino_Uno_-_R3.jpg/220px-Arduino_Uno_-_R3.jpg" alt="image"></p>
+<h3>Stepper Motor</h3>
+<p>A stepper motor is an electrically powered motor that creates rotation from electrical current driven into the motor. Physically, stepper motors can be large but are often small enough to be driven by current on the order of milliampere. Current pulses are applied to the motor, and this generates discrete rotation of the motor shaft. This is unlike a DC motor that exhibits continuous rotation. Although it is possible to drivea stepper motor in a manner where it has near continuous rotation, doing so requires more finesse of theinput waveform that drives the stepper motor.</p>
+<p>Stepper Motor are generally of two types</p>
+<ul>
+<li><strong>Permanent-magnet (PM) stepper motor</strong>  — This kind of motor creates rotation by using the  forces between a permanent magnet and an electromagnet created by electrical current. An  interesting characteristic of this motor is that even when it is not powered, the motor exhibits some  magnetic resistance to turning.</li>
+<li>Variable-reluctance (VR) stepper motor  — Unlike the PM stepper motor, the VR stepper motor  does not have a permanent-magnet and creates rotation entirely with electromagnetic forces. This motor does not exhibit magnetic resistance to turning when the motor is not powered.</li>
+</ul>
+<p>What is inside a stepper motor?
+Generally, a stepper motor consists of a stator, a rotor with a shaft, and coil windings. The stator is a  surrounding casing that remains stationary and is part of the motor housing, while the rotor is a central shaft within the motor that actually spins during use.</p>
+<p>How does a stepper motor work?
+VR stepper motors work in a very easy to understand manner. The image belwo shows some of the physical details that  characterize its operation. In a VR stepper motor, the surrounding coils that are physically located  opposite of each other are energized to create opposite magnetic fields. The the image below ,coil
+C produces a south-pole magnetic field, and coil C produces a north-pole magnetic field. The magnetic fields produced by the coils pass through the air gap and through the metallic rotor. Because the magnetic fields attract each other, the metallic rotor spins in a direction that brings the nearest edges (2 and 4) of  the rotor as close as possible to the pair of energized coils (C and C). Like the PM stepper rotor, the VR   stepper rotor will remain aligned to the coils as long as coils C and C are energized and the magnetic fields are not changed. To move to the next state and continue this rotation, coils C and C must be deenergized, while coils A and A must be oppositely energized to attract rotor edges 1 and 3 respectively. The same process occurs with coils B and B to attract rotor edges 2 and 4 respectively, and so on.This is an example of a 3-phase VR motor.</p>
+<h1>Getting Familiar with Arduino</h1>
+<h3>Blinking LED</h3>
+<p>We desing a ciruit in which the LED will be blinking. It will be bright for one second and dark for one second and the process repeats.</p>
+<h4>Circuit Diagrams</h4>
+<p><img src="https://docs.arduino.cc/static/c8dbeff786e52681c3d0e9ee9525e140/29114/schematic.png" alt="imgae"></p>
+<h4>Code:</h4>
+<pre><code class="language-arduino">int ledPin = 13; // LED on digital pin 13
+void setup(){
+
+pinMode(ledPin, OUTPUT); // sets pin 13 as output
+}
+void loop(){
+digitalWrite(ledPin, HIGH); // turns the LED on
+delay(1000); // pauses for 1 second
+digitalWrite(ledPin, LOW); // turns the LED off
+delay(1000); // pauses for 1 second
+}
+</code></pre>
+<p>As we can see that the LED blinks with frequency of one second.</p>
+<h3>Blinking LED with changing brightness</h3>
+<p>The ciruit diagram in the same but I had connected the LED to pin 9 insted of pin 13.</p>
+<pre><code class="language-arduino">int ledPin = 9; // LED on digital pin 13
+void setup(){
+
+pinMode(ledPin, OUTPUT); // sets pin 13 as output
+}
+void loop(){
+for(i=0;i&lt;256;i++){
+analogWrite(ledPin, i);
+delay(10)} 
+for(i=256;i&gt;0;i--){
+analogWrite(ledPin, i);
+delay(10)} 
+}
+</code></pre>
+<p>We can see that the LED slowes glows to brighen and then it slowly fades away to be dark.</p>
+<h3>Measuring DC Voltage</h3>
+<p>For this we put the one end of the cell to the ground and the other end to analog input pin. This is analog input siutaion. We will use serial output with boudrate <span class="math inline">\(9600\)</span> to display the output.</p>
+<pre><code class="language-arduino">int pin = A5;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  float val = analogRead(pin);
+  Serial.println(val);
+  delay(1000);
+
+}
+</code></pre>
+<p>The Voltage was shown to be <span class="math inline">\(3.48V\)</span>. This was a small battery cell so that was approximately right.</p>
+<h2>Stepper Motor control with Arduino</h2>
+<p>We will connect the stepper motor through a H bridge motor driver. This will help us to direct instruction to the motor. We are using external power supply because the motor take too much power and it is not possible to draw that much power from the arduino board. So the motor driver helps us achieve that too. The Circuit diagram is given below:</p>
+<p><img src="https://docs.arduino.cc/static/86aa2dffb09672074039cf091756ddf6/dd45a/UnipolarKnob_schms.png" alt="imgae">.</p>
+<p>We are using a full step revolution for the stepper motor. That will require <span class="math inline">\(250\)</span> full steps to achieve <span class="math inline">\(360\)</span> full rotation. There are four magnets in our stepper motor. There would be four pins to control the stepper motor as <code>pin1</code>, <code>pin2</code>, <code>pin3</code>, <code>pin4</code> We will use the control sequence as <code>pin1</code>-<code>pin3</code>-<code>pin2</code>-<code>pin4</code>. This perticular order of the pins depends on the inner structure of the stepper motor.</p>
+<p>The code for linear motion, and simple circular motion is given below.</p>
+<pre><code class="language-arduino">int pin1= 8;
+int pin2 = 9;
+int pin3 = 10;
+int pin4 = 11;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(pin1,OUTPUT);
+  pinMode(pin2,OUTPUT);
+  pinMode(pin3,OUTPUT);
+  pinMode(pin4,OUTPUT);
+
+}
+
+void loop() {
+for(int i=0;i&lt;200;i++){
+
+  digitalWrite(pin4,HIGH);
+  digitalWrite(pin2,LOW);
+  digitalWrite(pin3,LOW);
+  digitalWrite(pin1,LOW);
+  delay(50);
+
+  digitalWrite(pin2,HIGH);
+  digitalWrite(pin1,LOW);
+  digitalWrite(pin3,LOW);
+  digitalWrite(pin4,LOW);
+  delay(50);
+
+  digitalWrite(pin3,HIGH);
+  digitalWrite(pin2,LOW);
+  digitalWrite(pin1,LOW);
+  digitalWrite(pin4,LOW);
+  delay(50);
+
+  digitalWrite(pin1,HIGH);
+  digitalWrite(pin2,LOW);
+  digitalWrite(pin3,LOW);
+  digitalWrite(pin4,LOW);
+  delay(50);}
+
+}
+</code></pre>
+<h3>Controlling Circular motion using IR sensor</h3>
+<p>An infrared proximity sensor or IR Sensor is an electronic device that emits infrared lights to sense some aspect of the surroundings and can be employed to detect the motion of an object. As this is a passive sensor, it can only measure infrared radiation. This sensor is very common in the electronic industry and if you’ve ever tried to design an obstacle avoidance robot or any other proximity detection-based system.</p>
+<p>IR sensor is an <em>analog ouput device</em>. It gives a voltage output which is very high when no obsticle in the path. But when an obsticle comes in the path, the output value is very less then. We will put this IR sensor directly beneath the revolution of stepper motor. We have put a check that if the output value is reduced by more than <span class="math inline">\(15\)</span>% that would mean that the wire is directly above the sensor and we would stop the motion.</p>
+<p>The code for that is given below</p>
+<pre><code class="language-arduino">int pin1= 8;
+int pin2 = 9;
+int pin3 = 10;
+int pin4 = 11;
+int pin = A5;
+void setup() {
+  Serial.begin(9600);
+  // put your setup code here, to run once:
+  pinMode(pin1,OUTPUT);
+  pinMode(pin2,OUTPUT);
+  pinMode(pin3,OUTPUT);
+  pinMode(pin4,OUTPUT);
+
+ for(int i=0;i&lt;500;i++){
+
+  float val = analogRead(pin);
+  Serial.println(val);
+
+  if(val&lt;250){
+    digitalWrite(pin3,LOW);
+  digitalWrite(pin2,LOW);
+  digitalWrite(pin1,LOW);
+  digitalWrite(pin4,LOW);
+  break;
+    }
+  
+  
+  digitalWrite(pin4,HIGH);
+  digitalWrite(pin2,LOW);
+  digitalWrite(pin3,LOW);
+  digitalWrite(pin1,LOW);
+  delay(50);
+
+  digitalWrite(pin2,HIGH);
+  digitalWrite(pin1,LOW);
+  digitalWrite(pin3,LOW);
+  digitalWrite(pin4,LOW);
+  delay(50);
+
+  digitalWrite(pin3,HIGH);
+  digitalWrite(pin2,LOW);
+  digitalWrite(pin1,LOW);
+  digitalWrite(pin4,LOW);
+  delay(50);
+
+  digitalWrite(pin1,HIGH);
+  digitalWrite(pin2,LOW);
+  digitalWrite(pin3,LOW);
+  digitalWrite(pin4,LOW);
+  delay(50);}
+  
+ }
+
+
+void loop() {
+}
+</code></pre>
+<h1>Results:</h1>
+<p>The stapper motor rotates for given steps of revolution. And when the IR sensor is applied than the stepper motor stops rotating when its above the IR sensor.</p>
+<h1>Discussion</h1>
+<p>This was by far the most interesting experiment of the stepper motor. Programming was one of my favorate things from the start of my undergraduate course. And when we see the real things (hardware) being moved by the programming logic, my heart starts dancing with joy. I really enjoyed the experiment. There should be more experiments like this.</p>
+<p>Arduino has many many applications in real world. Many things could be automated using arduino. We can make simple things like automated door lock system, PID controlled unlock system. And many more things. It would be a great pleasure for me to learn more about these things.</p>
+<p>Arduino can be used to automated observation taking in the labs. For example, in the Debye temperature experiment. We have to take video because there are so many observation that we can't just write with hand. So in these condition, the knowlege of ardino comes very handy.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Equation using Spectral Method - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Heat Equation using Spectral Method
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2024-12-15" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2024-12-15
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+                <a href="/tags/physics.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #physics
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+from numpy import pi
+from scipy import fft
+
+plt.style.use('seaborn-v0_8-whitegrid')
+</code></pre>
+<h1>Solving heat equation using spectral methods</h1>
+<p>Our heat equation is this:</p>
+<p>\begin{equation}
+\frac{\partial u}{\partial t} = \kappa \nabla^2 u
+\end{equation}</p>
+<p>We will slove this equation in a square box of legth <span class="math inline">\(L\)</span> first.</p>
+<p>To start solving this equation, we will first have to non-dimenssionalise it. Because computers don't understand the language of units. We need to find the natural length scale which can be easily identified as the length of the rod <span class="math inline">\(L\)</span>. Now we define dimenssionless position as <span class="math inline">\(x \to \frac{x}{L}\)</span>. Then we need to find the scale for time. If we put the length scale into the equation, we will find that the time scale is <span class="math inline">\(\tau = \frac{L^2}{\kappa}\)</span>. Then we define <span class="math inline">\(t \to \frac{t}{\tau}\)</span>. We also need to find a temperature scale, which doesn't effect our equation because it is on both side and will cancel out. But still we need to do that. The natural temperature scale is found in the intial  intial distribution of the temperature. Then this <span class="math inline">\(T_0\)</span> can we taken as temperature scale and the dimenssionless temperature would be <span class="math inline">\(T \to T/T_0\)</span>. Not that our space domain reduces to just <span class="math inline">\([0,1]\)</span> in dimenssionless variables. Now we easily write the diffrential equation in dimenssionless variables:</p>
+<p>Then our equation becomes</p>
+<p>\begin{equation}
+\frac{\partial u}{\partial t} = \nabla^2 u
+\end{equation}</p>
+<p>To solve this equation, we will take spatial fourier transform on both side of the equation and then the <span class="math inline">\(\nabla\)</span> operator becomes just <span class="math inline">\(-k^2\)</span>. So our equation has this form now</p>
+<p>\begin{equation}
+\frac{\partial \hat{u}}{\partial t} = -k^2 \hat{u}
+\end{equation}</p>
+<p>Then we can use any kind of integrator to solve this temporal equation, for the simplicity, we will use the Euler's method now, then we can imporve it by using Runge Kutta and other fancy method later. The equation at a later time will look like this&quot;</p>
+<p>\begin{equation}
+\hat{u}(t+\Delta t) = \hat{u} + \Delta t (-k^2 \hat{u})
+\end{equation}</p>
+<p>Then we can take inverse fourier tranform to get back to the <span class="math inline">\(u\)</span> at that instant of time.</p>
+<p>Now we need boundary conditions, we will take simple boundary conditions as usual to model.
+The intial temeperature destribution is given by:</p>
+<p><span class="math display">\[
+At the edges, the temperature is 0. The boundary conditions are the periodic boundary conditions. 
+
+Now we start solving the equation
+
+
+```python
+%matplotlib inline
+
+t0 = 0 #intial time
+tf = 50 #final time
+dt = 1e-2 #time step
+
+Nt = int((tf-t0)/dt) #total number of time steps
+
+Nx = 32 #total number of spatial grid steps
+h = 1/Nx #the grid spacing
+
+xs = np.linspace(0,1, Nx)
+
+#making the intial temperature matrix
+U = np.zeros((Nx, Nx, Nt), dtype='float64')
+
+
+def To(x, y):
+
+    return np.exp(-(x-0.5)**2 - (y-0.5)**2)
+    # return 2*np.sin(x*np.pi*3)**2 + 3*np.cos(y*np.pi*3)**2
+    # return np.random.uniform(0,1)
+    # return 0
+
+for i in range(Nx):
+    for j in range(Nx):
+        x = i*h
+        y = j*h
+        U[i,j,0] =  To(x,y)
+        
+```
+
+
+```python
+plt.pcolormesh(U[:,:,0], cmap='rainbow', vmin=0, vmax=1)
+plt.colorbar()
+plt.show()
+```
+
+
+    
+![png](/assets/Heat Equation using Spectral Method-1.png)
+    
+
+
+
+```python
+#applyting spectral method
+for i in range(1,Nt):
+    u = U[:, :, i-1]
+
+    u_hat = fft.fft2(u) #taking the fourier transform
+
+    k_x = fft.fftfreq(Nx)*(2*pi/1)
+    k_y = fft.fftfreq(Nx)*(2*pi/1)
+    kx, ky = np.meshgrid(k_x,k_y)
+    
+    k_spec = kx*kx + ky*ky
+
+    u_hat += -k_spec*u_hat*dt
+
+    #taking the inverse fourier tranform
+    u_real = np.real(fft.ifft2(u_hat))
+
+
+    U[:,:,i] = u_real
+
+```
+
+
+```python
+plt.pcolormesh(U[:,:,60], cmap='rainbow')
+plt.show()
+```
+
+
+    
+![png](/assets/Heat Equation using Spectral Method-2.png)
+    
+
+
+
+```python
+%matplotlib qt
+for i in range(Nt):
+    if i%10==0:
+        plt.clf()
+        plt.pcolormesh(U[:,:,i], cmap='rainbow', vmin=0, vmax=(1))
+        plt.title(f't = {round(i*dt)}')
+        plt.pause(0.1)
+```
+
+Taking a rondom point and seeing it's behaviour with time
+
+
+```python
+x = np.random.choice(range(Nx))
+y = np.random.choice(range(Nx))
+
+temp_point = U[x, y, :]
+plt.plot(temp_point)
+```
+
+
+
+
+    [<matplotlib.lines.Line2D at 0x7f005038b970>]
+
+
+
+
+    
+![png](/assets/Heat Equation using Spectral Method-3.png)
+    
+
+
+trying psudo spectral method
+
+### Numerical solutions from pseudo-spectral methods with filtering
+
+The above process works very fine, and gives us the accurate results for periodic boundary conditions. However sometimes, we have an insight in the equation, which can help us to reduce the eqation in simpler form. It also reduces the computation time and power required. We would have to find a perticular thing called the integrating factor. And from thereon, we can work on this onwards.
+
+In Fourier space, these equations are of the form
+
+\]</span></p>
+<p>\dot{\phi_q} = \alpha(q) \phi_q + \hat{N}_q</p>
+<p><span class="math display">\[
+Multiplying both sides by $\exp(−\alpha(k)t)$ gives
+
+\]</span></p>
+<p>\frac{d(\phi_q e^{-\alpha t}) }{dt} =\frac{d \psi }{dt}=  e^{-\alpha t}\hat{N}_q<br>
+%+ e^{-\alpha t}i\mathbf q \cdot \mathbf \Lambda</p>
+<p><span class="math display">\[
+Thus, we can solve for $\psi_q=\phi_q e^{-\alpha t}$ and then compute 
+
+$$\phi_q (t+dt) = \psi_q (t+dt)e^{\alpha (t+dt)} = \left[\psi_q (t) + dt \left(e^{-\alpha t}
+\hat{N}_q \right)\right] e^{\alpha (t+dt)}
+\]</span></p>
+<p>This can be simplified to</p>
+<p><span class="math display">\[\]</span></p>
+<p>The heat equation is a very simple equation, It has no non-linear terms and we could easily solve this for time part analytically.
+The equation right now is</p>
+<p>\begin{equation}
+\frac{\partial u}{\partial t} = \nabla^2 u
+\end{equation}</p>
+<p>After taking the fourier transform it becomes</p>
+<p>\begin{equation}
+\frac{\partial \hat{u}}{\partial t} = -k^2 \hat{u}
+\end{equation}</p>
+<p>Now we multiply by <span class="math inline">\(e^{k^2 t}\)</span> both side and do some rearrangement then the equation becomes</p>
+<p>\begin{equation}
+\frac{\partial \hat{u}}{\partial t}e^{k^2 t}  -k^2 \hat{u} e^{k^2 t} = 0
+\end{equation}</p>
+<p>which is precisely
+\begin{equation}
+\frac{\partial }{\partial t}(\hat{u} e^{k^2 t}) = 0
+\end{equation}</p>
+<p>We integate this equation from <span class="math inline">\(t=0\)</span> to <span class="math inline">\(t=t\)</span> and find the solution of the form</p>
+<p><span class="math display">\[
+Now we take fourier inverse transfrom and find our solutions as expected:
+
+$${u}(t) =  \mathcal{F}^{-1}(\hat{u}(0)e^{-k^2 t})$$
+
+The implimentation of this code is given below.
+
+
+```python
+u0 = U[:, :, 0]
+k_x = fft.fftfreq(Nx)*(2*pi/1)
+k_y = fft.fftfreq(Nx)*(2*pi/1)
+kx, ky = np.meshgrid(k_x,k_y)
+
+ksq = kx*kx + ky*ky
+#taking the fourier transform
+uhat = fft.fft2(u0)
+
+for i in range(1, Nt):
+    
+    #current time is just how much steps we have taken
+    t = i*dt
+
+    U[:, :, i] = np.real(fft.ifft2(uhat*np.exp(-ksq*t)))
+
+```
+
+
+```python
+%matplotlib qt
+for i in range(Nt):
+    if i%10==0:
+        plt.clf()
+        plt.pcolormesh(U[:,:,i], cmap='rainbow', vmin=0, vmax=(1))
+        plt.title(f't = {round(i*dt)}')
+        plt.colorbar()
+        plt.pause(0.1)
+```
+
+
+```python
+
+```\]</span></p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

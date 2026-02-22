@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What type of God do you believe in? - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            What type of God do you believe in?
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2024-01-21" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2024-01-21
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/Article.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Article
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/types-of-god-4.jpg" alt="What type of God do you believe in?" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <!-- raw HTML omitted -->
+<p><a href="https://en.wikipedia.org/wiki/Hindu_art#/media/File:Matsya_Avatar,_ca_1870.jpg">Matsya Avatar of Vishnu, Uttar Pradesh, India.</a></p>
+<p>To me, atheism sounded like a natural concept for someone capable of rational thinking. I thought that one need not be a philosopher to spot the logical fallacy in the religious practices around us. Anyone with common sense can see that all the things we do to please God are nonsense. My belief got stronger and stronger as I read more books. I naturally evolved into believing that God does not exist. And I thought that everyone else would also come to this conclusion eventually.</p>
+<p>But I found that very few people think like me. Even when I came to IIT, I was surprised that most people believe in the Orthodox religion. I thought, why can't they see the reality as clearly as I can? Why can't they see that there is no one answering their prayers? But when I interacted with them, I discovered they don't believe in a wish-making God. Their conception of God differed from what my mother taught me about God. And that led me to think about what kind of God everybody believes in.</p>
+<p>Based on people's arguments on God's existence, when I debate with them, I have categorized God into four categories. But before I explain each of them, I want to clarify some things. First, by the definition of God, I mean something supernatural, a higher power. One of my friends told me that all of nature and all things are included in his conception of God. (This belief is called <em>Panthiesm</em>.) You might say that I believe my mother is God. Whenever I ask God for a piece of bread, he doesn't respond, but when I ask my mother for the same thing, I get it instantly. We will not talk about these kinds of arguments here.</p>
+<p>These categories are based on my interactions with my fellow classmates. Honestly, it would be foolish to generalize it for everyone, but I am nothing more than a fool. The following are the religious categories of God:</p>
+<ul>
+<li>God of prayers</li>
+<li>God of ignorance</li>
+<li>God of Trigger</li>
+<li>God of coincidence</li>
+</ul>
+<h1>God of prayers</h1>
+<!-- raw HTML omitted -->
+<p><a href="https://www.hinduwebsite.com/ask/how-to-pray.asp">How to pray: Hinduwebsite</a></p>
+<p>God of prayers is the most common type of God. Most religious people believe that there is a God who listens to their prayers. <em>Prayers</em> include not only wishes but also spiritual prayers without personal benefit, for example, <em>Namaz</em>, <em>Aarti</em>, etc. People believe they are doing good deeds simply by enchanting the names of God. They believe in the omnipotent (all-powerful) and omnibenevolent (all-good) God.</p>
+<p>If you follow any orthodox religious practices, like going to temple or church, wearing beads or <em>mala</em>, reading <em>namaz</em>, going to pilgrims, or planning a terrorist attack, with the intention of pleasing a personal God, your God falls under this category. This God is a personal God, a very human God. God looks like humans, has emotions like humans, and cares for other humans. This God can have various forms, shapes, and sizes. But one thing is clear: God interacts with the world. It can change the course of the future. But it needs to be pleased through various practices. If you make this God happy, you will go to Heaven; otherwise, you will go to Hell. God has spoken to the world through many prophets, and one day, God will come to Earth, end all the crimes and sins, and relieve the humans, uniting Earth with the heavens.</p>
+<p>All Hindu Gods <em>Bramha, Vishnu, Shiv</em> and all their forms fall under this category. The Judiac-Christan God is also the same kind of God because all Christians, Jews, and Muslims have a set of religious practices. These beliefs are based on some significant assumptions:</p>
+<ul>
+<li>God is interested in human affairs, and he interferes in the working of the Universe.</li>
+<li>God is omnipotent (all-powerful) and omnibenevolent (all-good).</li>
+<li>God can feel human emotions like mercy, love, and hunger and hence has interests and biases.</li>
+</ul>
+<p>Now we will think that the Universe is too big; there is one planet, the Earth, revolving around this star, the Sun. There are billions of stars in our galaxy and billions of galaxies in the world. But God still cares about one of the billions of species on this little blue pixel. But God is omnipotent and powerful. Looking after billions of creatures on billions of planets around billions of stars in billions of galaxies is no big deal for God.</p>
+<p><a href="https://en.wikipedia.org/wiki/Yuval_Noah_Harari">Yuval Noah Harari</a> offers a powerful insight in his book Sapiens. To quote him:</p>
+<blockquote>
+<p>&quot;The most fundamental insight of polytheism is the supreme power is devoid of interests and biases, and therefore it is unconcerned with the mundane human desires, worries, and cares. It is pointless to ask this power for victory in war, for rain, or for good health. Those who realize this fact become <em>Sanyais</em> and devote their life uniting with the <em>Atman.&quot;</em></p>
+</blockquote>
+<p>Neil Degrace Tyson offers a powerful argument against the second assumption. (which is not unique to him; the debate has been going on for centuries.) It is not possible for God to be omnipotent and omnibenevolent simultaneously. We see many disasters, famines, pandemics, tsunamis, earthquakes, etc. If God is omnipotent, he can stop all this; if God is omnibenevolent, he should stop it. That means that there should not be any natural disaster. But there are so many, and that would imply that either God is either not all-good or not all-powerful.</p>
+<h1>God of Trigger</h1>
+<p>This is the most common type of God among scientists. The central idea is that God created this Universe, God set up life in this Universe and then left it to evolve according to the laws of science. This idea revolves around an absentee deity who pulled the trigger at first but didn't interfere with worldly affairs after that.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://www.saatchiart.com/art/Painting-Genesis/1103496/4365785/view">Genesis by  Zdzislaw Lazuk</a></p>
+<p>Scientists argue that the world is too organized, and that hints towards a creator. If the conditions were a little bit different, then life was impossible to exist. If the value of the gravitational constant had been a bit higher, the Universe would have collapsed again at a singular point. And the argument goes on.</p>
+<p>Stephen Hawking mentions this God in his Book A Brief History of Time. He says that the initial conditions, chosen at the Big Bang, were chosen exactly such that the Universe would evolve into its current state. Out of infinite possibilities, only one that fits perfectly was chosen. This does indicate a creator. (Don't forget that Stephen Hawking was a hardcore atheist.)</p>
+<p>This idea comes naturally when thinking about the start of the Universe. If the Big Bang Theory is correct, then it's natural to ask why the Bang happened. And at this, churches jumped on the opportunity to insist that it was God who created the Big Bang. Similarly, it's about the starting of life; how did the first lifeform get consciousness? How did the matter suddenly get alive? These questions can only be answered in terms of a higher power.</p>
+<p><a href="https://plato.stanford.edu/entries/aquinas/">Thomas Aquinas</a> presented <strong>Cosmological Argument</strong> to prove the existence of God. There were four cosmological arguments: argument by motion, causation, contingency, and grading. He also gave a teleological argument for intelligent design, which we will not discuss here. The first four arguments have the same structure.</p>
+<blockquote>
+<p>Every event is caused by some other event, which itself has a cause or set of causes. So, there is a chain of causes that either goes on infinitely or is started by the <em>first cause</em>. But things can't go infinitely, so there must be the first cause, which is itself uncaused. And this first cause is God.</p>
+</blockquote>
+<p>The other three arguments run similarly. Over the centuries Thomas Aquinas' argument has faced a lot of criticism. The critics say that we can't just ignore the infinite regression. But I personally think that it's a good argument, way better than what scriptures have to offer.</p>
+<p>The teleological argument, however, is different. It says that this world, along with its creatures, is too complex to exist without any outside help. And this indicates that it has to be designed by an intelligent creator. It often comes with an analogy of a watch: If you find a watch somewhere. You observe it and see that it's too complex. So, it can't come to its own form all by itself. Therefore, the creator of the watch has to be there. The same is true for the Universe and all of its consequent. But I think that it's a terrible analogy. Two watches can't create a third watch, but two humans can.</p>
+<p><a href="https://en.wikipedia.org/wiki/David_Hume">David Hume</a> criticizes these arguments in a sophisticated way. He shares in the theory of probability and asks questions like: How can we be so sure that the Universe wouldn't exist if the conditions had not been just like this when we have just one Universe to talk about? And why are we giving so much importance to life on Earth? Why does it matter if life is not there? The Universe would still exist.</p>
+<h1>God of Ignorance</h1>
+<p>This one is also called the God of Gaps. Most people, even educated ones, appeal to the deity when they come across something they can't explain using the primary knowledge of science. Consciousness is one of the unsolved mysteries of science. And when we confront theologians, they would generally present arguments such as What happens when a person dies? Where do they go? How would science explain that? It is not a secret fact that science can not explain death. But that doesn't mean that it can never be explained. Right now, we don't have any theory that can explain consciousness scientifically, but there is a possibility that we might develop one in the future.</p>
+<p>One need not present an example while appealing to God of ignorance. There are simply so many things that we don't understand and can't understand using the current development of science. Wherever science fails to explain something, we are bound to label it as a work of God. My father uses this argument repeatedly. He says that science is yet an immature theory, a childish attempt to explain reality, but religion has been there for thousands of years. (Not monotheist religions, actually. Two is the minimum number for making something plural.) But I don't argue with him because neither do I have a better counterargument, nor is it wise to argue with your father.</p>
+<p>God of Gapes follows this certain assumption:</p>
+<ul>
+<li>If something is not yet proven true, it must be false. And if something is not yet proven false, it must be true.</li>
+</ul>
+<p>But if we look closely, God of Gaps is more of an atheist argument than a theist one. Science may not have answers for all the questions that reality asks, but unlike religion, science is a dynamic field, and it's ever-evolving. If science can't explain something today, it will do so in the upcoming years because active research is always going.</p>
+<p>Throughout history, science has filled the gaps and eliminated the God of Gapes. Earlier lunar and solar eclipses were said to be the work of God, but then we found out the true reason, and God was removed from there. Earlier, we thought that pandemics were caused by God, but then we discovered viruses and bacteria, and God was removed from there.</p>
+<p>I would like to quote German theologian <a href="https://en.wikipedia.org/wiki/Dietrich_Bonhoeffer">Dietrich Bonhoeffer</a>:</p>
+<blockquote>
+<p>&quot;For the frontiers of knowledge are inevitably being pushed back further and further, which means that you only think of God as a stop-gap. He also is being pushed back further and further and is in more or less continuous retreat. We should find God in what we do know, not in what we don't.&quot;</p>
+</blockquote>
+<h1>God of Coincidence</h1>
+<p>The world is probabilistic. There are some things that happen more often than others, and sometimes, the least expected things happen. But humans are hard deterministic; they can't digest the fact of a lousy probabilistic world. And when they see things unexpected happening, they say it's the work of God. For example, if a person survives an accident, we would say that God saved him. (Or his mother's prayers saved him, God of prayers.) But people can be saved from accidents; it's not impossible. It can be included in the God of ignorance, but I like to keep it secret for some specific reasons.</p>
+<p>First of all, I want to clarify that the low probability things aren't impossible. Any event having a low probability just means that if you repeat the experiment many times, the number of occurrences of that event is low. But they can still happen. If you calculate the probability of a dart landing on a specific point, it's zero. But still, the dart lands somewhere.</p>
+<p>Not only we label these rare things as the work of God, but we also associate it some high probability things. For example, rainfall in the month of August is a common event, but we always associate it with the work of God because there were some years in which it didn't rain in August.</p>
+<p>With the introduction of Quantum Mechanics, the religious people would jump over it. Aha! you don't know the world, right? You can only guess what its state would be. God knows it. He knows everything. Only God knows in which state the wavefunction will collapse.</p>
+<p>I believed in the God of Coincidnets for much of my life. I didn't think I was capable of being creative. So whenever a poem, a rhyme, or a thought came to my mind, I thought that God had given me that thought. Many times in my life, I have made clever decisions and helped myself out in difficult situations, and when I reflected back on them, I wasn't able to trace the source of them. I had no answer as to how I reached that solution. It just happened to be in my mind, and that was surely the work of God.</p>
+<p>Ramanujan, the great Indian mathematician, said that the theorems he wrote were given to him by the Goddess Saraswati. He didn't know how to prove them, but he said that he just knew that his theorems were true. These kinds of questions are difficult to answer and can comfortably be put under the supernatural label.</p>
+<h1>Conclusion</h1>
+<p>It is as foolish to reject everything as it is to accept everything blindly. As a skeptic, I spend much time wondering why people don't question their beliefs. Why don't people see the obvious fallacies in their religious practice? But what I didn't notice is that I am doing the same with my religion (atheism). I was rejecting everything people said about God or religion. But as I progress to debate with many people around me and watch many debates on YouTube, I find that I have fewer and fewer arguments for them. That means that I haven't studied my own religion deeply enough. And that's why I have recently started reading philosophical books. I am currently reading Philosophy of Religion by John Hick. (John Wick with an H).</p>
+<p>Many people will argue that science hasn't proven the existence of God, yet science hasn't conclusively proven that God doesn't exist either. People will argue that some things are just out of the scope of science and God is one of them. (The followers of God of Ignorance indeed.) That presents us with a free choice.</p>
+<p>As John Hick says in his book Philosophy of Religion:</p>
+<blockquote>
+<p>&quot;The force of the cosmological form of reasoning resides in a dilemma: either there is a necessary being, or the Universe is ultimately unintelligible. Clearly, such an argument is cogent only if the second alternative has been ruled out. Far from being ruled out, however, this second alternative represents the skeptic's position. This inability to exclude the possibility of an unintelligible universe prevents the cosmological argument from operating for the skeptic as proof of God's existence—and the skeptic is, after all, the only person who needs such proof. Either the world is untenable, or there is a supernatural power behind its order. Both of the statements are equally preposterous. &quot;</p>
+</blockquote>
+<p>On this line of argument, I say that we have a free choice on what we want to believe. Whether God exists or not, nothing has been proven yet; it's an open debate. So we can pick a side. I have chosen the side of atheism, believing that God doesn't exist. But since it's a free choice, I, along with all the atheists, should keep in mind that the other possibility is not ruled out. Therefore, we should respect all the people who believe in God.</p>
+<p>But that only applies to the people who have gone through the thinking process and accepted the existence of God. People who believe in everything their religion teaches them without questioning are not included. We should obviously respect everyone's religion, and we should not try and attempt to hurt anyone's religious sentiments. Those who believe in God, it's their choice, and we should not have any problem with that.</p>
+<p>As we witness the history of Ram Mandir finally being inaugurated, we are leading more towards thinking logically about religion. But I think lord Ram will not be particularly happy about his temple finally coming into place. He would be happy when his morals were adopted by everyone who calls himself a Hindu. With that, I would like to end this article. Jai Shree Ram.</p>
+<h1>References</h1>
+<ul>
+<li>Book: Hick, John. (1990). Philosophy of Religion. Prentice Hall. <a href="https://www.ditext.com/hick/title.html">https://www.ditext.com/hick/title.html</a></li>
+<li>Book: Harari, Yuval Noah. (2015). Sapiens: A Brief History of Humankind. Harper Collins.</li>
+<li>Cosmological Argument (Stanford Encyclopedia of Philosophy). <a href="https://plato.stanford.edu/ENTRIES/cosmological-argument/">https://plato.stanford.edu/ENTRIES/cosmological-argument/</a>. Published June 30, 2022.</li>
+<li>God of the Gaps | Encyclopedia.com. (n.d.). <a href="https://www.encyclopedia.com/education/encyclopedias-almanacs-transcripts-and-maps/god-gaps">https://www.encyclopedia.com/education/encyclopedias-almanacs-transcripts-and-maps/god-gaps</a></li>
+<li>Book: Hawking, Stephen. (1998). A brief history of time. Bantam. <a href="https://archive.org/details/briefhistoryofti0000hawk">https://archive.org/details/briefhistoryofti0000hawk</a></li>
+<li>Philosophy <a href="https://www.youtube.com/watch?v=1A_CAkYt3GY">Crash course</a></li>
+</ul>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

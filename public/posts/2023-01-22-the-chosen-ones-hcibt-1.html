@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chosen Ones |HCIBT #1 - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            The Chosen Ones |HCIBT #1
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2023-01-22" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2023-01-22
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="/tags/journal.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #journal
+                </a>
+                
+                <a href="/tags/Story.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Story
+                </a>
+                
+                <a href="/tags/HCIBT.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #HCIBT
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="/assets/the-chosen-ones-hcibt-1-1.jpeg" alt="The Chosen Ones |HCIBT #1" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p><img src="https://i.pinimg.com/564x/9b/c0/a2/9bc0a25ce0fd45b73472ceda69dccbc9.jpg" alt="St. Stephen's College, Delhi"></p>
+<p>Excitement, nerve, pride, amazement, and many other feeling were mixed when I put my first foot in St. Stephen's College. I took a moment to admire the magnificent red building before rushing into the process. It looked like an ancient institution standing there for more than a hundred years. Its British architecture was appealing. A large one at the top of the building established that this is a Christian minority college. I took a deep breath of pride. After all the chaos and tragedies of my life, I have made it to this college. It was like a dream coming true. I have a certain feeling of contentment that I made my father feel proud. It was not like achieving all life goals, but it was a beginning at least, and I was sure more success was on the way.</p>
+<p>I nodded to the security guard, who smiled congratulations to me. I then rushed to the college hall, where we were supposed to attend our orientation. I knew the way to the college hall. It was near the staff room where I gave the interview for admission. The little time it took me to get from the gate to the college hall made me think about the college life I was heading. I was excited about many things.</p>
+<p>When I reached the gate of the college hall, A tall girl greeted me with a smile. She was a third-year student volunteering for the orientation. </p>
+<p>&quot;Which course?&quot; She asked, still smiling.</p>
+<p>&quot;Physics honors.&quot;, I replied under-confidently.</p>
+<p>&quot;First three rows on the left. Best of luck.&quot; She pointed with her index finger. I walked in the direction, and soon I was staring at my name while chit pasted on a chair. No doubt, that was my place to sit. </p>
+<p>I was just on time, and the program was about to start. I looked up at the stage. Teachers were already sitting there. A verse from the holy Bible showed above the stage. </p>
+<blockquote>
+<p><em>Jesus said: I am the light of the world. He that followeth me shall not walk in darkness, but shall have the light of life.</em> </p>
+</blockquote>
+<p> It was clear that only Jesus could have said such things. I joked to myself. The description of 'Jesus said' was unnecessary. The place was well-built for a hundred-year-old castle. Large ceiling fans on the side walls were tilted forty-five degrees swirling the air downwards to sitting students. </p>
+<p>A girl with curly hair rushed to the seat beside mine. She waved at me with a cheery smile. For a moment, she looked like Hermoine Granger from Harry Potter movies. </p>
+<p>&quot;Hi.&quot; She said, wanting to start a conversation.</p>
+<p>&quot;Hello!&quot; I answered under my breath, not wanting to start a conversation. </p>
+<p>To my surprise, she took the hint, instantly gave up the attempt, and engaged in a conversation with a boy sitting right to her. </p>
+<p>For the first time, I noticed the horrible sight of the function: the people. People make me nervous. I am so apprehensive in front of people that I could never start a conversation on my own, and if someone comes and starts a conversation with me, I would try to disclose lesser and lesser information about myself. I dread their awkward questions about my life, family, career, and business. That is why I try to avoid people as much as possible. And now I can see a flood of unknown people in front of my eyes.</p>
+<p>I have always had trouble making friends. Because I overthink. My trust depends on many factors that overfit the curve of friendship. I think about their nature, way of talking, status, and many other things before trusting someone with my secrets, and that's why I don't have anything called a best friend. I am afraid of people because I overjudge them.</p>
+<p>Given my situation, the scene was not looking good. Hermione Granger was talking with the boy in furious English, and I could only pray for such fluency. Everyone around me was talking to people around them. Not even one person was looking nervous and silent like myself. Students were dressed formally, and I had pulled up my favorite jeans without thinking much. They were confident, and I was full of nerve such that no words came out of my mouth. Could I ever fit in this environment? After all, I was just a villager in India's capital.</p>
+<p>My chain of thoughts was broken when a middle-aged man with grey hair and a white mustache started addressing the assembly. He introduced himself as Prof. John Verghese, principal of the college. He started the show by counting his qualifications. Then the turned to the history of the college. And I was astonished, and now I was more proud of myself. He informed us that the college was established in 1881. It was under Cambridge university, then it went under Punjab university, and now it comes under Delhi University. He mentioned the association of the college with independence movements, non-cooperation, etc. He told us about the alumni the college has produced: IASs, national leaders, authors, and even a president. He persisted with the college's achievements in the last year across the fields, praising the college through data and its rankings through national and international standards.</p>
+<p>Principal sir made it clear that the college has set itself high standards. So, they don't take the admission process lightly because they work up to the standards. That explains why they have put an extra filter through an interview for admission. Then he began to mutter data again. He explained how many students had applied for admission, and many made it. It seemed he wanted to emphasize how many got rejected. That made me feel lucky not to be one of them. He pushed the statement more with a golden sentence:</p>
+<p>&quot;You are the chosen ones.&quot;</p>
+<p>That sentence broadened the chests of many of our students with pride. (Later, it becomes a typical Stephanian joke. It also appeared on T-Shirts!). He started filling the air in us with more inspiring sentences. </p>
+<p>&quot;We have put trust in you. We think you are up to the standard, and now it's time for you to act up to the standards.&quot; </p>
+<p>He was acting like uncle Ben (from Spiderman). &quot;With great power comes great responsibility. You are the chosen ones to be given great power, and now it's your responsibility to use it well.&quot; (He did not say that, but I was hoping it was around the corner.)</p>
+<p>After that, he introduced the heads of different departments. I only paid attention to one: &quot;Prof. Jacob Cherian from the department of Physics and Astrophysics.&quot; An old, short, grey-haired man stood up among the teachers and acknowledged them. At the name of the department of Philosophy, he raised his hand and said: &quot;Myself.&quot; I was surprised that there is a department for Philosophy to care about the fact that the person, who just listed his degrees in English Literature, is the head of that. </p>
+<p>&quot;We will now say the prayer, and then, the head of departments will lead students to their respective departments.&quot;</p>
+<p>He requested all of us to stand up. We did so. And we said something they called grace. It started with 'Oh God, our heavenly father.&quot; The Rest of it fades my memory.</p>
+<p>Then we followed Prof. Cherian to our department. He looked cheerful as we filled the theater-type classroom. He joined his hands together in greeting before starting to address the class. </p>
+<p>&quot;I welcome you all to the Physics department of St. Stephen's College. Year by year, I have seen so many bright faces come here and put their hearts into Physics. You add one more set to the list.&quot; He took a minute to scan through all the faces of new students. He seemed to store all the data of faces in the solid state disk in his heart. </p>
+<p>&quot;Learning Physics is not a procedure; it is an experience. And we are here to make this experience memorable. We will make you enjoy your learning in these classrooms rather than having a constant measurement of time in the hope of getting it over as you might have been doing in your schools. We have a team of qualified people who will not only teach you how to learn Physics but also how to do Physics. Your professors here are not only your teachers, but they are your friends.&quot; He indicated the teachers who were standing near the entering door. They also looked quite cheerful. &quot;You can approach any of them at any time, in or out of classrooms, in case of any doubt. They will help you in your academics and your career. You can ask for their advice on any burdensome situation in your life, whether or not it has to do something with your academics.&quot; </p>
+<p>He sighed and scanned through the class once more. &quot;Our goal here is not to excel but to have multidimensional development. So I encourage you to make friends in college. Take my words: you will remember these people throughout your life because they will influence you the most. Now, I should end the dull words of advice and start introducing you to your professors.&quot; </p>
+<p>The head of the department's address was much shorter than the principal's. But it was the best introduction speech I have ever heard. It was engaging and friendly but unbelievably generous for someone of Dr. Cherian's age. Oh come on which teachers says that I am not your teacher, I am your friend.</p>
+<p>He started to indicate teachers with his right hand and call out their names. </p>
+<p>&quot;Dr. Geetanjali Sethi, she is a cosmologist. She is good at Quantum Mechanics.&quot; An average-height and slightly obese lady smiled and waved her hand. &quot;Dr. Sangeeta. She is good at electronics...&quot; And the introduction went on for quite a while. Many people seemed to be good at electronics. They stopped at Dr. Sampooranand. </p>
+<p>&quot;Sampporanand means complete joy. You see, no other department in this college has Sampooranand except ourselves. At this, all the professors laughed. (Just a matter of fact, Dr. Sampooranand left after one month. We never had total joy. :( ) </p>
+<p>&quot;Now, I would like Dr. Sangeeta to address the class.&quot; He moved away and sat down on a chair, which was placed on the other side of the class. </p>
+<p>Dr. Sangeeta was a middle-aged woman; she had put her glasses on her head. He was looking less cheerful than Dr. Cherian. She came to the middle and started addressing the class.</p>
+<p>&quot;Good Morning, everyone. I congratulate you all for making it to the most prestigious college in India. I assure you of the utmost support from your professors. But you will have to promise the best effort from your side.&quot; She sounded very formal, but her voice softened when talking about serious issues. </p>
+<p>&quot;I know that some of you come from some rural areas, far-fetched areas.&quot; I sat erect like she was talking to me. &quot;Some of you have had education in regional language, and those who are not very comfortable in English. I want to tell you that we are not biased toward any language. You can ask us anything in the Hindi language too. He lowered a bit and said in a soft voice, &quot;<em>Hum Hindi me bhi baat kar sakte hai.&quot;</em> There is no reason to be scared to ask questions. If you have any doubts in the classroom, you should look to clear them straight away.&quot; </p>
+<p>She walked towards the blackboard and stood ahead of the teacher's desk, facing the class now. &quot;Secondly, I want to warn to not to take pride in your 12th-class marks.&quot; Her soft voice was gone and replaced by a warning voice. &quot;No one asks you about your marks here; you will have to redefine yourselves through hard work. Some of you may be ninety-eight, ninety-nine percent marks, but we will see if you can get sixty-seven percent marks in Dr. Gupta's Mechanics class. You have to work hard from the beginning to show your worth.&quot; She walked away from the middle to the left side of the teacher's desk and stood there, silent for a moment. Then she cleared her throat and said in an informative voice. </p>
+<p>&quot;We have two departmental societies: The Physics Society and the Electronics Society. We have fixed slots for society activities in the timetable: Friday for the Physics Society and Saturday for the Electronics Society. I encourage all of you to take part in those society activities. That is fun and informative, bound to increase your knowledge, especially in the practical field. In The Electronics society, we make robots and other fun stuff.&quot; I was not surprised to find out that there is an electronics society because so many teachers are good at electronics. Prof. Sangeeta was still speaking. &quot;Then there is the Social Service League, a college-wide society you should join. There are many other societies as well. You can join them according to your interest and hobbies. For example, if you like singing, you can join Naksh, the music society. I personally suggest that everyone should join their regional society.&quot; Now her warning voice was back. </p>
+<p>&quot;But don't join so many societies that you have no time for studies. Always remember that these things are called extra-curricular activities. You don't give them more attention than your curriculum. You are smart enough to differentiate between your hobbies and career choices. Whatever you do, try to enjoy your college life. Have some fun.&quot;</p>
+<p>She stepped back and said something to Prof. Geentanjali. Geetanjali ma'am stepped up wearing a cheering smile on her face. </p>
+<p>&quot;Good Morning, everyone. I don't want to add anything to what Jacob sir and Sangeeta ma'am had already said. I want to add a bit of advice. You don't have to worry too much about it. Managing time between societies, studies, and friends is easy: keep your priorities in mind. My main job is to explain your timetable.&quot;</p>
+<p>She picked up the chalk, walked to the blackboard, and drew a block diagram of the department. &quot;We have two lecture theaters, labs, staffrooms, and restrooms. So the department of Physics is divided into two parts. The left part from the entrance is called the new physics block, while the right is called the old physics block.&quot; She started to label the empty blocks in the diagram. &quot;On the right side, we have the old physics lecture theater (OPLT) and the old physics lab (OPL), followed by the office of the HOD, and on the left side, we have NPLT and NPL. And then the electronics lab.&quot; She finished with the map of the department. </p>
+<p>&quot;You have core courses and General Electives. The list of electives is given on the college website, and also you can find it on the college notice boards. You will have to register for the courses at the head of the department office. You will find that out soon. That's all from my side.&quot;</p>
+<p>Dr. Cherian spoke in a deep voice. &quot;Now you can fill out the Social Service League membership card.&quot; He signaled the professor near the door, and two boys entered the class. The had a stack of cards, and they started distributing. </p>
+<p>I got my card. It asked for my name, course, and whether or not I lived on the campus. I reached pockets for a pen and found nothing. First, guilt took over me that I forgot such an essential thing, and then nerve because I would have to ask someone for a pen, and I didn't know anyone. I didn't look at my sides. I didn't care who was sitting next to me. This was so embarrassing. I stared at my card, reading it again and again. I didn't know what to do. I finally gathered my courage and looked at the boy sitting next to me. He had already filled out his card. He understood my problem and asked in a soft voice. &quot;Do you want a pen?&quot; </p>
+<p>I nodded.</p>
+<p>I started to fill in my basic details on the card. I didn't know where I was to live, but definitely not on the campus. There was a column for donations to SSL. 'The minimum donation is Rs. 150.' I didn't feel donating the minimum asked, so I wrote 250.</p>
+<p>After everyone filled out their cards, they were collected back. I returned the pen to the boy. &quot;Thank You,&quot; I whispered. </p>
+<p>&quot;Hi, My name is Mohit. What is your name?&quot;, He asked me. </p>
+<p>&quot;Shaym,&quot; I answered the question and made no further. </p>
+<p>&quot;I am from Rajasthan. Where are you from?&quot;, He was passing me information about himself without my demand. I found it very odd. Why is he answering the counter question before asking the question itself? He senses that I am not going to counter-question him anyway. How do people know about people so much without even talking? </p>
+<p>&quot;I am from Punjab,&quot; I whispered. </p>
+<p>&quot;Cool, we are neighbors then.&quot; </p>
+<p>I don't know what to say to that. Although That was a cute observation, I didn't say that. </p>
+<p>&quot;Yeah, I guess so.&quot;</p>
+<p>I was starting to enjoy the conversation when Dr. Cherian interrupted. &quot;You may now go and have lunch. I believe you all are starving.&quot; </p>
+<p>A wave of rush ran through the class. Indeed, everyone was hungry. We passed through the angry corridors (burning with the July summer heat.) to the cafeteria. </p>
+<p>We have to queue outside the cafeteria to get an authorized entry. I waited patiently for my turn. A boy was sitting outside the entrance to mark who had entered and who had not. Some formalities do not make sense at all. I signed in front of my name on the table and entered the cafe. </p>
+<p>It was noise inside. People were talking to people they had already known or had just met and made friends. As neither was applicable in my case, so I decided to eat my diet alone in silence. The food was adequate. Paneer and Veg-Biryani were delicious. And A cup of ice cream after adding four moons to it. I went to take one more cup of ice cream but didn't get it, and I was kind of sad about it. </p>
+<p>The orientation program was officially over with the meal. But we had to get our new identity cards, it was told by the principal. But I didn't know where room RS-1 was, and of course, I had to ask someone to guide me. Luckily, I found a third-year volunteer just outside the cafe. I asked him for the way to room RS-1, followed his directions, and found myself in front of RS-1. But it was closed. I had again held my nerves and asked an official there. He said they would start distributing the ID cards after lunch. Apparently, some people eat slower than me.</p>
+<p>I took the opportunity to wander through the college and explore it. The red brick building reflecting daylight looked pristine. Stone walls, along with rounded doors, gave it an ancient feeling. The corridors were decorated with plants everywhere. The classroom windows seen from the gallery were old-styled. The neatly trimmed laws were soothing to the eyes. I went through the corridors to the science block. The road to the science block was surrounded by trees, and fancy artwork could be seen around the trees. I went on to reach a small shop (called Science Dhaba). Nearby was a shed under which the tree-trunk-shaped chairs were arranged circularly around a wooden table. (They called Gazebo.) The sun was piercing, so I went and sat there to take a few cold breaths. I looked around myself. The artwork of a cart made of wooden sticks was hanging on the wall. It gave me an insight was how creative the people were in the college. So many excellent pieces of artwork can be seen and admired. I just saw an artificial bird nest in the form of a house. A tree was planted in a water tank. I was sure I would enjoy the three years here more than my life.</p>
+<p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiowxRwMSsUHBFhSQf3Fc-OIHUMGRS9Lh43DEM6ZMqmNIMCNJwqFM0NLHETqZynwEosep-FeeK9Z3USlOe04mNyz4HyW2PVguzR2u9aLflK1NRJ5l5WDoSyU403ZO5-z_dXv7nApnSFN6_Lexjo1frrSywNQbWHRXipd093Rfw11lTuLWLA4g_WethBgQ/s3264/IMG_20190726_133537.jpg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiowxRwMSsUHBFhSQf3Fc-OIHUMGRS9Lh43DEM6ZMqmNIMCNJwqFM0NLHETqZynwEosep-FeeK9Z3USlOe04mNyz4HyW2PVguzR2u9aLflK1NRJ5l5WDoSyU403ZO5-z_dXv7nApnSFN6_Lexjo1frrSywNQbWHRXipd093Rfw11lTuLWLA4g_WethBgQ/s320/IMG_20190726_133537.jpg" alt=""></a></p>
+<p>In front of me was a basketball court. I recognized the court from the movie Half Girlfriend. It was attached to the boys' hostel, as it was shown. The doors of rooms in the hostel (they call it the 'residence' for some unknown reasons that none has asked.) opened to the court. The college management may not have noticed how easy it was to take girls to the boys' hostel, but the filmmakers exploited the fact. Anyway, I felt proud to be in a college where blockbuster movies are made.</p>
+<p>A group of foreigners arrived suddenly and occupied the empty chairs beside me. They were talking to a student. I learned to listen to the conversation between them. Listening to a foreigner was going to be a new experience for me. Honestly, I was not getting much from them. It looked that American students had come to India to study religion. One of them told the story of how he became a believer and another about how he became an atheist. I don't know if I was the only one thinking: they should debate if God exists. Then the thing happened that I had never thought of in my wildest dream. The boy left because he needed to meet someone, and all foreigners turned to me.</p>
+<p>I had never spoken English, and the person in front of me had never communicated anything other than English. And now we had to talk. I swallowed a gulp as he asked my name. Then he started talking about Christianity. He told me God sent his son Jesus to earth to save humans from cruelty. His teaching is worth following, and only that way we can live a perfect life. The best thing in the preaching was that doing bad deeds is a sin but thinking about doing bad deeds is also a sin. We need to be pure from our hearts. <em>We should love our neighbor as we love ourselves.</em> He took out his phone and started explaining the four symbols of Jesus. Which were A heart, a divide, a cross, and a question mark. Every time he elaborated on a sign, he would ask me: </p>
+<p>&quot;What could that mean?&quot; And I would shrug my shoulders. &quot;I don't know.&quot; After a fair discussion on Christianity, he asked me about my religion. That's when my heart skipped a beat. Because now, I had to speak. I cleared my throat and told them about Hindusim in poor (ICU level) English.</p>
+<p>&quot;I am a Hindu. Hinduism is a nice religion. We worship trees and animals. (Even I don't know why.) We have many Gods. And sometimes, Gods come on earth to free humans from cruelty.&quot; That was all I could say. </p>
+<p>&quot;What course are you studying.&quot;</p>
+<p>&quot;Oh, I am studying Physics.&quot; A stammer had just been made. </p>
+<p>&quot;I know a little bit of Physics myself. Force is mass times acceleration.&quot; He made gestures with his fingers like he was writing in the air. They all laughed at this, but I didn't laugh. I forced a smile. </p>
+<p>&quot;I think I should go. I will have to collect my ID card.&quot; I somehow managed to get out of the conversation. I stood up, hesitated for a moment, and asked, &quot;Can I have a photo with you?&quot; </p>
+<p>&quot;Of course!&quot; one of them answered. </p>
+<p>I clicked the selfie. &quot;Thank you so much,&quot; I said as I walked out of the shade.</p>
+<p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCIhDEvTP3g2fxkRq-J2VrTJHqGDthqEBVuB30WKowqJCoPj5DwU_8rQN53tgWAeTQZAaWnEz58oKXOMX_73ByqVB656t2kK0wkFJ2K6vIPYLi6fkRPXLoHd4dWElQCoj5Ekw86oo0mP7GXEPMXT0H0urXFCnczFMz7ZpUEYd3mGyxnAyIkgjIFwKPEQ/s4608/IMG_20190719_152814.jpg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCIhDEvTP3g2fxkRq-J2VrTJHqGDthqEBVuB30WKowqJCoPj5DwU_8rQN53tgWAeTQZAaWnEz58oKXOMX_73ByqVB656t2kK0wkFJ2K6vIPYLi6fkRPXLoHd4dWElQCoj5Ekw86oo0mP7GXEPMXT0H0urXFCnczFMz7ZpUEYd3mGyxnAyIkgjIFwKPEQ/s320/IMG_20190719_152814.jpg" alt=""></a></p>
+<p>I thought they might have started to give the Id cards, so I retraced my journey to room RS-1 and found a queue. As I went there, I found out that you require the fee receipt to get the ID card. I asked a volunteer where can I find a photocopy shop. I was getting good at these. I went there and got the receipt printed. When I came back, the line was even longer. I waited patiently for my turn. At last, when I got my id card. I looked at it and sighed with relief. </p>
+<p>At last I was an oficial student of St. Stephen's College.</p>
+<h2><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLH-iXktWyPg3TZGllE4UVI6cla2SS9m_Ceetjn8ksXxgYVLIuiQnMDap7Jc7JBpkLYC38zqu9fnHUlIeQ8BIsaWCzrzWbWB-pQ5JGlXpNsbEJJxxKJhH18V7Pfww0g_VVJp5kklD9dnNmpUomUVZrmAfGMNqfDoZI9Q8yD0DpTQzsQCKW08tcL6jslQ/s1616/IMG_20230123_002245.jpg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLH-iXktWyPg3TZGllE4UVI6cla2SS9m_Ceetjn8ksXxgYVLIuiQnMDap7Jc7JBpkLYC38zqu9fnHUlIeQ8BIsaWCzrzWbWB-pQ5JGlXpNsbEJJxxKJhH18V7Pfww0g_VVJp5kklD9dnNmpUomUVZrmAfGMNqfDoZI9Q8yD0DpTQzsQCKW08tcL6jslQ/s320/IMG_20230123_002245.jpg" alt=""></a></h2>
+<h3>Comments:</h3>
+<h4>It's so detailed, my own first day in college ...</h4>
+<p><a href="https://www.blogger.com/profile/05407595145564212286" title="noreply@blogger.com">Anjali Kumari shaw</a> - <!-- raw HTML omitted -->Jan 1, 2023<!-- raw HTML omitted --></p>
+<p>It's so detailed, my own first day in college is not as vivid as yours (tho it's Just 4-5 months passed) beautifully written and depth of details making it more real and relatable. Keep it up it's beautiful ✨</p>
+<!-- raw HTML omitted -->
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
