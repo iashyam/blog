@@ -2,14 +2,11 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+image: assets/shyam_sunder.jpeg
 ---
-
-
 Hi there! This is Shyam, the one whose fingers bled the words you are reading. I welcome you to this side of the internet.
 
-Find the link of books and movies I have watched  here: [Books and Movies](https://iashyam.github.io/blog/books-movies/)
-
-I am crruntly working as a associte structural engineer at McDermott. My profile says structural engineer,but I am a coder from the heart and the brain. I am from Rajasthan but currently living in Chennai.
+I am crruntly working as a associte structural engineer at [McDermott](https://www.mcdermott.com/). My profile says structural engineer,but I am a coder from the heart and the brain. I am from Rajasthan but currently living in Chennai.
 
 My interests by the day are programming, physics, and problem-solving and by the night are philosophy, poetry and podcasts. (Aslo books, music, languages, gym, guitar and much more stuff that doesn’t go with the alliteration). My hobbies are reading, writing, listening to music, running (hardly anymore) and practicing language on duolingo.
 
