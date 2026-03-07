@@ -22,6 +22,9 @@ jobs:
       - name: Install gossg
         run: go install github.com/iashyam/gossg@latest
 
+      - name: delate cache
+        run: rm -rf .gossg_cache.json
+
       - name: Generate Static Site
         run: gossg
 
