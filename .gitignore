@@ -5,6 +5,8 @@ Gemfile.lock
 .DS_Store
 public/
 
+.gossg_cache.json
+
 # Jekyll cache
 .jekyll-cache
 .jekyll-metadata
