@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"
+    class="antialiased text-gray-900 bg-white dark:bg-black dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piers Morgan&#39;s Argument Intuition - The Rest Frame</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style type="text/tailwindcss">
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 dark:bg-gray-700 rounded-full border-2 border-transparent bg-clip-padding;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-400 dark:bg-gray-600;
+        }
+
+        .markdown-content h1 {
+            @apply text-3xl sm:text-4xl font-bold tracking-tight mb-8 mt-12 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h2 {
+            @apply text-xl sm:text-2xl font-bold tracking-tight mb-6 mt-10 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content h3 {
+            @apply text-lg sm:text-xl font-semibold tracking-tight mb-4 mt-8 text-gray-900 dark:text-white;
+        }
+
+        .markdown-content p {
+            @apply text-[1rem] md:text-[1.05rem] leading-relaxed mb-6 text-gray-800 dark:text-gray-300 text-justify;
+        }
+
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline underline-offset-2;
+        }
+
+        .markdown-content ul {
+            @apply list-disc list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content ol {
+            @apply list-decimal list-outside ml-6 mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300 space-y-2 text-justify;
+        }
+
+        .markdown-content blockquote {
+            @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 pr-5 py-2 mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400 italic bg-gray-50 dark:bg-gray-900 rounded-r-lg;
+        }
+
+        .markdown-content img {
+            @apply shadow-sm my-8 mx-auto ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content code:not(pre code) {
+            @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-1.5 py-0.5 rounded-md font-mono text-sm break-words;
+        }
+
+        .markdown-content pre {
+            @apply bg-[#282c34] rounded-lg shadow-sm overflow-x-auto p-4 mb-8 ring-1 ring-gray-200 dark:ring-gray-800;
+        }
+
+        .markdown-content pre code {
+            @apply text-sm leading-relaxed text-gray-300 bg-transparent p-0 border-0;
+        }
+
+         
+        .markdown-content mjx-container[display="true"] { 
+            @apply overflow-x-auto overflow-y-hidden max-w-full block py-4;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center w-full gap-4">
+            <a href="https://iashyam.in/" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                The Rest Frame
+            </a>
+            <nav class="flex gap-6 text-[0.9rem] font-medium text-gray-500 dark:text-gray-400">
+                <a href="https://iashyam.in/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="https://iashyam.in/projects.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="https://iashyam.in/timeline.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Timeline</a>
+                <a href="https://iashyam.in/tags.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">Tags</a>
+                <a href="https://iashyam.in/about.html"
+                    class="hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6 py-12 sm:py-16">
+        
+<article class="animate-in fade-in">
+    <header class="mb-10 sm:mb-14 text-left max-w-3xl mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-5 text-gray-900 dark:text-white leading-tight">
+            Piers Morgan&#39;s Argument Intuition
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <time datetime="2026-03-09" class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                2026-03-09
+            </time>
+
+            
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex flex-wrap gap-2">
+                
+                <a href="https://iashyam.in/tags/Poem.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #Poem
+                </a>
+                
+                <a href="https://iashyam.in/tags/English%20Poem.html"
+                    class="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    #English Poem
+                </a>
+                
+            </div>
+            
+
+            <div class="hidden sm:block text-gray-300 dark:text-gray-600">•</div>
+            <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Shyam Sunder
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="max-w-4xl mx-auto mb-10 sm:mb-14">
+        <img src="https://iashyam.in/assets/absolute-2.png" alt="Piers Morgan&#39;s Argument Intuition" class="w-full h-auto object-cover rounded-lg">
+    </div>
+    
+
+    <hr class="my-8 border-gray-100 dark:border-gray-800/80">
+
+    <div class="markdown-content max-w-[85ch] mx-auto text-[1rem] md:text-[1.05rem]">
+        <p>Recently Richard Dawkins featured on Piers Morgan's show (again). He pushes Richard Dawkins on atheism by asking him what there was before the big bang. Prof. Dawkins very rightly points out that the question doesn't make any sense because time itself began at the big bang. You can not use the world <em>before</em> in context of the big bang. But Piers was having none of that. He says that logically it has to make sense, and if we intend to be logical we have to ask this question. He argues that by forbidding the use of temporal phrases like <em>before</em>, we want to escape from the question. The answer that there was no before big bang is counter-intuitive and nonsense. He actually believes that this somehow proves the existence of God.</p>
+<h2>Does Counter-intuitive imply nonsense?</h2>
+<p>First of all, I want to point out that counter-intuitive doesn't always mean nonsense. Physics sometimes deal with counter-intuitive things. This is because our brain is very limited in its intuition since we all pick up our intuition from our surroundings. If nothing else, then optical illusion are the first example of it; they at the first glance seem to defy our intuition. Physics will more often than not will go against the intuition of a common person. Take any example of modern physics theory relativity or quantum physics. It is all against human intuition. The dual slit experiment with electron totally shatters your predictions, and it is actually performed and documented. Just because you don't comprehend it, you can't just call it nonsense.</p>
+<p>Here is one common example: take two balls, one made of paper and the other of steel. They both are identical in shape, size and smoothness of surface. Both are dropped from the same height and at the same time. Which will touch the ground first? If you have not studied physics (or even if you have), your intuition might tell you that the steel ball will fall first. But surprise, they both land at the same time! Why should there be a difference? The air drag depends of the surface area which is the same for both spheres, and acceleration due to gravity doesn't depend on the density of the object at all. Many people will find it counter-intuitive. But it is absolutely true! Most of readers will not find it counter-intuitive, however, because they have raised their consciousnesses by studying physics. Try asking the same question to your grandma.</p>
+<h2>Is it really nonsensical to ask before the big bang?</h2>
+<p>But why can't we associate a before to big bang? Why doesn't it make sense to ask the question? Since it seem very counter-intuitive, an analogy to the north pole is often used. Asking what was before big bang is like asking what is north of the north pole. We build our intuition because our brain tries to associate things which are seen together often. Our brain is a brilliant machine which try to automate thoughts by grouping repeated closely appearing thoughts. Take this analogy forward. A traveler has a compass, the needle always shows the direction to north. So he has taken it as in intuition that there is north to all points. So he follows along the direction of the needle, walks, walks and walks. Now he reaches the north pole and his needle stops working. (Because there is no horizontal component of earth's magnetic field at the north pole, only vertical is there.) Now if he asks what is the north of this point, we can call say that his question make no sense. Similarly we have come to associate a before to every point in time. We call follow at arrow to big bang but if we ask what was before big bang, it makes no sense at all.</p>
+<p>Here is how I like to think about this argument. As Richard Dawkins said that he is not a physicist but a biologist, so he can't really elaborate it, I have studied physics but my research area is at the order of biology and physics. I have discussed it with my friend who work in the pure physics and he said that it make sense. Here it is. We know that the time dilutes around heavier objects. The denser it goes, the more time dilutes. Now think about a point where all the mass and energy of the universe is stored; all of it at one single point. How would time go around that point? It will basically freeze. So the time was frozen at the single point, and as the universe started to expand, the time started to flow and that's why we say that time itself was born at the big bang. And that's exactly why there was no <em>before</em> before big bang. Think of how fast the river was flowing at the glacier.</p>
+<h2>Does God solves the problem?</h2>
+<p>Now let's suppose for the moment that there was God before the big bang? Now a lot of other questions arise. (And that's why prof. Dawkins says that we can explain complex things in terms of simple things.) At what moment of time did God decide to create the universe? What was God doing before the created the universe? He was resting all along doing nothing and one day he gets bored and says, 'You know what I am bored. Let me create a universe.' Is ours the only universe the created or there are others too? If yes at at what time did he start creating the universes? Interesting involving God raised the same problem of infinite regress which it intended to solve.</p>
+<p>The only solution is that God has to be outside time. As Bill Kraig defines it, God is timeless. That would mean that God crated the time when he created the universe. That means that the time began at the creation of universe. So there was no time before the big bang. (Isn't it what we were already screaming?) So it still doesn't make sense to ask what was there before the big bang. The word <em>before</em> still doesn't make sense. Congratulations Piers! We have completed a full circle but your question is still unanswered.</p>
+<h2>Space side of the question</h2>
+<p>Piers Morgan always talks about time having a beginning doesn't make sense. But does the space having a beginning makes any sense? Think about if for a moment. It has always struck me odd to think of an expanding universe. What is the universe expending into? Think of anything expending. A metal sphere will expand if provided head. If you imagine it expanding you will think of its getting larger and occupying the space around it. That is what we understand about expansion: occupation of the space around an object. But then what could it mean for space to expand.</p>
+<p>How do you imagine big bang in your head? You see the universe as a dot with expands rapidly into what we call now a universe. That is now it is shown in the diagrams of big bang. If you imagining a dot in the middle of a black canvas, and then a circle with increasing radius. You are wrong. There is no canvas. You will have to be inside the dot. Most of the time we don't think about it but when we do, it makes little intuitive sense. But it is the case.</p>
+<p>Needless to say, Piers Morgan will not bring out this side of the argument because it goes against his presupposed answer. If the beginning of space doesn't make sense then space wasn't created at all. That means universe was always there. There goes the efforts in drain, dear Piers.</p>
+<h2>The Limitations of Our Intuition</h2>
+<p>The previous section shows us a subtle hint about why our intuition fails us around these topics. And this will show us why we these question doesn't make sense. See, we have used to seeing things like before the event and object expanding in the universe, and we go on to generalize it for universe. <strong>It is not necessary that the logic that applies to objects <em>in</em> space-time should apply <em>for</em> space-time</strong>_.</p>
+<p>This is one of the strongest opposition to Thomas Aquinas' cosmological arguments. He said something like- 'The universe consists of contingent objects, so universe must the contingent. Whatever is not contingent can be called God' And people jumped over him. The universe is made of contingent objects does not apply that the universe itself is contingent.</p>
+<p>Think about this analogy. I have a big basket in my home where we put all the utensils (<em>Bhanda ki tokri</em>). Every utensil in the basket has a neighbor (an utensil placed either left or right of it.) A creature born and brought up in the basket might feel urge to hypothesize: since every utensil in the basket has a neighbor therefore the basket itself must have a neighbor. You can sense where the hypothesis based on narrow viewpoint of the basket scientist went wrong. Similarly it is about our universe. Every event in the universe has a previous ('before') event associated with it. But does it make sense to extend the logic to the universe itself?</p>
+<p>We all are born and brought up in the finite universe. Our intuition has evolved according to (and for making sense of) things within the universe. That's the exactly why we can't rely on our intuition to answer the questions about the universe.</p>
+<p>Richard Dawkins dismissed Piers Morgan by saying that human mind is not capable of handling such ideas like Big Bang. Then Piers Morgan followed it by something like 'maybe even physicists don't understand it, and they are making us fools'. It all turned into foolish exchange of foolish arguments. But if we think carefully and try to understand what lies behind all this. We might be able counter-argue what-was-there-before-big-bang argument.</p>
+<p>Thank You so much for reading such a long article. I hope you enjoyed reading it. But I don't hope you to agree on every point I made. I would be very curious to know if I have gone wrong somewhere. If you find a contradiction or a false argument, please comment down. I would be more than happy to think about it.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="py-10 border-t border-gray-100 dark:border-gray-900 mt-auto text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="text-[0.8rem] text-gray-400 dark:text-gray-500">
+                &copy; 2026 The Rest Frame.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
