@@ -1,10 +1,10 @@
 ---
 date: '2026-03-09'
 draft: false
-image: assets/absolute-2.png
+image: assets/dawkins-morgan.png
 tags:
-- Poem
-- English Poem
+- Article
+- Philosophy
 title: Piers Morgan's Argument Intuition
 ---
 
