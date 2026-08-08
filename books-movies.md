@@ -9,19 +9,20 @@ Books
 ----
 - The Happy Prince by Oscar Wilde. 
 - The Idiot by Fyodor Dostoevsky (left unfinished)
-- The Prisonor of Birth by Jeffery Archer(May 17, 2025)
+- The Prisoner of Birth by Jeffery Archer(May 17, 2025)
 - Little Women by Louisa May Alcott (June 1, 2025)
 - The Greatest Show on Earth by Richard Dawkins
 - Verity by Colleen Hoover (Aug 23, 2025)
-- The Secret Hisotry by Donna Tratt.
+- The Secret History by Donna Tartt.
 (2026)
 - Pride and Prejudice
 - Down And Out in Paris And London by George Orwell
 - Animal Farm 
 - 1984
-- Aunts Aren't Gentlemen by PG Woodehouse
+- Aunts Aren't Gentlemen by PG Wodehouse
 - Project Hail Mary
 - Gone Girl
+- Oliver Twist by Charles Dickens 
 
 Movies 
 ----
@@ -33,13 +34,13 @@ Movies
 - Dear Zindagi (Sat, April 27, 2025)
 - Jab Tak Hai Jaan (Sun, April 28, 2025)
 - Yeh Jawaani Hai Deewani (Wed, April 30, 2025)
-- Inglorius Bastards (Thu, May 1, 2025)
+- Inglourious Basterds (Thu, May 1, 2025)
 - Thunderbolts* (Sat, May 3, 2025)
 - Notting Hill (Sun, May 4, 2025)
 - Along Came Polly (Sun, May 4, 2025)
 - Jerry Maguire (Tue, May 17, 2025)
 - The Truman Show (May 25, 2025)
-- Captain Amarica: Brave New World (June 6, 2025)
+- Captain America: Brave New World (June 6, 2025)
 - Drishyam 2 (7, June 2025)
 - Invention Of Lying (June 14, 2025)
 - A Complete Unknown (Jun 15, 2025)
@@ -52,8 +53,8 @@ Movies
 - Shutter Island (July 19, 2025)
 - Batman Begins (July 20, 2025)
 - Fantastic Four (2005) (Aug 1, 2025)
-- Fantastic Four: Rise of Silver Serfer (Aug 1, 2025)
-- The Dark Night (Aug 2, 2025)
+- Fantastic Four: Rise of Silver Surfer (Aug 1, 2025)
+- The Dark Knight (Aug 2, 2025)
 - Forrest Gump (Aug 3, 2025)
 - Tumse Na Ho Payega (Aug 9, 2025)
 - 500 Days of Summer (Aug 10, 2025)
@@ -70,7 +71,7 @@ Movies
 - Punjab 1984 (Sep 13, 2025)
 - Sajjan Singh Rangroot (Sep 13, 2025)
 - Rise of the Planet of Apes (Sep 23, 2025)
-- Dispicable Me (Oct 1, 2025)
+- Despicable Me (Oct 1, 2025)
 - Chhichhore (Oct 20, 2025)
 - Fantastic Four: The First Steps (Nov 9, 2025)
 - Laila Majnun 
@@ -87,11 +88,13 @@ Movies
 - Project Hail Mary
 - Dhurander 2
 - Justice League (Snyder Cut)
+- Main Wapis Aaunga. 
+- Gladiator 2
 
 
 Shows
 ---
-- Silicon Velly  (April 11, 2025)
+- Silicon Valley  (April 11, 2025)
 - Suits (Season 7) (Aug 1, 2025)
 - American Manhunt: Osama Bin Laden (May 21, 2025)
 - Emily in Paris (S1E8)
@@ -100,13 +103,16 @@ Shows
 - Georgie and Mandy's First Marriage (S1E19)
 - Our Beloved Summer
 - The Big Bang Theory
+- Breaking Bad
+- Game of Thrones
 
 Podcasts
 ---
-- The Rest Is Science
+- The Rest Is Science [link](https://www.youtube.com/@TheRestIsScience)
 - Urdunama hosted by Fabiha Sayed [link](https://open.spotify.com/show/6zRRY9ssHgiH2Rm0IUrd5x)
 - Lex Fridman Podcast (Lex Fridman) [link](https://lexfridman.com/podcast/)
 - Within Reason Podcast (By Alex O'Connor) [link](https://open.spotify.com/show/16wUbvDT95dxzpG2KEhakK)
-- Humbermann Lab Podcast (By Andrew Hubermann) [link](https://www.hubermanlab.com/all-episodes)
-- Kitabi Cabins Podcast 
+- Huberman Lab Podcast (By Andrew Huberman) [link](https://www.hubermanlab.com/all-episodes)
+- Kitabi Cabins Podcast
 - Fake Podcast
+- StarTalk Radio (By Neil deGrasse Tyson) [link](https://www.youtube.com/@StarTalk)
