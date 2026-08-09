@@ -90,6 +90,75 @@ Movies
 - Justice League (Snyder Cut)
 - Main Wapis Aaunga. 
 - Gladiator 2
+- The Odyssey
+- Spiderman: Brand New Day
+
+TBW:
+- Chris Nolan
+  - The Prestige (9, Aug 2026)
+  - Tennet
+  - Interstaller. 
+  - The Martian 
+  - Inception
+- Steven Spilberg Movies
+  - Jurassic Park
+  - Schindler's List
+  - Saving Private Ryan
+  - War of the Worlds
+  - West Side Story
+  - Disclosre Day
+  - Twilight Zone 
+  - ET: 
+  - Close Encounters with the third kind
+  - Minority Report
+  - Catch me if you can 
+  - The Fablemens
+  - The Bridge of Spies
+  - The Post
+  - AI: Artifical Intelligene 
+- David Fincher
+  - Seven
+  - Zodiac
+  - The Social Network
+  - The girl with dragon tatoo 
+  - The Curious case of Benjamin Button
+- The Shawshank Redemption
+- The Godfather series
+- Lord of the rings series
+- 12 Angry Men
+- Pulp Fiction
+- The Silence of the lambs
+- The pianist
+- One battle after another
+- Django unchained
+- Once upon a time in hollywood
+- Good will hunting
+- Arrival
+- Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
+- Lawrence of Arabia
+- 2001: A Space Odyssey
+- No Country for Old Men
+- A time to kill
+- Monty Python and the Holy Grail
+- Chinatown
+- Dead Poets Society
+- The Wild Robot
+- Million Dollar Baby
+- Her
+- The Wizard of Oz
+- Parasite
+- The Good bad and the ugly
+- About time
+- Seven Samurai
+- Grave of the Fireflies
+- Demolition
+- The rainmaker
+- The Usual Suspects
+- Apocalypse Now
+- A moment to remember
+- Love actually
+
+
 
 
 Shows
@@ -105,6 +174,7 @@ Shows
 - The Big Bang Theory
 - Breaking Bad
 - Game of Thrones
+- How i met your mother
 
 Podcasts
 ---
@@ -113,6 +183,4 @@ Podcasts
 - Lex Fridman Podcast (Lex Fridman) [link](https://lexfridman.com/podcast/)
 - Within Reason Podcast (By Alex O'Connor) [link](https://open.spotify.com/show/16wUbvDT95dxzpG2KEhakK)
 - Huberman Lab Podcast (By Andrew Huberman) [link](https://www.hubermanlab.com/all-episodes)
-- Kitabi Cabins Podcast
-- Fake Podcast
 - StarTalk Radio (By Neil deGrasse Tyson) [link](https://www.youtube.com/@StarTalk)
