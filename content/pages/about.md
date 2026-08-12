@@ -13,3 +13,5 @@ My interests by the day are programming, physics, and problem-solving and by the
 What I write on this blog (What I used to write, sadly I am not that much active anymore!) are the thoughts that occupy my head and won’t let me be at peace. These are the stories of the fictional world, in which I live when I am silent, poems, articles about the stupid arguments that goes on in my head, and some other things that I don’t remember at the moment.
 
 I hail from a village located in northern Rajasthan near Punjab border, currently staying in Chennai for work.
+
+You can find my CV [here](assets/cv.pdf).
