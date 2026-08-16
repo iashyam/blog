@@ -23,6 +23,7 @@ Books
 - Project Hail Mary
 - Gone Girl
 - Oliver Twist by Charles Dickens 
+- The Hobbit
 
 Movies 
 ----
@@ -92,6 +93,9 @@ Movies
 - Gladiator 2
 - The Odyssey
 - Spiderman: Brand New Day
+- THe Prestige
+- Tenet
+- Zodiac 
 
 TBW:
 - Chris Nolan
