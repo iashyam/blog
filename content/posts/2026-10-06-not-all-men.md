@@ -7,7 +7,7 @@ categories:
 tags: []
 math: false
 layout: post
-image: ""
+image: "assets/notallmen.png"
 ---
 
 # Not All Men
