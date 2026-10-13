@@ -4,7 +4,7 @@ title: "Not All Men"
 date: 2026-10-06
 categories:
   - Writing
-tags: []
+tags: [essay]
 math: false
 layout: post
 image: "assets/notallmen.png"
